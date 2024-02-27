@@ -1,0 +1,169 @@
+.btn-primary {
+  background: #008cc1;
+  border: 0px;
+  padding: 15px 41px 15px 41px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background: none;
+  border: 0px;
+}
+
+.btn-regis .btn {
+  background: #D80032;
+}
+
+.btn-regis .btn:hover {
+  background: #C70039;
+}
+
+.btn-login {
+  background: #D80032;
+}
+
+.btn-login:hover {
+  background: #C70039;
+}
+
+.btn-secondary {
+  background: none;
+  border: 1px solid #D80032;
+  padding: 15px 41px 15px 41px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #C70039;
+}
+
+
+.btn-secondary:hover {
+  background: #D80032;
+  border: 1px solid #C70039;
+  color: #ffffff;
+
+}
+
+.heroBWA .btn {
+  background: #C70039;
+}
+
+.heroBWA .btn:hover {
+  background: #D80032;
+}
+
+.heroBWA {
+  padding-top: 70px;
+  padding-bottom: 200px;
+}
+
+.nav-item a{
+  font-family: 'Poppins';
+}
+
+.heroBWA h1 {
+  font-family: "Poppins";
+  font-weight: 700;
+  color: #2f281e;
+}
+
+.heroBWA p {
+  font-family: "Poppins";
+  font-weight: 400;
+  color: #2f281e;
+}
+
+.test {
+  padding-top: 65px;
+}
+
+.test h2 {
+  font-family: "Poppins";
+  font-weight: 400;
+  color: #2f281e;
+}
+
+.test p {
+  font-family: "Poppins";
+  font-weight: 400;
+  color: #2f281e;
+}
+
+.navbar {
+  margin-top: 15px;
+}
+
+.card {
+  width: max-content;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 25px;
+  border: 1px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+}
+
+.card-title h1 {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 40px;
+  color: #2f281e;
+  margin-bottom: -20px;
+}
+
+
+.col label {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 14px;
+  color: #2f281e;
+  text-align: left;
+}
+
+.registerbtn {
+  background: #C70039;
+  border: 0px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.registerbtn:hover {
+  background: #ffffff;
+  color: #C70039;
+  border: 1px solid #C70039;
+}
+
+.papan {
+  margin-top: 15px;
+  
+}
+
+.card-body .col{
+  text-align: left;
+}
+
+table tr{
+  font-family: "poppins";
+}
+
+.card-title{
+  font-family: "poppins";
+  font-weight: bolder;
+  text-align: center;
+}
+
+.card-text{
+  text-align: center;
+  font-family: "poppins";
+}
+@media only screen and (max-width: 768px) {
+  .btn-primary,
+  .btn-secondary, 
+  .card {
+    margin-top: 10px;
+    margin-left: 0 !important;
+  }
+}
+
