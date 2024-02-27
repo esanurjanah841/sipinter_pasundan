@@ -129,7 +129,7 @@ function register()
             alert('Maaf Umur Anda dibawah 15 tahun, Anda tidak bisa daftar!');
             document.location.href = 'register.php';
               </script>";
-              
+            
         
         }else{
         $nama = htmlspecialchars($_POST['nama']);
