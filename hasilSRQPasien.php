@@ -218,9 +218,9 @@ $tanggal= strftime("%A, %d %B %Y");
                                                     $tampil ="SELECT DISTINCT p.id_gejala, p.kode_gejala, p.gejala from relasi b, gejala p where b.id_gejala=p.id_gejala and p.id_gejala='$item' group by id_gejala";
                                                     $result = mysqli_query($koneksi, $tampil);
                                                     $read  = mysqli_fetch_array($result);
-                                                    $pesangejala = $read['gejala'];
+                                                    
                                                ?>
-                                               <input class="form-control form-control-user" id="gejala" name="gejala[]" style="border: none; outline: none; margin-bottom:-5px;font-size: 16px;" value="<?php echo $pesangejala?>" readonly>
+                                               <input class="form-control form-control-user" id="gejala" name="gejala[]" style="border: none; outline: none; margin-bottom:-5px;font-size: 16px;" value="<?php echo $read['gejala']?>" readonly>
                                     <?php }?>
                                     <br>
                                     

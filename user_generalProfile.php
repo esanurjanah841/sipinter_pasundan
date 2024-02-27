@@ -77,7 +77,7 @@ include 'header-user.php';
         <a href="user_profile.php" class="btn btn-info btn-icon-split">
             <span class="text">Profile User</span>
         </a>
-        <a href="user_generalprofile.php" class="btn btn-primary btn-icon-split">
+        <a href="user_generalProfile.php" class="btn btn-primary btn-icon-split">
             <span class="text">General User</span>
         </a>
     </div>
@@ -113,7 +113,7 @@ include 'header-user.php';
                   <h3 class="mb-0">Profile</h3>
                 </div>
                 <div class="col-4 text-right">
-                <a href="user_ubahGeneral.php" class="btn btn-sm btn-primary">
+                <a href="user_ubahGeneral.php?id_user=<?php echo $tampil["id_user"];?>" class="btn btn-sm btn-primary">
                     <span class="icon text-white-20">
                         <i class="fas fa-file"></i>
                     </span>

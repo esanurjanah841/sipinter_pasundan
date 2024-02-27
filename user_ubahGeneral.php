@@ -8,7 +8,9 @@ if (isset($_SESSION['role'])) {
 }
 }
 
-$tampilpasien = mysqli_query($koneksi, "SELECT * FROM user where id_user='$_SESSION[id_user]'");
+$id_user = $_GET["id_user"];
+
+$tampilpasien = mysqli_query($koneksi, "SELECT * FROM user where id_user='$id_user'");
 $tampil = mysqli_fetch_array($tampilpasien);
 
 include 'header-user.php';
