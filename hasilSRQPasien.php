@@ -100,14 +100,7 @@ $tanggal= strftime("%A, %d %B %Y");
                                     <?php	
                                     if($_SERVER['REQUEST_METHOD']=='POST'){	
                                     if(empty($_POST['gejala'])){
-                                        $tampiluser = mysqli_query($koneksi, "SELECT DISTINCT p.id_user, p.nama_lengkap, p.nik, p.ttl, p.jenis_kelamin, p.alamat, p.kota, p.provinsi, p.tlp, p.pendidikan, p.pekerjaan, p.status, p.goldar from user b, profil_user p where b.nik=p.nik and b.id_user='$_SESSION[id_user]' group by nik");
-                                        $tampil = mysqli_fetch_array($tampiluser);
-                                            $alamat = $tampil['alamat'];
-                                            $kota = $tampil['kota'];
-                                            $provinsi = $tampil['provinsi'];
-
-                                        $read['gejala'] = "Tidak ada gejala yang dipilih.";
-                                        $pesan = "Tidak ada gejala yang dipilih.";
+                                        $pesangejala = "Tidak ada gejala yang dipilih.";
                                         $hasil['penyakit'] = "Dalam Batas Normal";
                                         $pesan = "Tetap jaga kesehatan jiwa dengan: <br>
                                         1. Bila Anda merasa ada keluhan, bicarakan keluhan dengan seseorang yang dapat dipercaya <br>
@@ -116,10 +109,11 @@ $tanggal= strftime("%A, %d %B %Y");
                                         4. Kembangkan hobi bermanfaat <br>
                                         5. Meningkatkan ibadah, mendekatkan diri pada Tuhan <br>
                                         6. Selalu berpikir positif";
-                                        echo "<tr>  
-                                        <td>0</td>
-                                        <td>Dalam Batas Normal</td>
-                                        <td><a href=\"#detail\"  ><i class='fas fa-pen'>Detail</i></a></td>
+                                        echo "
+                                        <tr>  
+                                            <td>0</td>
+                                            <td>Dalam Batas Normal</td>
+                                            <td><a href=\"#detail\"  ><i class='fas fa-pen'>Detail</i></a></td>
                                         </tr>";
                                             
                                     }elseif(isset($_POST['submit'])){
@@ -136,10 +130,11 @@ $tanggal= strftime("%A, %d %B %Y");
                                                 4. Kembangkan hobi bermanfaat <br>
                                                 5. Meningkatkan ibadah, mendekatkan diri pada Tuhan <br>
                                                 6. Selalu berpikir positif";
-                                                echo "<tr>  
-                                                <td>".$x."</td>
-                                                <td>Dalam Batas Normal</td>
-                                                <td><a href=\"#detail\"  ><i class='fas fa-pen'>Detail</i></a></td>
+                                                echo "
+                                                <tr>  
+                                                    <td>".$x."</td>
+                                                    <td>Dalam Batas Normal</td>
+                                                    <td><a href=\"#detail\"  ><i class='fas fa-pen'>Detail</i></a></td>
                                                 </tr>";
 
                                         }else if($jumlah_dipilih>=6){
@@ -152,9 +147,9 @@ $tanggal= strftime("%A, %d %B %Y");
                                                 $pesan = "Segera konsultasikan kesehatan Anda dengan tenaga kesehatan di Fasilitas Pelayanan Kesehatan terdekat.";
                                                 echo "
                                                 <tr>  
-                                                        <td>".$x."</td>
-                                                        <td>".$hasil['penyakit']."</td>
-                                                        <td><a href=\"#detail\"  ><i class='fas fa-pen'>Detail</i></a></td>
+                                                    <td>".$x."</td>
+                                                    <td>".$hasil['penyakit']."</td>
+                                                    <td><a href=\"#detail\"  ><i class='fas fa-pen'>Detail</i></a></td>
                                                 </tr>";
                                         }
                                     }
@@ -186,24 +181,24 @@ $tanggal= strftime("%A, %d %B %Y");
                                 </div>
                                 <?php 
                                     $tampiluser = mysqli_query($koneksi, "SELECT DISTINCT p.id_user, p.nama_lengkap, p.nik, p.ttl, p.jenis_kelamin, p.alamat, p.kota, p.provinsi, p.tlp, p.pendidikan, p.pekerjaan, p.status, p.goldar from user b, profil_user p where b.nik=p.nik and b.id_user='$_SESSION[id_user]' group by nik");
-                                    $tampil = mysqli_fetch_array($tampiluser);
-                                        $alamat = $tampil['alamat'];
-                                        $kota = $tampil['kota'];
-                                        $provinsi = $tampil['provinsi'];
+                                    $view = mysqli_fetch_array($tampiluser);
+                                        $alamat = $view['alamat'];
+                                        $kota = $view['kota'];
+                                        $provinsi = $view['provinsi'];
                                 ?>
                                 
                                 
                                 <div class="form-group">
                                     <label for="nik">NIK</label>
-                                    <input type="text" class="form-control form-control-user" id="nik" name="nik"  value="<?php echo $tampil['nik']?>" readonly>
+                                    <input type="text" class="form-control form-control-user" id="nik" name="nik"  value="<?php echo $view['nik']?>" readonly>
                                 </div>
                                 <div class="form-group">
                                     <label for="nama_lengkap">Nama Lengkap</label>
-                                    <input type="text" class="form-control form-control-user" id="nama_lengkap" name="nama_lengkap"  value="<?php echo $tampil['nama_lengkap']?>" readonly>
+                                    <input type="text" class="form-control form-control-user" id="nama_lengkap" name="nama_lengkap"  value="<?php echo $view['nama_lengkap']?>" readonly>
                                 </div>
                                 <div class="form-group ">
                                     <label for="ttl">Tanggal Lahir</label>
-                                    <input type="date" class="form-control form-control-user" id="ttl" name="ttl"  value="<?php echo $tampil['ttl']?>" readonly>
+                                    <input type="date" class="form-control form-control-user" id="ttl" name="ttl"  value="<?php echo $view['ttl']?>" readonly>
                                 </div>
                                 <div class="form-group ">
                                     <label for="alamat">Alamat</label>
@@ -211,7 +206,7 @@ $tanggal= strftime("%A, %d %B %Y");
                                 </div>
                                 <div class="form-group ">
                                     <label for="tlp">No. Telepon</label>
-                                    <input type="text" class="form-control form-control-user" id="tlp" name="tlp" value="<?php echo $tampil['tlp']?>" readonly>
+                                    <input type="text" class="form-control form-control-user" id="tlp" name="tlp" value="<?php echo $view['tlp']?>" readonly>
                                 </div>
                                 <br>
                                 <div class="form-group">
