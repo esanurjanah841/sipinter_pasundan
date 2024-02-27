@@ -171,7 +171,7 @@ $tanggal= strftime("%A, %d %B %Y");
                                         $provinsi = $tampil['provinsi'];
                                 ?>
                                 
-                                <input type="hidden" id="id_user" name="id_user" value="<?php echo $tampil['id_user']?>">
+                                
                                 <div class="form-group">
                                     <label for="nik">NIK</label>
                                     <input type="text" class="form-control form-control-user" id="nik" name="nik"  value="<?php echo $tampil['nik']?>" readonly>

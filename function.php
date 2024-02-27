@@ -367,7 +367,7 @@ function tambahRelasi()
 function tambahLaporan()
 {
     global $koneksi;
-   
+    
     $tanggal_pengisian = htmlspecialchars($_POST['tanggal_pengisian']);
     $nik = htmlspecialchars($_POST['nik']);
     $nama_lengkap = htmlspecialchars($_POST['nama_lengkap']);
