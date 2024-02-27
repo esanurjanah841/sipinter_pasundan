@@ -177,6 +177,7 @@ function login() {
                 $_SESSION['role'] = "pasien";
                 $_SESSION['id_user'] = $data['id_user'];
                 echo "<script>
+                alert('Berhasil Login! Silahkan isi Profile');
                 document.location.href = 'menuPasien.php';
                 </script>";
             } elseif($role =="administrator") {
@@ -463,7 +464,7 @@ function tambahPTM()
             document.location.href = 'formPTMPasien.php'</script>";
     }
             echo "<script>
-            alert('Data berhasil dikirimkan! ');
+            alert('Data berhasil dikirimkan! Terima kasih sudah melakukan skrining kesehatan secara mandiri, silahkan kunjungi Puskesmas atau Fasilitas Pelayanan Kesehatan terdekat untuk mendapatkan pemeriksaan dan konsultasi kesehatan lebih lanjut');
             document.location.href = 'riwayat.php'</script>";
 }
 
