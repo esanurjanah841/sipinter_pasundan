@@ -53,7 +53,7 @@ $tanggal= strftime("%A, %d %B %Y");
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-          <a class="navbar-brand fw-bold" href="#page-top">
+          <a class="navbar-brand fw-bold" href="menuPasien.php">
               <div class="sidebar-brand-icon">
                   <img src="gambar/Logo-Sipinter.png" width="175" height="auto" alt="logo" />
               </div>
