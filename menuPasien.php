@@ -90,7 +90,7 @@ if (isset($_SESSION['role'])) {
       <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
         <a href="" style="color:black" data-bs-toggle="modal" data-bs-target="#profile">
-          <img src="gambar/Profile-sipinter.png" class="card-img-top" alt="...">
+          <img src="gambar/Profile-Sipinter.png" class="card-img-top" alt="...">
           <h4 class="title">Isi Profile</h4>
           <p class="description">Pengguna diwajibkan mengisi kelengkapan profile user terlebih dahulu sebelum lanjut ke tahap skrining kesehatan. Ayo tambahkan Profile disini!!</p>
           </a>

@@ -213,13 +213,14 @@ $tanggal= strftime("%A, %d %B %Y");
                                 <br>
                                 <div class="form-group">
                                     <label for="gejala"><i>Daftar Gejala yang dipilih:</i></label>
-                                    <?php foreach($_POST['gejala'] as $item)
+                                    <?php foreach($_POST['gejala'] as $item) 
                                                 {
                                                     $tampil ="SELECT DISTINCT p.id_gejala, p.kode_gejala, p.gejala from relasi b, gejala p where b.id_gejala=p.id_gejala and p.id_gejala='$item' group by id_gejala";
                                                     $result = mysqli_query($koneksi, $tampil);
                                                     $read  = mysqli_fetch_array($result);
+                                                    $pesangejala = $read['gejala'];
                                                ?>
-                                               <input class="form-control form-control-user" id="gejala" name="gejala[]" style="border: none; outline: none; margin-bottom:-5px;font-size: 16px;" value="<?php echo $read['gejala']?>" readonly>
+                                               <input class="form-control form-control-user" id="gejala" name="gejala[]" style="border: none; outline: none; margin-bottom:-5px;font-size: 16px;" value="<?php echo $pesangejala?>" readonly>
                                     <?php }?>
                                     <br>
                                     
@@ -232,7 +233,6 @@ $tanggal= strftime("%A, %d %B %Y");
                                 </div>
                                 <div class="form-group ">
                                     <p><?php echo $pesan ?></p>
-                                    
                                 </div>
                                     
                                 

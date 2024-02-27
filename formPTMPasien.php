@@ -144,7 +144,7 @@ if(($nik)==1){
                             <tr>
                                 <td width="150">Alamat Lengkap</td>
                                 <td>:&emsp;</td>
-                                <td><textarea type="text" class="form-control form-control-user" id="alamat" name="alamat"  value="<?php echo $tampil['alamat']?>"></textarea></td>
+                                <td><textarea type="text" class="form-control form-control-user" id="alamat" name="alamat"  value="<?php echo $tampil['alamat']?>"><?php echo $tampil['alamat']?></textarea></td>
                             </tr>
                             <tr>
                                 <td width="150">No. Telepon</td>
