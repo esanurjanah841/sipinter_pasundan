@@ -106,7 +106,8 @@ $tanggal= strftime("%A, %d %B %Y");
                                             $kota = $tampil['kota'];
                                             $provinsi = $tampil['provinsi'];
 
-                                        $pesangejala = "Tidak ada gejala yang dipilih.";
+                                        $read['gejala'] = "Tidak ada gejala yang dipilih.";
+                                        $pesan = "Tidak ada gejala yang dipilih.";
                                         $hasil['penyakit'] = "Dalam Batas Normal";
                                         $pesan = "Tetap jaga kesehatan jiwa dengan: <br>
                                         1. Bila Anda merasa ada keluhan, bicarakan keluhan dengan seseorang yang dapat dipercaya <br>
@@ -234,7 +235,7 @@ $tanggal= strftime("%A, %d %B %Y");
                                 </div>
                                 <div class="form-group ">
                                     <p><?php echo $pesan ?></p>
-                                    <input type="text" class="form-control form-control-user" id="penyakit" name="penyakit" style="font-size: 16px;" value="<?php echo $hasil['penyakit']?>" readonly>
+                                    
                                 </div>
                                     
                                 
