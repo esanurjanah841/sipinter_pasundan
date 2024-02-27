@@ -4,7 +4,7 @@ if (isset($_SESSION['role'])) {
     if ($_SESSION['role'] == "admin") {
         header("location: indexAdminbiasa.php");
     } else if ($_SESSION['role'] == "administrator") {
-      header("location: indexadmin.php");
+      header("location: indexAdmin.php");
   }
 }
 
@@ -66,7 +66,7 @@ if (isset($_SESSION['role'])) {
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="menupasien.php">Menu</a></li>
+          <li><a class="nav-link scrollto active" href="menuPasien.php">Menu</a></li>
           <li><a class="nav-link scrollto" href="riwayat.php">Riwayat</a></li>
           <li class="dropdown"><a href="#"><span>User Pasien</span> <i class="fas fa-user"></i></a>
             <ul>
@@ -97,8 +97,6 @@ if (isset($_SESSION['role'])) {
                                     <label for="tanggal_pengisian">Tanggal Pengisian</label>
                                     <input type="text" class="form-control form-control-user" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?php echo $tampil['tanggal_pengisian']?>"  readonly>
                                 </div>
-                                
-                                
                                 <div class="form-group">
                                     <label for="nik">NIK</label>
                                     <input type="text" class="form-control form-control-user" id="nik" name="nik"  value="<?php echo $tampil['nik']?>" readonly>

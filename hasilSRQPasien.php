@@ -101,7 +101,7 @@ $tanggal= strftime("%A, %d %B %Y");
                                     if($_SERVER['REQUEST_METHOD']=='POST'){	
                                     if(empty($_POST['gejala'])){
                                         
-                                        
+                                        $pesangejala = "Tidak ada gejala yang dipilih.";
                                         $hasil['penyakit'] = "Dalam Batas Normal";
                                         echo "<tr>  
                                         <td>0</td>
@@ -129,6 +129,7 @@ $tanggal= strftime("%A, %d %B %Y");
                                                 $hasil  = mysqli_fetch_array($result);  
                                                 
                                                 }
+                                                $pesan = "Segera konsultasikan kesehatan Anda dengan tenaga kesehatan di Fasilitas Pelayanan Kesehatan terdekat.";
                                                 echo "
                                                 <tr>  
                                                         <td>".$x."</td>
@@ -203,15 +204,14 @@ $tanggal= strftime("%A, %d %B %Y");
                                                ?>
                                                <input class="form-control form-control-user" id="gejala" name="gejala[]" style="border: none; outline: none; margin-bottom:-5px;font-size: 16px;" value="<?php echo $read['gejala']?>" readonly>
                                     <?php }?>
+                                    <?php echo $pesangejala ?>
                                 </div>
-                                <br>
-                                <i class="text">Berdasarkan dari gejala-gejala yang telah dipilih pasien di atas, </i>
-                                <br>
+
                                 <div class="form-group ">
                                     <label for="penyakit">Hasil skrining kesehatan jiwa Anda menunjukan</label>
                                     <input type="text" class="form-control form-control-user" id="penyakit" name="penyakit" style="font-size: 16px;" value="<?php echo $hasil['penyakit']?>" readonly>
                                 </div>
-                                    <p>Segera konsultasikan kesehatan Anda dengan tenaga kesehatan di Fasilitas Pelayanan Kesehatan terdekat.</p>
+                                    <p><?php echo $pesan ?></p>
                                 
                         <div class="modal-footer">
                             <button type="button" style="margin:5px" onclick="history.back();" class="btn btn-danger">Batal</button>
