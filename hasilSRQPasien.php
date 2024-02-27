@@ -124,7 +124,7 @@ $tanggal= strftime("%A, %d %B %Y");
 
                                         if($jumlah_dipilih<6){
                                             for($x=0;$x<$jumlah_dipilih;$x++)
-                                                $hasil['penyakit'] = "Dalam Batas Normal";
+                                                
                                                 $pesan = "Tetap jaga kesehatan jiwa dengan: <br>
                                                 1. Bila Anda merasa ada keluhan, bicarakan keluhan dengan seseorang yang dapat dipercaya <br>
                                                 2. Melakukan kegiatan yang sesuai dengan minat dan kemampuan <br>
@@ -204,7 +204,7 @@ $tanggal= strftime("%A, %d %B %Y");
                                 </div>
                                 <div class="form-group ">
                                     <label for="alamat">Alamat</label>
-                                    <input type="text" class="form-control form-control-user" id="alamat" name="alamat"  value="<?php echo "$alamat, "; echo "$kota, "; echo "$provinsi, ";?>" readonly>
+                                    <input type="text" class="form-control form-control-user" id="alamat" name="alamat"  value="<?php echo "$alamat, "; echo "$kota, "; echo "$provinsi";?>" readonly>
                                 </div>
                                 <div class="form-group ">
                                     <label for="tlp">No. Telepon</label>
