@@ -129,6 +129,7 @@ function register()
             alert('Maaf Umur Anda dibawah 15 tahun, Anda tidak bisa daftar!');
             document.location.href = 'register.php';
               </script>";
+              
         
         }else{
         $nama = htmlspecialchars($_POST['nama']);
@@ -283,11 +284,11 @@ function tambahProfilePasien()
         echo "<script>
             alert('Data Profile gagal ditambahkan! 
             NIK Anda sudah terdaftar!');
-            document.location.href = 'menupasien.php'</script>";
+            document.location.href = 'menuPasien.php'</script>";
     }
             echo "<script>
             alert('Data Profile berhasil ditambahkan!');
-            document.location.href = 'menupasien.php'</script>";
+            document.location.href = 'menuPasien.php'</script>";
 }
 
 function tambahGejala()
@@ -459,7 +460,7 @@ function tambahPTM()
     if (!$exe) {
         echo "<script>
             alert('Data gagal dikirimkan! Cek kembali, harap melengkapi semua data!');
-            document.location.href = 'skrining.php'</script>";
+            document.location.href = 'formPTMPasien.php'</script>";
     }
             echo "<script>
             alert('Data berhasil dikirimkan! ');
@@ -511,11 +512,11 @@ function tambahPTMHasil()
     if (!$exe) {
         echo "<script>
             alert('Hasil Pemeriksaan gagal ditambahkan! Periksa kembali, diharapkan melengkapi semua data.');
-            document.location.href = 'indexptm.php'</script>";
+            document.location.href = 'indexPTM.php'</script>";
     }
             echo "<script>
             alert('Hasil Pemeriksaan berhasil ditambahkan dan dikirimkan ke pasien!');
-            document.location.href = 'indexptm.php'</script>";
+            document.location.href = 'indexPTM.php'</script>";
 }
 
 function ubahGejala($id_gejala)
