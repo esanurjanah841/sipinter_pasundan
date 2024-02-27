@@ -11,7 +11,7 @@ if (isset($_SESSION['role'])) {
     $id_riwayat = $_GET["id_riwayat"];
     
 
-    $queryRiwayat = mysqli_query($koneksi, "SELECT DISTINCT  b.tanggal_pengisian, b.nama_lengkap, b.ttl, b.alamat, b.tlp, b.kode_penyakit, b.penyakit, b.nik, b.gejala, b.id_riwayat FROM riwayat b, user p where b.nik = p.nik and id_riwayat = '$id_riwayat' group by id_riwayat");
+    $queryRiwayat = mysqli_query($koneksi, "SELECT * FROM riwayat where id_riwayat = '$id_riwayat'");
     $tampil = mysqli_fetch_array($queryRiwayat);
 ?>
 

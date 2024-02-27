@@ -103,7 +103,8 @@ $tanggal= strftime("%A, %d %B %Y");
                                         
                                         $pesangejala = "Tidak ada gejala yang dipilih.";
                                         $hasil['penyakit'] = "Dalam Batas Normal";
-                                        $pesan = "1. Bila Anda merasa ada keluhan, bicarakan keluhan dengan seseorang yang dapat dipercaya <br>
+                                        $pesan = "Tetap jaga kesehatan jiwa dengan: <br>
+                                        1. Bila Anda merasa ada keluhan, bicarakan keluhan dengan seseorang yang dapat dipercaya <br>
                                         2. Melakukan kegiatan yang sesuai dengan minat dan kemampuan <br>
                                         3. Tenangkan pikiran dengan relaksasi <br>
                                         4. Kembangkan hobi bermanfaat <br>
@@ -122,6 +123,13 @@ $tanggal= strftime("%A, %d %B %Y");
                                         if($jumlah_dipilih<6){
                                             for($x=0;$x<$jumlah_dipilih;$x++)
                                                 $hasil['penyakit'] = "Dalam Batas Normal";
+                                                $pesan = "Tetap jaga kesehatan jiwa dengan: <br>
+                                                1. Bila Anda merasa ada keluhan, bicarakan keluhan dengan seseorang yang dapat dipercaya <br>
+                                                2. Melakukan kegiatan yang sesuai dengan minat dan kemampuan <br>
+                                                3. Tenangkan pikiran dengan relaksasi <br>
+                                                4. Kembangkan hobi bermanfaat <br>
+                                                5. Meningkatkan ibadah, mendekatkan diri pada Tuhan <br>
+                                                6. Selalu berpikir positif";
                                                 echo "<tr>  
                                                 <td>".$x."</td>
                                                 <td>Dalam Batas Normal</td>
