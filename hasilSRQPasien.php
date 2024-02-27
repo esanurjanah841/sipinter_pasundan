@@ -9,13 +9,6 @@ if (isset($_SESSION['role']))
 setlocale(LC_ALL, 'id-ID', 'id_ID');
 $tanggal= strftime("%A, %d %B %Y");
 
-
-    $tampiluser = mysqli_query($koneksi, "SELECT DISTINCT p.id_user, p.nama_lengkap, p.nik, p.ttl, p.jenis_kelamin, p.alamat, p.kota, p.provinsi, p.tlp, p.pendidikan, p.pekerjaan, p.status, p.goldar from user b, profil_user p where b.nik=p.nik and b.id_user='$_SESSION[id_user]' group by nik");
-    $tampil = mysqli_fetch_array($tampiluser);
-    $alamat = $tampil['alamat'];
-    $kota = $tampil['kota'];
-    $provinsi = $tampil['provinsi'];
- 
 ?>
 
 <!DOCTYPE html>
@@ -107,7 +100,12 @@ $tanggal= strftime("%A, %d %B %Y");
                                     <?php	
                                     if($_SERVER['REQUEST_METHOD']=='POST'){	
                                     if(empty($_POST['gejala'])){
-                                        
+                                        $tampiluser = mysqli_query($koneksi, "SELECT DISTINCT p.id_user, p.nama_lengkap, p.nik, p.ttl, p.jenis_kelamin, p.alamat, p.kota, p.provinsi, p.tlp, p.pendidikan, p.pekerjaan, p.status, p.goldar from user b, profil_user p where b.nik=p.nik and b.id_user='$_SESSION[id_user]' group by nik");
+                                        $tampil = mysqli_fetch_array($tampiluser);
+                                            $alamat = $tampil['alamat'];
+                                            $kota = $tampil['kota'];
+                                            $provinsi = $tampil['provinsi'];
+
                                         $pesangejala = "Tidak ada gejala yang dipilih.";
                                         $hasil['penyakit'] = "Dalam Batas Normal";
                                         $pesan = "Tetap jaga kesehatan jiwa dengan: <br>
@@ -185,7 +183,13 @@ $tanggal= strftime("%A, %d %B %Y");
                                     <label for="tanggal_pengisian">Tanggal Pengisian</label>
                                     <input type="text" class="form-control form-control-user" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?php echo $tanggal?>"  readonly>
                                 </div>
-                                
+                                <?php 
+                                    $tampiluser = mysqli_query($koneksi, "SELECT DISTINCT p.id_user, p.nama_lengkap, p.nik, p.ttl, p.jenis_kelamin, p.alamat, p.kota, p.provinsi, p.tlp, p.pendidikan, p.pekerjaan, p.status, p.goldar from user b, profil_user p where b.nik=p.nik and b.id_user='$_SESSION[id_user]' group by nik");
+                                    $tampil = mysqli_fetch_array($tampiluser);
+                                        $alamat = $tampil['alamat'];
+                                        $kota = $tampil['kota'];
+                                        $provinsi = $tampil['provinsi'];
+                                ?>
                                 
                                 
                                 <div class="form-group">
