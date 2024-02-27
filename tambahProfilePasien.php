@@ -61,7 +61,7 @@ include 'header-user.php';
 <?php
 
  if($nik==0){
-  echo include 'tambahprofileuji.php';
+  echo include 'tambahProfileuji.php';
 }else{
   echo include 'user_profileread.php';
 }

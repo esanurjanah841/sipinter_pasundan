@@ -4,7 +4,7 @@ if (isset($_SESSION['role'])) {
     if ($_SESSION['role'] == "admin") {
         header("location: indexAdminbiasa.php");
     } else if ($_SESSION['role'] == "administrator") {
-      header("location: indexadmin.php");
+      header("location: indexAdmin.php");
   }
 }
 
@@ -66,7 +66,7 @@ if (isset($_SESSION['role'])) {
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="menupasien.php">Menu</a></li>
+          <li><a class="nav-link scrollto active" href="menuPasien.php">Menu</a></li>
           <li><a class="nav-link scrollto" href="riwayat.php">Riwayat</a></li>
           <li class="dropdown"><a href="#"><span>User Pasien</span> <i class="fas fa-user"></i></a>
             <ul>
@@ -85,7 +85,7 @@ if (isset($_SESSION['role'])) {
 if(($nik)==1){
  echo "<script>
  alert('Data Profile belum ditambahkan!');
- document.location.href = 'menupasien.php.php'</script>";
+ document.location.href = 'menuPasien.php.php'</script>";
 }else{
  echo false;
 }

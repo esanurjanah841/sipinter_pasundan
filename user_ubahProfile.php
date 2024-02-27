@@ -4,7 +4,7 @@ if (isset($_SESSION['role'])) {
   if ($_SESSION['role'] == "admin") {
       header("location: indexAdminbiasa.php");
   } else if ($_SESSION['role'] == "administrator") {
-    header("location: indexadmin.php");
+    header("location: indexAdmin.php");
 }
 }
 
@@ -76,7 +76,7 @@ include 'header-user.php';
         <a href="user_profile.php" class="btn btn-primary btn-icon-split">
             <span class="text">Profile User</span>
         </a>
-        <a href="user_generalprofile.php" class="btn btn-info btn-icon-split">
+        <a href="user_generalProfile.php" class="btn btn-info btn-icon-split">
             <span class="text">General User</span>
         </a>
     </div>
