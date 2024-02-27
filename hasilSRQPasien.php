@@ -103,6 +103,12 @@ $tanggal= strftime("%A, %d %B %Y");
                                         
                                         $pesangejala = "Tidak ada gejala yang dipilih.";
                                         $hasil['penyakit'] = "Dalam Batas Normal";
+                                        $pesan = "1. Bila Anda merasa ada keluhan, bicarakan keluhan dengan seseorang yang dapat dipercaya <br>
+                                        2. Melakukan kegiatan yang sesuai dengan minat dan kemampuan <br>
+                                        3. Tenangkan pikiran dengan relaksasi <br>
+                                        4. Kembangkan hobi bermanfaat <br>
+                                        5. Meningkatkan ibadah, mendekatkan diri pada Tuhan <br>
+                                        6. Selalu berpikir positif";
                                         echo "<tr>  
                                         <td>0</td>
                                         <td>Dalam Batas Normal</td>
@@ -204,6 +210,7 @@ $tanggal= strftime("%A, %d %B %Y");
                                                ?>
                                                <input class="form-control form-control-user" id="gejala" name="gejala[]" style="border: none; outline: none; margin-bottom:-5px;font-size: 16px;" value="<?php echo $read['gejala']?>" readonly>
                                     <?php }?>
+                                    <br>
                                     <?php echo $pesangejala ?>
                                 </div>
 
