@@ -9,6 +9,13 @@ if (isset($_SESSION['role']))
 setlocale(LC_ALL, 'id-ID', 'id_ID');
 $tanggal= strftime("%A, %d %B %Y");
 
+
+    $tampiluser = mysqli_query($koneksi, "SELECT DISTINCT p.id_user, p.nama_lengkap, p.nik, p.ttl, p.jenis_kelamin, p.alamat, p.kota, p.provinsi, p.tlp, p.pendidikan, p.pekerjaan, p.status, p.goldar from user b, profil_user p where b.nik=p.nik and b.id_user='$_SESSION[id_user]' group by nik");
+    $tampil = mysqli_fetch_array($tampiluser);
+    $alamat = $tampil['alamat'];
+    $kota = $tampil['kota'];
+    $provinsi = $tampil['provinsi'];
+ 
 ?>
 
 <!DOCTYPE html>
@@ -178,13 +185,7 @@ $tanggal= strftime("%A, %d %B %Y");
                                     <label for="tanggal_pengisian">Tanggal Pengisian</label>
                                     <input type="text" class="form-control form-control-user" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?php echo $tanggal?>"  readonly>
                                 </div>
-                                <?php 
-                                    $tampiluser = mysqli_query($koneksi, "SELECT DISTINCT p.id_user, p.nama_lengkap, p.nik, p.ttl, p.jenis_kelamin, p.alamat, p.kota, p.provinsi, p.tlp, p.pendidikan, p.pekerjaan, p.status, p.goldar from user b, profil_user p where b.nik=p.nik and b.id_user='$_SESSION[id_user]' group by nik");
-                                    $tampil = mysqli_fetch_array($tampiluser);
-                                        $alamat = $tampil['alamat'];
-                                        $kota = $tampil['kota'];
-                                        $provinsi = $tampil['provinsi'];
-                                ?>
+                                
                                 
                                 
                                 <div class="form-group">
@@ -219,6 +220,7 @@ $tanggal= strftime("%A, %d %B %Y");
                                                <input class="form-control form-control-user" id="gejala" name="gejala[]" style="border: none; outline: none; margin-bottom:-5px;font-size: 16px;" value="<?php echo $read['gejala']?>" readonly>
                                     <?php }?>
                                     <br>
+                                    
                                     <?php echo $pesangejala ?>
                                 </div>
 
@@ -226,7 +228,11 @@ $tanggal= strftime("%A, %d %B %Y");
                                     <label for="penyakit">Hasil skrining kesehatan jiwa Anda menunjukan</label>
                                     <input type="text" class="form-control form-control-user" id="penyakit" name="penyakit" style="font-size: 16px;" value="<?php echo $hasil['penyakit']?>" readonly>
                                 </div>
+                                <div class="form-group ">
                                     <p><?php echo $pesan ?></p>
+                                    <input type="text" class="form-control form-control-user" id="penyakit" name="penyakit" style="font-size: 16px;" value="<?php echo $hasil['penyakit']?>" readonly>
+                                </div>
+                                    
                                 
                         <div class="modal-footer">
                             <button type="button" style="margin:5px" onclick="history.back();" class="btn btn-danger">Batal</button>
