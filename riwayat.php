@@ -115,7 +115,7 @@ if (isset($_SESSION['role'])) {
           <tbody>
           <?php 
           $no= 0;
-          $queryRiwayat = mysqli_query($koneksi, "SELECT DISTINCT b.tanggal_pengisian, b.nama_lengkap, b.ttl, b.alamat, b.tlp, b.penyakit, b.nik, b.gejala, b.id_riwayat FROM user p, riwayat b where b.nik = p.nik and id_user='$_SESSION[id_user]' group by id_riwayat");
+          $queryRiwayat = mysqli_query($koneksi, "SELECT DISTINCT b.tanggal_pengisian, b.nama_lengkap, b.ttl, b.alamat, b.tlp, b.penyakit, b.nik, b.gejala, b.id_riwayat FROM user p, riwayat b where b.nik = p.nik and p.id_user='$_SESSION[id_user]' group by id_riwayat");
           while ($data = mysqli_fetch_array($queryRiwayat)) { 
           $no ++;?>
             <tr>

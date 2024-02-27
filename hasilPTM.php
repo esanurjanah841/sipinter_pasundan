@@ -302,15 +302,11 @@ if (isset($_SESSION['role'])) {
                                 <td><input type="text" class="form-control form-control-user" id="periksa_gula" name="periksa_gula" value="<?php echo $tampil['periksa_gula']?>" readonly></td>
                                 <td><?php echo "&emsp;mg/dl (<200)" ?></td>
                             </tr>
+                            
                             <tr>
-                                <td width="150"><h6>Teks Template</h6></td>
+                                <td width="150"><h6>Rekomendasi Dokter</h6></td>
                                 <td>:&emsp;</td>
-                                <td><p></p></td>
-                            </tr>
-                            <tr>
-                                <td width="150"><h6>Rekomendasi Dokter/h6></td>
-                                <td>:&emsp;</td>
-                                <td><textarea class="form-control form-control-user" id="feedback" name="feedback" value="<?= $user['feedback']; ?>" readonly><?= $tampil['feedback']; ?></textarea></td>
+                                <td><textarea class="form-control form-control-user" id="feedback" name="feedback" value="<?= $tampil['feedback']; ?>" readonly><?= $tampil['feedback']; ?></textarea></td>
                             </tr>
                         </table>    
                                         <br>

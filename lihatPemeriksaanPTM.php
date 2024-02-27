@@ -182,10 +182,7 @@
                                         <input type="text" class="form-control-tes col-lg-9" style="background-color: #eaecf4;" id="periksa_gula" name="periksa_gula" value="<?= $user['periksa_gula']; ?>" readonly><?php echo "&emsp;mg/dl (<200)" ?>
                                     </div>
                                 </div>
-                                <div class="form-group ">
-                                    <h6>Teks Template</h6>
-                                    <p></p>
-                                </div>
+                               
                                 <div class="form-group ">
                                     <label for="feedback">Rekomendasi Dokter</label>
                                     <textarea class="form-control form-control-user" id="feedback" name="feedback" value="<?= $user['feedback']; ?>" readonly><?= $user['feedback']; ?></textarea>

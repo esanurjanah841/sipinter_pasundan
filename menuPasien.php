@@ -226,7 +226,7 @@ if (isset($_SESSION['role'])) {
           <tbody>
           <?php 
           $urut = 0;
-          $queryPTMPeriksa = mysqli_query($koneksi, "SELECT DISTINCT b.id_ptm, b.tanggal_pengisian, b.tanggal_pemeriksaan, b.nama_lengkap, b.tlp, b.ttl, b.nik FROM ptm_hasil b, user p where b.nik = p.nik and id_user='$_SESSION[id_user]' group by id_ptm");
+          $queryPTMPeriksa = mysqli_query($koneksi, "SELECT DISTINCT b.id_ptm, b.tanggal_pengisian, b.tanggal_pemeriksaan, b.nama_lengkap, b.tlp, b.ttl, b.nik, b.feedback FROM ptm_hasil b, user p where b.nik = p.nik and id_user='$_SESSION[id_user]' group by id_ptm");
           while ($result = mysqli_fetch_array($queryPTMPeriksa)) { 
           $urut ++;?>
             <tr>
