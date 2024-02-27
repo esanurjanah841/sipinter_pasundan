@@ -312,7 +312,7 @@ if (isset($_SESSION['role'])) {
                                         <br>
                         <div class="modal-footer">
                             <a type=button  onclick="history.back();" class="btn btn-success" style="margin-right:10px">Kembali</a>
-                            <button type="button" class="btn btn-warning" style="color:white;"><i class="fas fa-print" ><a href="printhasilptm.php?id_ptm=<?php echo $tampil['id_ptm']; ?>"> Print</a></i></button>
+                            <button type="button" class="btn btn-warning" style="color:white;"><i class="fas fa-print" onclick="window.print()" style="color:white;"> Print</button>
                         </div>
                     </form>
 
