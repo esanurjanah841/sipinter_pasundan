@@ -77,7 +77,6 @@
                                         $no++; ?>
                                         <tr>
                                         <td><?= $no ?></td>
-                                            <td><?= $data['tanggal_pengisian']; ?></td>
                                             <td><?= $data['tanggal_pemeriksaan']; ?></td>
                                             <td><?= $data['nik']; ?></td>
                                             <td><?= $data['nama_lengkap']; ?></td>
