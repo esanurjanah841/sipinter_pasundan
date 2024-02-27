@@ -369,7 +369,6 @@ function tambahLaporan()
     global $koneksi;
    
     $tanggal_pengisian = htmlspecialchars($_POST['tanggal_pengisian']);
-    $bpjs = htmlspecialchars($_POST['bpjs']);
     $nik = htmlspecialchars($_POST['nik']);
     $nama_lengkap = htmlspecialchars($_POST['nama_lengkap']);
     $ttl = htmlspecialchars($_POST['ttl']);
@@ -378,7 +377,7 @@ function tambahLaporan()
     $penyakit = htmlspecialchars($_POST['penyakit']);
     $gejala = implode(", ", $_POST['gejala']);
     // $penyakit = $_POST['id_penyakit'];
-    $queryLaporan = "INSERT INTO riwayat VALUES ('','$tanggal_pengisian', '$bpjs','$nik', '$nama_lengkap', '$ttl', '$alamat', '$tlp', '$penyakit', '$gejala')";
+    $queryLaporan = "INSERT INTO riwayat VALUES ('','$tanggal_pengisian','$nik', '$nama_lengkap', '$ttl', '$alamat', '$tlp', '$penyakit', '$gejala')";
     // $queryRelasi = "INSERT INTO relasi VALUES ('', '')"
     $exe = mysqli_query($koneksi, $queryLaporan);
     if (!$exe) {
