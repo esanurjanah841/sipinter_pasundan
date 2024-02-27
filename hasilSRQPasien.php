@@ -1,10 +1,12 @@
 <?php 
 include 'function.php';
-if (isset($_SESSION['role'])) 
-    if ($_SESSION['role'] == "admin") {
+if (isset($_SESSION['role'])) {
+    if ($_SESSION['role'] == "administrator") {
         header("location: indexAdmin.php");
+    }elseif ($_SESSION['role'] == "admin") {
+        header("location: indexAdminBiasa.php");
     }
-
+}
 
 setlocale(LC_ALL, 'id-ID', 'id_ID');
 $tanggal= strftime("%A, %d %B %Y");
@@ -149,7 +151,7 @@ $tanggal= strftime("%A, %d %B %Y");
                                                 <tr>  
                                                     <td>".$x."</td>
                                                     <td>".$hasil['penyakit']."</td>
-                                                    <td><a href=\"#detail\"  ><i class='fas fa-pen'>Detail</i></a></td>
+                                                        <td><a href=\"#detail\"  ><i class='fas fa-pen'>Detail</i></a></td>
                                                 </tr>";
                                         }
                                     }
@@ -180,7 +182,7 @@ $tanggal= strftime("%A, %d %B %Y");
                                     <input type="text" class="form-control form-control-user" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?php echo $tanggal?>"  readonly>
                                 </div>
                                 <?php 
-                                    $tampiluser = mysqli_query($koneksi, "SELECT * FROM profil_user where id_user='$_SESSION[id_user]'");
+                                    $tampiluser = mysqli_query($koneksi, "SELECT DISTINCT  p.nama_lengkap, p.nik, p.ttl, p.jenis_kelamin, p.alamat, p.kota, p.provinsi, p.tlp, p.pendidikan, p.pekerjaan, p.status, p.goldar from user b, profil_user p where b.nik=p.nik and b.id_user='$_SESSION[id_user]' group by nik");
                                     $view = mysqli_fetch_array($tampiluser);
                                         $alamat = $view['alamat'];
                                         $kota = $view['kota'];
