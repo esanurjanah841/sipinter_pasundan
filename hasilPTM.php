@@ -185,7 +185,7 @@ if (isset($_SESSION['role'])) {
                             <tr>
                                 <td></td>
                                 <td>:&emsp;</td>
-                                <td>
+                                <td colspan="2">
                                 <input type="text" class="form-control form-control-user" id="riwayatkeluarga3" name="riwayatkeluarga3"  value="<?php echo $tampil['riwayatkeluarga3']?>" style="font-size:12px" readonly>
                                 </td>
                             </tr>
@@ -262,8 +262,8 @@ if (isset($_SESSION['role'])) {
                             <tr>
                                 <td width="150">Tinggi Badan </td>
                                 <td>:&emsp;</td>
-                                <td><input type="text" class="form-control form-control-user" id="tinggi" name="tinggi" value="<?php echo $tampil['tinggi']?>" style="font-size:12px" readonly></td>
-                                <td width="10">cm</td>
+                                <td colspan="2"><input type="text" class="form-control form-control-user" id="tinggi" name="tinggi" value="<?php echo $tampil['tinggi']?>" style="font-size:12px" readonly>cm</td>
+                                
                             </tr>
                             <tr>
                                 <td width="150">Berat Badan </td>
@@ -306,7 +306,7 @@ if (isset($_SESSION['role'])) {
                             <tr>
                                 <td width="150"><h6>Rekomendasi Dokter</h6></td>
                                 <td>:&emsp;</td>
-                                <td><textarea class="form-control form-control-user" id="feedback" name="feedback" value="<?= $tampil['feedback']; ?>" style="font-size:12px" readonly><?= $tampil['feedback']; ?></textarea></td>
+                                <td colspan="2"><textarea class="form-control form-control-user" id="feedback" name="feedback" value="<?= $tampil['feedback']; ?>" style="font-size:12px" readonly><?= $tampil['feedback']; ?></textarea></td>
                             </tr>
                         </table>    
                                         <br>
