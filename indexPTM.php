@@ -54,7 +54,7 @@
                                     </thead>
                                     <tbody>
                                     <?php 
-                                        $queryPasien = mysqli_query($koneksi, "SELECT * FROM ptm_pasien");
+                                        $queryPasien = mysqli_query($koneksi, "SELECT * FROM ptm_pasien where status_post = 'Menunggu Validasi'");
                                         $no=0;
                                         while ($data = mysqli_fetch_assoc($queryPasien)) {
                                         $no++; ?>

@@ -53,7 +53,7 @@ $tanggal= strftime("%A, %d %B %Y");
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-          <a class="navbar-brand fw-bold" href="#page-top">
+          <a class="navbar-brand fw-bold" href="menuPasien.php">
               <div class="sidebar-brand-icon">
                   <img src="gambar/Logo-Sipinter.png" width="175" height="auto" alt="logo" />
               </div>
@@ -84,8 +84,9 @@ $tanggal= strftime("%A, %d %B %Y");
         <div class="container">
             <div class="row">
                 <div class="col align-self-center" style="font-family:poppins">
+                    <h4 class="mb-4">Petunjuk Pengerjaan : </h4>
+                    <p style="text-align:justify">Bacalah petunjuk ini seluruhnya sebelum mulai mengisi. Pertanyaan berikut berhubungan dengan masalah yang mungkin mengganggu Anda selama 30 hari terakhir. Apabila Anda menganggap pertanyaan itu Anda alami dalam 30 hari terakhir, berilah tanda ceklis  pada kolom (berarti Ya). Sebaliknya, Apabila Anda menganggap pertanyaan itu tidak Anda alami dalam 30 hari terakhir, jangan beri tanda ceklis pada kolom (berarti tidak). Jika Anda tidak yakin tentang jawabannya, berilah jawaban yang paling sesuai dengan Anda. Kami tegaskan bahwa jawaban Anda bersifat rahasia dan akan digunakan hanya untuk membantu pemecahan masalah Anda.</p>
                     <h2 class="mb-4">Pertanyaan : </h2>
-                    <p style="text-align:justify">Bacalah petunjuk ini seluruhnya sebelum mulai mengisi. Pertanyaan berikut berhubungan dengan masalah yang mungkin mengganggu Anda selama 30 hari terakhir. Apabila Anda menganggap pertanyaan itu Anda alami dalam 30 hari terakhir, berilah tanda ceklis  pada kolom (berarti Ya). Sebaliknya, Apabila anda menganggap pertanyaan itu tidak Anda alami dalam 30 hari terakhir, jangan beri tanda ceklis pada kolom (berarti tidak). Jika Anda tidak yakin tentang jawabannya, berilah jawaban yang paling sesuai dengan Anda. Kami tegaskan bahwa jawaban Anda bersifat rahasia dan akan digunakan hanya untuk membantu pemecahan masalah Anda.</p>
                     <form action="hasilSRQPasien.php" method="post" enctype="multipart/form-data" role="form">
                         <div class="boxes">
                             <table class="table table-bordered" id="dataTable">
