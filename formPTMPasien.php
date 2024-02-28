@@ -108,7 +108,7 @@ if(($nik)==1){
                                     while($tampil = mysqli_fetch_array($tampiluser)){
                                 ?>
                     <form action="function.php?act=tambahPTM" id="tambah" method="POST" class="tambah_pasien">
-                        <table cellpadding="7" cellspacing="7">
+                        <table cellpadding="7" cellspacing="7" style="font-size:12px">
                         <input type="hidden" id="id_user" name="id_user"   value="<?php echo $tampil['id_user']?>">
                         <input type="hidden" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?php echo $tanggal;?>" >
                             <tr>
@@ -117,62 +117,62 @@ if(($nik)==1){
                                 <td width="500"><input type="text" class="form-control form-control-user "  id="nik" name="nik"  value="<?php echo $tampil['nik']?>" readonly></td>
                             </tr>
                             <tr>
-                                <td width="150">Nama Pasien</td>
+                                <td>Nama Pasien</td>
                                 <td>:&emsp;</td>
                                 <td><input type="text" class="form-control form-control-user" id="nama_lengkap" name="nama_lengkap"  value="<?php echo $tampil['nama_lengkap']?>" readonly></td>
                             </tr>
                             <tr>
-                                <td width="150" class="col-lg-6">Tanggal Lahir</td>
+                                <td class="col-lg-6">Tanggal Lahir</td>
                                 <td>:&emsp;</td>
                                 <td><input type="date" class="form-control form-control-user" id="ttl" name="ttl"  value="<?php echo $tampil['ttl']?>" readonly></td>
                             </tr>
                             <tr>
-                                <td width="150" class="col-lg-6">Jenis Kelamin</td>
+                                <td class="col-lg-6">Jenis Kelamin</td>
                                 <td>:&emsp;</td>
                                 <td><input type="text" class="form-control form-control-user" id="jenis_kelamin" name="jenis_kelamin"  value="<?php echo $tampil['jenis_kelamin']?>" readonly></td>
                             </tr>
                             <tr>
-                                <td width="150" class="col-lg-6">Provinsi</td>
+                                <td class="col-lg-6">Provinsi</td>
                                 <td>:&emsp;</td>
                                 <td><input type="text" class="form-control form-control-user" id="provinsi" name="provinsi" value="<?php echo $tampil['provinsi']?>" readonly></td>
                             </tr>
                             <tr>
-                                <td width="150" class="col-lg-6">Kota/Kabupaten</td>
+                                <td class="col-lg-6">Kota/Kabupaten</td>
                                 <td>:&emsp;</td>
                                 <td><input type="text" class="form-control form-control-user" id="kota" name="kota" value="<?php echo $tampil['kota']?>" readonly></td>
                             </tr>
                             <tr>
-                                <td width="150">Alamat Lengkap</td>
+                                <td>Alamat Lengkap</td>
                                 <td>:&emsp;</td>
                                 <td><textarea type="text" class="form-control form-control-user" id="alamat" name="alamat"  value="<?php echo $tampil['alamat']?>"><?php echo $tampil['alamat']?></textarea></td>
                             </tr>
                             <tr>
-                                <td width="150">No. Telepon</td>
+                                <td>No. Telepon</td>
                                 <td>:&emsp;</td>
                                 <td><input type="text" class="form-control form-control-user" id="tlp" name="tlp"  value="<?php echo $tampil['tlp']?>" readonly></td>
                             </tr>
                             <tr>
-                                <td width="150">Pendidikan Terakhir</td>
+                                <td>Pendidikan Terakhir</td>
                                 <td>:&emsp;</td>
                                 <td><input type="text" class="form-control form-control-user" id="pendidikan" name="pendidikan"  value="<?php echo $tampil['pendidikan']?>" readonly></td>
                             </tr>
                             <tr>
-                                <td width="150">Pekerjaan</td>
+                                <td>Pekerjaan</td>
                                 <td>:&emsp;</td>
                                 <td><input type="text" class="form-control form-control-user" id="pekerjaan" name="pekerjaan"  value="<?php echo $tampil['pekerjaan']?>" readonly></td>
                             </tr>
                             <tr>
-                                <td width="150">Status Perkawinan</td>
+                                <td>Status Perkawinan</td>
                                 <td>:&emsp;</td>
                                 <td><input type="text" class="form-control form-control-user" id="status" name="status"  value="<?php echo $tampil['status']?>" readonly></td>
                             </tr>
                             <tr>
-                                <td width="150">Golongan Darah</td>
+                                <td>Golongan Darah</td>
                                 <td>:&emsp;</td>
                                 <td><input type="text" class="form-control form-control-user" id="goldar" name="goldar"  value="<?php echo $tampil['goldar']?>" readonly></td>
                             </tr>
                             <tr>
-                                <td width="150">Riwayat Pada Keluarga </td>
+                                <td>Riwayat Pada Keluarga </td>
                                 <td>:&emsp;</td>
                                 <td>
                                 <select name="riwayatkeluarga1" id="riwayatkeluarga1" class="form-control form-control-user" aria-label="Default select example">
@@ -188,7 +188,7 @@ if(($nik)==1){
                                 </td>
                             </tr>
                             <tr>
-                                <td width="150"></td>
+                                <td></td>
                                 <td>:&emsp;</td>
                                 <td>
                                 <select name="riwayatkeluarga2" id="riwayatkeluarga2" class="form-control form-control-user" aria-label="Default select example">
@@ -204,7 +204,7 @@ if(($nik)==1){
                                 </td>
                             </tr>
                             <tr>
-                                <td width="150"></td>
+                                <td></td>
                                 <td>:&emsp;</td>
                                 <td>
                                 <select name="riwayatkeluarga3" id="riwayatkeluarga3" class="form-control form-control-user" aria-label="Default select example">
@@ -220,7 +220,7 @@ if(($nik)==1){
                                 </td>
                             </tr>
                             <tr>
-                                <td width="150">Riwayat Pada Diri Sendiri</td>
+                                <td>Riwayat Pada Diri Sendiri</td>
                                 <td>:&emsp;</td>
                                 <td>
                                 <select name="riwayatsendiri1" id="riwayatsendiri1" class="form-control form-control-user" aria-label="Default select example">
@@ -236,7 +236,7 @@ if(($nik)==1){
                                 </td>
                             </tr>
                             <tr>
-                                <td width="150"></td>
+                                <td></td>
                                 <td>:&emsp;</td>
                                 <td>
                                 <select name="riwayatsendiri2" id="riwayatsendiri2" class="form-control form-control-user" aria-label="Default select example">
@@ -252,7 +252,7 @@ if(($nik)==1){
                                 </td>
                             </tr>
                             <tr>
-                                <td width="150"></td>
+                                <td></td>
                                 <td>:&emsp;</td>
                                 <td>
                                 <select name="riwayatsendiri3" id="riwayatsendiri3" class="form-control form-control-user" aria-label="Default select example">
@@ -268,7 +268,7 @@ if(($nik)==1){
                                 </td>
                             </tr>
                             <tr>
-                                <td width="150">Merokok</td>
+                                <td>Merokok</td>
                                 <td>:&emsp;</td>
                                 <td>
                                 <select name="merokok" id="merokok" class="form-control form-control-user" aria-label="Default select example" required>
@@ -279,7 +279,7 @@ if(($nik)==1){
                                 </td>
                             </tr>
                             <tr>
-                                <td width="150">Aktivitas Fisik < 150 Menit/Minggu  </td>
+                                <td>Aktivitas Fisik < 150 Menit/Minggu  </td>
                                 <td>:&emsp;</td>
                                 <td>
                                 <select name="fisik" id="fisik" class="form-control form-control-user" aria-label="Default select example" required>
@@ -290,7 +290,7 @@ if(($nik)==1){
                                 </td>
                             </tr>
                             <tr>
-                                <td width="150">Konsumsi Gula >4 Sendok Makan / Hari</td>
+                                <td>Konsumsi Gula >4 Sendok Makan / Hari</td>
                                 <td>:&emsp;</td>
                                 <td>
                                 <select name="gula" id="gula" class="form-control form-control-user" aria-label="Default select example" required>
@@ -301,7 +301,7 @@ if(($nik)==1){
                                 </td>
                             </tr>
                             <tr>
-                                <td width="150">Konsumsi Garam >1 Sendok Teh/ Hari</td>
+                                <td>Konsumsi Garam >1 Sendok Teh/ Hari</td>
                                 <td>:&emsp;</td>
                                 <td>
                                 <select name="garam" id="garam" class="form-control form-control-user" aria-label="Default select example" required>
@@ -312,7 +312,7 @@ if(($nik)==1){
                                 </td>
                             </tr>
                             <tr>
-                                <td width="150">Konsumsi Lemak >5 Sendok Makan / Hari </td>
+                                <td>Konsumsi Lemak >5 Sendok Makan / Hari </td>
                                 <td>:&emsp;</td>
                                 <td>
                                 <select name="lemak" id="lemak" class="form-control form-control-user" aria-label="Default select example" required>
@@ -323,7 +323,7 @@ if(($nik)==1){
                                 </td>
                             </tr>
                             <tr>
-                                <td width="150">Konsumsi sayur dan buah ≤5 porsi/Hari</td>
+                                <td>Konsumsi sayur dan buah ≤5 porsi/Hari</td>
                                 <td>:&emsp;</td>
                                 <td>
                                 <select name="sayur" id="sayur" class="form-control form-control-user" aria-label="Default select example" required>
@@ -334,7 +334,7 @@ if(($nik)==1){
                                 </td>
                             </tr>
                             <tr>
-                                <td width="150">Konsumsi Alkohol</td>
+                                <td>Konsumsi Alkohol</td>
                                 <td>:&emsp;</td>
                                 <td>
                                 <select name="alkohol" id="alkohol" class="form-control form-control-user" aria-label="Default select example" required>
@@ -345,13 +345,13 @@ if(($nik)==1){
                                 </td>
                             </tr>
                             <tr>
-                                <td width="150">Tinggi Badan </td>
+                                <td>Tinggi Badan </td>
                                 <td>:&emsp;</td>
                                 <td><input type="text" class="form-control form-control-user" id="tinggi" name="tinggi"></td>
                                 <td>cm</td>
                             </tr>
                             <tr>
-                                <td width="150">Berat Badan </td>
+                                <td>Berat Badan </td>
                                 <td>:&emsp;</td>
                                 <td><input type="text" class="form-control form-control-user" style="width:20" id="berat" name="berat" ></td>
                                 <td>kg</td>

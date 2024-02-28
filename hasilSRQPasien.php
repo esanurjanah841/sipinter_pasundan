@@ -220,7 +220,7 @@ $tanggal= strftime("%A, %d %B %Y");
                                                     $read  = mysqli_fetch_array($result);
                                                     
                                                ?>
-                                               <input class="form-control form-control-user" id="gejala" name="gejala[]" style="border: none; outline: none; margin-bottom:-5px;font-size: 16px;" value="<?php echo $read['gejala']?>" readonly>
+                                               <input class="form-control form-control-user" id="gejala" name="gejala[]" style="border: none; outline: none; margin-bottom:-5px;font-size: 14px;" value="<?php echo $read['gejala']?>" readonly>
                                     <?php }?>
                                     <br>
                                     
@@ -229,7 +229,7 @@ $tanggal= strftime("%A, %d %B %Y");
 
                                 <div class="form-group " style="font-size:14px" >
                                     <label for="penyakit">Hasil skrining kesehatan jiwa Anda menunjukan</label>
-                                    <input type="text" class="form-control form-control-user" id="penyakit" name="penyakit" style="font-size: 16px;" value="<?php echo $hasil['penyakit']?>" readonly>
+                                    <input type="text" class="form-control form-control-user" id="penyakit" name="penyakit" style="font-size: 14px;" value="<?php echo $hasil['penyakit']?>" readonly>
                                 </div>
                                 <div class="form-group " style="font-size:14px">
                                     <p><?php echo $pesan ?></p>
