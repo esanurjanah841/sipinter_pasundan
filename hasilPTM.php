@@ -265,41 +265,39 @@ if (isset($_SESSION['role'])) {
                                 <td colspan="2"><input type="text" class="form-control form-control-user" id="tinggi" name="tinggi" value="<?php echo $tampil['tinggi']?>" style="font-size:12px" readonly></td>
                             </tr>
                             <tr>
-                                <td width="150">Berat Badan </td>
+                                <td width="150">Berat Badan (kg)</td>
                                 <td>:&emsp;</td>
-                                <td><input type="text" class="form-control form-control-user" id="berat" name="berat" value="<?php echo $tampil['berat']?>" style="font-size:12px" readonly></td>
-                                <td>kg</td>
+                                <td colspan="2"><input type="text" class="form-control form-control-user" id="berat" name="berat" value="<?php echo $tampil['berat']?>" style="font-size:12px" readonly></td>
+                                
                             </tr>
                             
                             <tr>
-                                <td width="150">Tekanan Darah Sistol</td>
+                                <td width="150">Tekanan Darah Sistol <?php echo "mmHg (<140/90)"?></td>
                                 <td>:&emsp;</td>
-                                <td>
+                                <td colspan="2">
                                 <input type="text" class="form-control form-control-user" id="sistol" name="sistol"  value="<?php echo $tampil['sistol']?>" style="font-size:12px" readonly>
                                 </td>
-                                <td><?php echo "&emsp;mmHg (<140/90)" ?></td>
                             </tr>
                             <tr>
-                                <td width="150">Tekanan Darah Diastol</td>
+                                <td width="150">Tekanan Darah Diastol <?php echo "(mmHg (<140/90))" ?></td>
                                 <td>:&emsp;</td>
-                                <td>
+                                <td colspan="2">
                                 <input type="text" class="form-control form-control-user" id="diastol" name="diastol"  value="<?php echo $tampil['diastol']?>" style="font-size:12px" readonly>
                                 </td>
-                                <td><?php echo "&emsp;mmHg (<140/90)" ?></td>
+                                <td></td>
                             </tr>
                             <tr>
-                                <td width="150">Lingkar Perut</td>
+                                <td width="150">Lingkar Perut (cm)</td>
                                 <td>:&emsp;</td>
-                                <td>
+                                <td colspan="2">
                                 <input type="text" class="form-control form-control-user" id="lingkar" name="lingkar"  value="<?php echo $tampil['lingkar']?>" style="font-size:12px" readonly>
                                 </td>
-                                <td>cm</td>
                             </tr>
                             <tr>
-                                <td width="150">Pemeriksaan Gula Darah Sewaktu</td>
+                                <td width="150">Pemeriksaan Gula Darah Sewaktu <?php echo "(mg/dl (<200))" ?></td>
                                 <td>:&emsp;</td>
-                                <td><input type="text" class="form-control form-control-user" id="periksa_gula" name="periksa_gula" value="<?php echo $tampil['periksa_gula']?>" style="font-size:12px" readonly></td>
-                                <td><?php echo "&emsp;mg/dl (<200)" ?></td>
+                                <td colspan="2"><input type="text" class="form-control form-control-user" id="periksa_gula" name="periksa_gula" value="<?php echo $tampil['periksa_gula']?>" style="font-size:12px" readonly></td>
+                               
                             </tr>
                             
                             <tr>
