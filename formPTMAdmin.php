@@ -30,8 +30,15 @@
                         <div class="card-body">
                         <div class="modal-body">
                         <form action="function.php?act=tambahPTMHasil" id="tambah" method="POST">
-                            <input type="hidden" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?php echo $tanggal;?>">
-                            <input type="hidden" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan"   value="<?php echo $tanggal;?>" >
+                            
+                            <div class="form-group ">
+                                    <label for="tanggal_pengisian">Tanggal Pemeriksaan</label>
+                                    <input type="text" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?php echo $tanggal;?>" >
+                                </div>
+                                <div class="form-group ">
+                                    <label for="tanggal_pemeriksaan">Tanggal Pemeriksaan</label>
+                                    <input type="text" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan"   value="<?php echo $tanggal;?>" >
+                                </div>
                                 <div class="form-group ">
                                     <label for="nik">NIK</label>
                                     <input type="text" class="form-control form-control-user" id="nik" name="nik" required>
