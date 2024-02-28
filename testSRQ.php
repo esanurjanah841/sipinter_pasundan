@@ -85,6 +85,7 @@ $tanggal= strftime("%A, %d %B %Y");
             <div class="row">
                 <div class="col align-self-center" style="font-family:poppins">
                     <h2 class="mb-4">Pertanyaan : </h2>
+                    <p style="text-align:justify">Bacalah petunjuk ini seluruhnya sebelum mulai mengisi. Pertanyaan berikut berhubungan dengan masalah yang mungkin mengganggu Anda selama 30 hari terakhir. Apabila Anda menganggap pertanyaan itu Anda alami dalam 30 hari terakhir, berilah tanda ceklis  pada kolom (berarti Ya). Sebaliknya, Apabila anda menganggap pertanyaan itu tidak Anda alami dalam 30 hari terakhir, jangan beri tanda ceklis pada kolom (berarti tidak). Jika Anda tidak yakin tentang jawabannya, berilah jawaban yang paling sesuai dengan Anda. Kami tegaskan bahwa jawaban Anda bersifat rahasia dan akan digunakan hanya untuk membantu pemecahan masalah Anda.</p>
                     <form action="hasilSRQPasien.php" method="post" enctype="multipart/form-data" role="form">
                         <div class="boxes">
                             <table class="table table-bordered" id="dataTable">

@@ -32,7 +32,7 @@
                         <form action="function.php?act=tambahPTMHasil" id="tambah" method="POST">
                             
                             <div class="form-group ">
-                                    <label for="tanggal_pengisian">Tanggal Pemeriksaan</label>
+                                    <label for="tanggal_pengisian">Tanggal Pengisian</label>
                                     <input type="text" id="tanggal_pengisian" name="tanggal_pengisian" class="form-control form-control-user"  value="<?php echo $tanggal;?>" >
                                 </div>
                                 <div class="form-group ">

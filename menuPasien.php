@@ -159,7 +159,9 @@ if (isset($_SESSION['role'])) {
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <p style="text-align: poppins; text-align:justify">Isilah profie pasien secara lengkap dan benar sebelum memulai tes diagnosa SRQ-29 (Self Reporting Questioner 29) maupun tes Skrining Faktor Resiko Penyakit Tidak Menular. Klik tombol 'Oke' untuk melakukan pengisian profile. Jika Anda sudah mengisi profile klik 'Batal' dan Anda sudah bisa melakukan tes diagnosa. Untuk melihat profile Anda, kunjungi User Pasien dan pilih 'Profile' untuk melihat dan mengubah data profile. </p>
+                        <p style="text-align: poppins; text-align:justify">Isilah profile terlebih dahulu secara benar dan lengkap sebelum memulai  Skrining Kesehatan. Klik tombol 'Oke' untuk melakukan pengisian profile.<br>
+                          Jika Anda sudah mengisi profile klik 'Batal'.<br>
+                          Kunjungi User Pasien dan pilih 'Profile' untuk melihat dan mengubah data profile Anda. </p>
                     </div>
                     
                     <div class="modal-footer">

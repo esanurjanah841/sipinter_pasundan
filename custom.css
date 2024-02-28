@@ -8,7 +8,9 @@
 
 .btn-primary:hover {
   background: none;
-  border: 0px;
+  border: 1px;
+  color: #008cc1;
+  padding: 15px 41px 15px 41px;
 }
 
 .btn-regis .btn {
