@@ -33,11 +33,11 @@
                             
                             <div class="form-group ">
                                     <label for="tanggal_pengisian">Tanggal Pemeriksaan</label>
-                                    <input type="text" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?php echo $tanggal;?>" >
+                                    <input type="text" id="tanggal_pengisian" name="tanggal_pengisian" class="form-control form-control-user"  value="<?php echo $tanggal;?>" >
                                 </div>
                                 <div class="form-group ">
                                     <label for="tanggal_pemeriksaan">Tanggal Pemeriksaan</label>
-                                    <input type="text" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan"   value="<?php echo $tanggal;?>" >
+                                    <input type="text" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan" class="form-control form-control-user"  value="<?php echo $tanggal;?>" >
                                 </div>
                                 <div class="form-group ">
                                     <label for="nik">NIK</label>
