@@ -108,7 +108,6 @@ if (isset($_SESSION['role'])) {
               <th>Tanggal Lahir</th>
               <th>No. Telepon</th>
               <th>Hasil Skrining</th>
-              <th>Gejala</th>
               <th>Kelola</th>
             </tr>
           </thead>
@@ -126,7 +125,6 @@ if (isset($_SESSION['role'])) {
               <td><?= $data['ttl']; ?></td>
               <td><?= $data['tlp']; ?></td>
               <td><?= $data['penyakit']; ?></td>
-              <td><?= $data['gejala']; ?></td>
               <td>
                 <a href="function.php?act=hapusRiwayat&id_riwayat=<?= $data['id_riwayat']; ?>" onclick="return confirm('Yakin ingin menghapus data?');" class="btn btn-danger btn-icon-split">
                   <span class="text">Hapus</span>
