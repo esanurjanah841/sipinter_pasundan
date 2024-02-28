@@ -204,7 +204,7 @@ $tanggal= strftime("%A, %d %B %Y");
                                 </div>
                                 <div class="form-group ">
                                     <label for="alamat">Alamat</label>
-                                    <input type="text" class="form-control form-control-user" id="alamat" name="alamat"  value="<?php echo "$alamat, "; echo "$kota, "; echo "$provinsi";?>" readonly>
+                                    <textarea class="form-control form-control-user" id="alamat" name="alamat"  value="<?php echo "$alamat, "; echo "$kota, "; echo "$provinsi";?>" readonly><?php echo "$alamat, "; echo "$kota, "; echo "$provinsi";?></textarea>
                                 </div>
                                 <div class="form-group ">
                                     <label for="tlp">No. Telepon</label>
@@ -227,11 +227,11 @@ $tanggal= strftime("%A, %d %B %Y");
                                     <?php echo $pesangejala ?>
                                 </div>
 
-                                <div class="form-group " style="font-size:12px" >
+                                <div class="form-group " style="font-size:14px" >
                                     <label for="penyakit">Hasil skrining kesehatan jiwa Anda menunjukan</label>
                                     <input type="text" class="form-control form-control-user" id="penyakit" name="penyakit" style="font-size: 16px;" value="<?php echo $hasil['penyakit']?>" readonly>
                                 </div>
-                                <div class="form-group " style="font-size:12px">
+                                <div class="form-group " style="font-size:14px">
                                     <p><?php echo $pesan ?></p>
                                 </div>
                                 <div class="form-group ">
