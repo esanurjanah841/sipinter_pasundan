@@ -303,7 +303,7 @@ if (isset($_SESSION['role'])) {
                             <tr>
                                 <td width="150"><h6>Rekomendasi Dokter</h6></td>
                                 <td>:&emsp;</td>
-                                <td colspan="2"><textarea class="form-control form-control-user" id="feedback" name="feedback" value="<?= $tampil['feedback']; ?>" style="font-size:12px" readonly><?= $tampil['feedback']; ?></textarea></td>
+                                <td colspan="2"><?= $tampil['feedback']; ?></td>
                             </tr>
                         </table>    
                                         <br>
