@@ -174,7 +174,7 @@ $tanggal= strftime("%A, %d %B %Y");
                     <h3 style="font-family: poppins; margin-top: 20px; text-align:center;">LAPORAN HASIL DIAGNOSA SRQ-29</h3>
                     <a style="font-family: poppins; margin-top: 20px"></a>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body" style="font-size:12px">
                 <div class="box-body table-responsive">
                     <form action="function.php?act=tambahLaporan" id="tambah" method="POST" class="tambah_pasien">
                                 <div class="form-group ">
@@ -233,6 +233,9 @@ $tanggal= strftime("%A, %d %B %Y");
                                 </div>
                                 <div class="form-group ">
                                     <p><?php echo $pesan ?></p>
+                                </div>
+                                <div class="form-group ">
+                                    <i style="font-size:10px">* Jika Anda sudah memasukan data dengan benar tekan simpan untuk menyimpan hasil skrining SRQ, jika data yang Anda masukan salah atau Anda ingin mengubah jawaban Anda harap tekan kembali.</i>
                                 </div>
                                     
                                 
