@@ -114,68 +114,68 @@ if(($nik)==1){
                             <tr>
                                 <td width="500">NIK</td>
                                 <td>:&emsp;</td>
-                                <td width="500"><input type="text" class="form-control form-control-user "  id="nik" name="nik"  value="<?php echo $tampil['nik']?>" readonly></td>
+                                <td width="500"><input type="text" class="form-control form-control-user "  id="nik" name="nik" style="font-size:12px" value="<?php echo $tampil['nik']?>" readonly></td>
                             </tr>
                             <tr>
                                 <td>Nama Pasien</td>
                                 <td>:&emsp;</td>
-                                <td><input type="text" class="form-control form-control-user" id="nama_lengkap" name="nama_lengkap"  value="<?php echo $tampil['nama_lengkap']?>" readonly></td>
+                                <td><input type="text" class="form-control form-control-user" id="nama_lengkap" name="nama_lengkap" style="font-size:12px" value="<?php echo $tampil['nama_lengkap']?>" readonly></td>
                             </tr>
                             <tr>
                                 <td class="col-lg-6">Tanggal Lahir</td>
                                 <td>:&emsp;</td>
-                                <td><input type="date" class="form-control form-control-user" id="ttl" name="ttl"  value="<?php echo $tampil['ttl']?>" readonly></td>
+                                <td><input type="date" class="form-control form-control-user" id="ttl" name="ttl" style="font-size:12px" value="<?php echo $tampil['ttl']?>" readonly></td>
                             </tr>
                             <tr>
                                 <td class="col-lg-6">Jenis Kelamin</td>
                                 <td>:&emsp;</td>
-                                <td><input type="text" class="form-control form-control-user" id="jenis_kelamin" name="jenis_kelamin"  value="<?php echo $tampil['jenis_kelamin']?>" readonly></td>
+                                <td><input type="text" class="form-control form-control-user" id="jenis_kelamin" name="jenis_kelamin" style="font-size:12px" value="<?php echo $tampil['jenis_kelamin']?>" readonly></td>
                             </tr>
                             <tr>
                                 <td class="col-lg-6">Provinsi</td>
                                 <td>:&emsp;</td>
-                                <td><input type="text" class="form-control form-control-user" id="provinsi" name="provinsi" value="<?php echo $tampil['provinsi']?>" readonly></td>
+                                <td><input type="text" class="form-control form-control-user" id="provinsi" name="provinsi" style="font-size:12px" value="<?php echo $tampil['provinsi']?>" readonly></td>
                             </tr>
                             <tr>
                                 <td class="col-lg-6">Kota/Kabupaten</td>
                                 <td>:&emsp;</td>
-                                <td><input type="text" class="form-control form-control-user" id="kota" name="kota" value="<?php echo $tampil['kota']?>" readonly></td>
+                                <td><input type="text" class="form-control form-control-user" id="kota" name="kota" style="font-size:12px" value="<?php echo $tampil['kota']?>" readonly></td>
                             </tr>
                             <tr>
                                 <td>Alamat Lengkap</td>
                                 <td>:&emsp;</td>
-                                <td><textarea type="text" class="form-control form-control-user" id="alamat" name="alamat"  value="<?php echo $tampil['alamat']?>"><?php echo $tampil['alamat']?></textarea></td>
+                                <td><textarea type="text" class="form-control form-control-user" id="alamat" name="alamat" style="font-size:12px"  value="<?php echo $tampil['alamat']?>"><?php echo $tampil['alamat']?></textarea></td>
                             </tr>
                             <tr>
                                 <td>No. Telepon</td>
                                 <td>:&emsp;</td>
-                                <td><input type="text" class="form-control form-control-user" id="tlp" name="tlp"  value="<?php echo $tampil['tlp']?>" readonly></td>
+                                <td><input type="text" class="form-control form-control-user" id="tlp" name="tlp" style="font-size:12px"  value="<?php echo $tampil['tlp']?>" readonly></td>
                             </tr>
                             <tr>
                                 <td>Pendidikan Terakhir</td>
                                 <td>:&emsp;</td>
-                                <td><input type="text" class="form-control form-control-user" id="pendidikan" name="pendidikan"  value="<?php echo $tampil['pendidikan']?>" readonly></td>
+                                <td><input type="text" class="form-control form-control-user" id="pendidikan" name="pendidikan" style="font-size:12px"  value="<?php echo $tampil['pendidikan']?>" readonly></td>
                             </tr>
                             <tr>
                                 <td>Pekerjaan</td>
                                 <td>:&emsp;</td>
-                                <td><input type="text" class="form-control form-control-user" id="pekerjaan" name="pekerjaan"  value="<?php echo $tampil['pekerjaan']?>" readonly></td>
+                                <td><input type="text" class="form-control form-control-user" id="pekerjaan" name="pekerjaan" style="font-size:12px"  value="<?php echo $tampil['pekerjaan']?>" readonly></td>
                             </tr>
                             <tr>
                                 <td>Status Perkawinan</td>
                                 <td>:&emsp;</td>
-                                <td><input type="text" class="form-control form-control-user" id="status" name="status"  value="<?php echo $tampil['status']?>" readonly></td>
+                                <td><input type="text" class="form-control form-control-user" id="status" name="status" style="font-size:12px"  value="<?php echo $tampil['status']?>" readonly></td>
                             </tr>
                             <tr>
                                 <td>Golongan Darah</td>
                                 <td>:&emsp;</td>
-                                <td><input type="text" class="form-control form-control-user" id="goldar" name="goldar"  value="<?php echo $tampil['goldar']?>" readonly></td>
+                                <td><input type="text" class="form-control form-control-user" id="goldar" name="goldar" style="font-size:12px"  value="<?php echo $tampil['goldar']?>" readonly></td>
                             </tr>
                             <tr>
                                 <td>Riwayat Pada Keluarga </td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <select name="riwayatkeluarga1" id="riwayatkeluarga1" class="form-control form-control-user" aria-label="Default select example">
+                                <select name="riwayatkeluarga1" id="riwayatkeluarga1" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px">
                                     <option selected></option>
                                     <option value="Penyakit Diabetes">Penyakit Diabetes</option>
                                     <option value="Penyakit Hipertensi">Penyakit Hipertensi</option>
@@ -191,7 +191,7 @@ if(($nik)==1){
                                 <td></td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <select name="riwayatkeluarga2" id="riwayatkeluarga2" class="form-control form-control-user" aria-label="Default select example">
+                                <select name="riwayatkeluarga2" id="riwayatkeluarga2" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px">
                                     <option selected></option>
                                     <option value="Penyakit Diabetes">Penyakit Diabetes</option>
                                     <option value="Penyakit Hipertensi">Penyakit Hipertensi</option>
@@ -207,7 +207,7 @@ if(($nik)==1){
                                 <td></td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <select name="riwayatkeluarga3" id="riwayatkeluarga3" class="form-control form-control-user" aria-label="Default select example">
+                                <select name="riwayatkeluarga3" id="riwayatkeluarga3" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px">
                                     <option selected></option>
                                     <option value="Penyakit Diabetes">Penyakit Diabetes</option>
                                     <option value="Penyakit Hipertensi">Penyakit Hipertensi</option>
@@ -223,7 +223,7 @@ if(($nik)==1){
                                 <td>Riwayat Pada Diri Sendiri</td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <select name="riwayatsendiri1" id="riwayatsendiri1" class="form-control form-control-user" aria-label="Default select example">
+                                <select name="riwayatsendiri1" id="riwayatsendiri1" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px">
                                     <option selected></option>
                                     <option value="Penyakit Diabetes">Penyakit Diabetes</option>
                                     <option value="Penyakit Hipertensi">Penyakit Hipertensi</option>
@@ -239,7 +239,7 @@ if(($nik)==1){
                                 <td></td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <select name="riwayatsendiri2" id="riwayatsendiri2" class="form-control form-control-user" aria-label="Default select example">
+                                <select name="riwayatsendiri2" id="riwayatsendiri2" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px">
                                     <option selected></option>
                                     <option value="Penyakit Diabetes">Penyakit Diabetes</option>
                                     <option value="Penyakit Hipertensi">Penyakit Hipertensi</option>
@@ -255,7 +255,7 @@ if(($nik)==1){
                                 <td></td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <select name="riwayatsendiri3" id="riwayatsendiri3" class="form-control form-control-user" aria-label="Default select example">
+                                <select name="riwayatsendiri3" id="riwayatsendiri3" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px">
                                     <option selected></option>
                                     <option value="Penyakit Diabetes">Penyakit Diabetes</option>
                                     <option value="Penyakit Hipertensi">Penyakit Hipertensi</option>
@@ -271,7 +271,7 @@ if(($nik)==1){
                                 <td>Merokok</td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <select name="merokok" id="merokok" class="form-control form-control-user" aria-label="Default select example" required>
+                                <select name="merokok" id="merokok" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px" required>
                                     <option selected>Pilih Jawaban</option>
                                     <option value="Ya">Ya</option>
                                     <option value="Tidak">Tidak</option>
@@ -282,7 +282,7 @@ if(($nik)==1){
                                 <td>Aktivitas Fisik < 150 Menit/Minggu  </td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <select name="fisik" id="fisik" class="form-control form-control-user" aria-label="Default select example" required>
+                                <select name="fisik" id="fisik" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px" required>
                                     <option selected>Pilih Jawaban</option>
                                     <option value="Ya">Ya</option>
                                     <option value="Tidak">Tidak</option>
@@ -293,7 +293,7 @@ if(($nik)==1){
                                 <td>Konsumsi Gula >4 Sendok Makan / Hari</td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <select name="gula" id="gula" class="form-control form-control-user" aria-label="Default select example" required>
+                                <select name="gula" id="gula" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px" required>
                                     <option selected>Pilih Jawaban</option>
                                     <option value="Ya">Ya</option>
                                     <option value="Tidak">Tidak</option>
@@ -304,7 +304,7 @@ if(($nik)==1){
                                 <td>Konsumsi Garam >1 Sendok Teh/ Hari</td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <select name="garam" id="garam" class="form-control form-control-user" aria-label="Default select example" required>
+                                <select name="garam" id="garam" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px" required>
                                     <option selected>Pilih Jawaban</option>
                                     <option value="Ya">Ya</option>
                                     <option value="Tidak">Tidak</option>
@@ -315,7 +315,7 @@ if(($nik)==1){
                                 <td>Konsumsi Lemak >5 Sendok Makan / Hari </td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <select name="lemak" id="lemak" class="form-control form-control-user" aria-label="Default select example" required>
+                                <select name="lemak" id="lemak" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px" required>
                                     <option selected>Pilih Jawaban</option>
                                     <option value="Ya">Ya</option>
                                     <option value="Tidak">Tidak</option>
@@ -326,7 +326,7 @@ if(($nik)==1){
                                 <td>Konsumsi sayur dan buah ≤5 porsi/Hari</td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <select name="sayur" id="sayur" class="form-control form-control-user" aria-label="Default select example" required>
+                                <select name="sayur" id="sayur" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px" required>
                                     <option selected>Pilih Jawaban</option>
                                     <option value="Ya">Ya</option>
                                     <option value="Tidak">Tidak</option>
@@ -337,7 +337,7 @@ if(($nik)==1){
                                 <td>Konsumsi Alkohol</td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <select name="alkohol" id="alkohol" class="form-control form-control-user" aria-label="Default select example" required>
+                                <select name="alkohol" id="alkohol" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px" required>
                                     <option selected>Pilih Jawaban</option>
                                     <option value="Ya">Ya</option>
                                     <option value="Tidak">Tidak</option>
@@ -347,13 +347,13 @@ if(($nik)==1){
                             <tr>
                                 <td>Tinggi Badan </td>
                                 <td>:&emsp;</td>
-                                <td><input type="text" class="form-control form-control-user" id="tinggi" name="tinggi"></td>
+                                <td><input type="text" class="form-control form-control-user" id="tinggi" name="tinggi" style="font-size:12px" required></td>
                                 <td>cm</td>
                             </tr>
                             <tr>
                                 <td>Berat Badan </td>
                                 <td>:&emsp;</td>
-                                <td><input type="text" class="form-control form-control-user" style="width:20" id="berat" name="berat" ></td>
+                                <td><input type="text" class="form-control form-control-user" style="width:20" id="berat" name="berat"style="font-size:12px" required ></td>
                                 <td>kg</td>
                             </tr>
                             
@@ -363,7 +363,7 @@ if(($nik)==1){
                         <div class="modal-footer">
                             <button type="button" style="margin:5px" class="btn btn-danger" onclick="history.back();">Batal</button>
                             <button type="submit" style="margin:5px" id="tambah" value="tambah" class="btn btn-success">Simpan</button>
-                            <button type="button" style="margin:5px;color:white;" class="btn btn-warning" onclick="window.print()"><i class="fas fa-print" > Print</i></button>
+                            
                         </div>
                     </form>
                     <?php } ?>
