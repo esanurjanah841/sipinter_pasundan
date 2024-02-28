@@ -227,15 +227,15 @@ $tanggal= strftime("%A, %d %B %Y");
                                     <?php echo $pesangejala ?>
                                 </div>
 
-                                <div class="form-group ">
+                                <div class="form-group " style="font-size:12px" >
                                     <label for="penyakit">Hasil skrining kesehatan jiwa Anda menunjukan</label>
                                     <input type="text" class="form-control form-control-user" id="penyakit" name="penyakit" style="font-size: 16px;" value="<?php echo $hasil['penyakit']?>" readonly>
                                 </div>
-                                <div class="form-group ">
+                                <div class="form-group " style="font-size:12px">
                                     <p><?php echo $pesan ?></p>
                                 </div>
                                 <div class="form-group ">
-                                    <i style="font-size:10px">* Jika Anda sudah memasukan data dengan benar tekan simpan untuk menyimpan hasil skrining SRQ, jika data yang Anda masukan salah atau Anda ingin mengubah jawaban Anda harap tekan kembali.</i>
+                                    <i style="font-size:11px">* Jika Anda sudah memasukan data dengan benar tekan simpan untuk menyimpan hasil skrining SRQ, jika data yang Anda masukan salah atau Anda ingin mengubah jawaban Anda harap tekan kembali.</i>
                                 </div>
                                     
                                 
