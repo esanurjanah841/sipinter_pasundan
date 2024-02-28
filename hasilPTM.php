@@ -260,10 +260,9 @@ if (isset($_SESSION['role'])) {
                                 </td>
                             </tr>
                             <tr>
-                                <td width="150">Tinggi Badan </td>
+                                <td width="150">Tinggi Badan (cm)</td>
                                 <td>:&emsp;</td>
-                                <td colspan="2"><input type="text" class="form-control form-control-user" id="tinggi" name="tinggi" value="<?php echo $tampil['tinggi']?>" style="font-size:12px" readonly>cm</td>
-                                
+                                <td colspan="2"><input type="text" class="form-control form-control-user" id="tinggi" name="tinggi" value="<?php echo $tampil['tinggi']?>" style="font-size:12px" readonly></td>
                             </tr>
                             <tr>
                                 <td width="150">Berat Badan </td>
