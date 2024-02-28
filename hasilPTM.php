@@ -96,17 +96,17 @@ if (isset($_SESSION['role'])) {
                 <div class="box-body table-responsive">
                   
                     <form action="" id="tambah" method="POST" class="tambah_pasien">
-                        <table cellpadding="7" cellspacing="7">
+                        <table cellpadding="7" cellspacing="7" style="font-size:12px">
                         
                             <tr>
                                 <td width="100">Tanggal Pengisian</td>
                                 <td>:&emsp;</td>
-                                <td width="600"><input type="text" class="form-control form-control-user " id="tanggal_pengisian" name="tanggal_pengisian"   value="<?php echo $tampil['tanggal_pengisian']?>" readonly></td>
+                                <td width="600"><input type="text" class="form-control form-control-user " id="tanggal_pengisian" name="tanggal_pengisian"   value="<?php echo $tampil['tanggal_pengisian']?>" style="font-size:12px" readonly></td>
                             </tr>
                             <tr>
-                                <td width="100">Tanggal Pemeriksaan</td>
+                                <td>Tanggal Pemeriksaan</td>
                                 <td>:&emsp;</td>
-                                <td width="600"><input type="text" class="form-control form-control-user " id="tanggal_pemeriksaan" name="tanggal_pemeriksaan"   value="<?php echo $tampil['tanggal_pemeriksaan']?>" readonly></td>
+                                <td><input type="text" class="form-control form-control-user " id="tanggal_pemeriksaan" name="tanggal_pemeriksaan"   value="<?php echo $tampil['tanggal_pemeriksaan']?>" style="font-size:12px" readonly></td>
                             </tr>
                             <tr>
                                 <td width="150">NIK</td>
@@ -116,159 +116,159 @@ if (isset($_SESSION['role'])) {
                             <tr>
                                 <td width="150">Nama Pasien</td>
                                 <td>:&emsp;</td>
-                                <td><input type="text" class="form-control form-control-user" id="nama_lengkap" name="nama_lengkap"  value="<?php echo $tampil['nama_lengkap']?>" readonly></td>
+                                <td><input type="text" class="form-control form-control-user" id="nama_lengkap" name="nama_lengkap"  value="<?php echo $tampil['nama_lengkap']?>" style="font-size:12px" readonly></td>
                             </tr>
                             <tr>
                                 <td width="150" class="col-lg-6">Tanggal Lahir</td>
                                 <td>:&emsp;</td>
-                                <td><input type="text" class="form-control form-control-user" id="ttl" name="ttl"  value="<?php echo $tampil['ttl']?>" readonly></td>
+                                <td><input type="text" class="form-control form-control-user" id="ttl" name="ttl"  value="<?php echo $tampil['ttl']?>" style="font-size:12px" readonly></td>
                             </tr>
                             <tr>
                                 <td width="150" class="col-lg-6">Jenis Kelamin</td>
                                 <td>:&emsp;</td>
-                                <td><input type="text" class="form-control form-control-user" id="jenis_kelamin" name="jenis_kelamin"  value="<?php echo $tampil['jenis_kelamin']?>" readonly></td>
+                                <td><input type="text" class="form-control form-control-user" id="jenis_kelamin" name="jenis_kelamin"  value="<?php echo $tampil['jenis_kelamin']?>" style="font-size:12px" readonly></td>
                             </tr>
                             <tr>
                                 <td width="150" class="col-lg-6">Provinsi</td>
                                 <td>:&emsp;</td>
-                                <td><input type="text" class="form-control form-control-user" id="provinsi" name="provinsi" value="<?php echo $tampil['provinsi']?>" readonly></td>
+                                <td><input type="text" class="form-control form-control-user" id="provinsi" name="provinsi" value="<?php echo $tampil['provinsi']?>" style="font-size:12px" readonly></td>
                             </tr>
                             <tr>
                                 <td width="150" class="col-lg-6">Kota/Kabupaten</td>
                                 <td>:&emsp;</td>
-                                <td><input type="text" class="form-control form-control-user" id="kota" name="kota" value="<?php echo $tampil['kota']?>" readonly></td>
+                                <td><input type="text" class="form-control form-control-user" id="kota" name="kota" value="<?php echo $tampil['kota']?>" style="font-size:12px" readonly></td>
                             </tr>
                             <tr>
                                 <td width="150">Alamat</td>
                                 <td>:&emsp;</td>
-                                <td><textarea type="text" class="form-control form-control-user" id="alamat" name="alamat"  value="<?php echo $tampil['alamat']?>" readonly><?php echo $tampil['alamat']?></textarea></td>
+                                <td><textarea type="text" class="form-control form-control-user" id="alamat" name="alamat"  value="<?php echo $tampil['alamat']?>" style="font-size:12px" readonly><?php echo $tampil['alamat']?></textarea></td>
                             </tr>
                             <tr>
                                 <td width="150">No. Telepon</td>
                                 <td>:&emsp;</td>
-                                <td><input type="text" class="form-control form-control-user" id="tlp" name="tlp"  value="<?php echo $tampil['tlp']?>" readonly></td>
+                                <td><input type="text" class="form-control form-control-user" id="tlp" name="tlp"  value="<?php echo $tampil['tlp']?>" style="font-size:12px" readonly></td>
                             </tr>
                             <tr>
                                 <td width="150">Pendidikan Terakhir</td>
                                 <td>:&emsp;</td>
-                                <td><input type="text" class="form-control form-control-user" id="pendidikan" name="pendidikan"  value="<?php echo $tampil['pendidikan']?>" readonly></td>
+                                <td><input type="text" class="form-control form-control-user" id="pendidikan" name="pendidikan"  value="<?php echo $tampil['pendidikan']?>" style="font-size:12px" readonly></td>
                             </tr>
                             <tr>
                                 <td width="150">Pekerjaan</td>
                                 <td>:&emsp;</td>
-                                <td><input type="text" class="form-control form-control-user" id="pekerjaan" name="pekerjaan"  value="<?php echo $tampil['pekerjaan']?>" readonly></td>
+                                <td><input type="text" class="form-control form-control-user" id="pekerjaan" name="pekerjaan"  value="<?php echo $tampil['pekerjaan']?>" style="font-size:12px" readonly></td>
                             </tr>
                             <tr>
                                 <td width="150">Status Perkawinan</td>
                                 <td>:&emsp;</td>
-                                <td><input type="text" class="form-control form-control-user" id="status" name="status"  value="<?php echo $tampil['status']?>" readonly></td>
+                                <td><input type="text" class="form-control form-control-user" id="status" name="status"  value="<?php echo $tampil['status']?>" style="font-size:12px" readonly></td>
                             </tr>
                             <tr>
                                 <td width="150">Golongan Darah</td>
                                 <td>:&emsp;</td>
-                                <td><input type="text" class="form-control form-control-user" id="goldar" name="goldar"  value="<?php echo $tampil['goldar']?>" readonly></td>
+                                <td><input type="text" class="form-control form-control-user" id="goldar" name="goldar"  value="<?php echo $tampil['goldar']?>" style="font-size:12px" readonly></td>
                             </tr>
                             <tr>
                                 <td width="150">Riwayat Pada Keluarga</td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <input type="text" class="form-control form-control-user" id="riwayatkeluarga1" name="riwayatkeluarga1"  value="<?php echo $tampil['riwayatkeluarga1']?>" readonly>
+                                <input type="text" class="form-control form-control-user" id="riwayatkeluarga1" name="riwayatkeluarga1"  value="<?php echo $tampil['riwayatkeluarga1']?>" style="font-size:12px" readonly>
                                 </td>
                             </tr>
                             <tr>
                                 <td width="150"></td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <input type="text" class="form-control form-control-user" id="riwayatkeluarga2" name="riwayatkeluarga2"  value="<?php echo $tampil['riwayatkeluarga2']?>" readonly>
+                                <input type="text" class="form-control form-control-user" id="riwayatkeluarga2" name="riwayatkeluarga2"  value="<?php echo $tampil['riwayatkeluarga2']?>" style="font-size:12px" readonly>
                                 </td>
                             </tr>
                             <tr>
                                 <td width="150"></td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <input type="text" class="form-control form-control-user" id="riwayatkeluarga3" name="riwayatkeluarga3"  value="<?php echo $tampil['riwayatkeluarga3']?>" readonly>
+                                <input type="text" class="form-control form-control-user" id="riwayatkeluarga3" name="riwayatkeluarga3"  value="<?php echo $tampil['riwayatkeluarga3']?>" style="font-size:12px" readonly>
                                 </td>
                             </tr>
                             <tr>
                                 <td width="150">Riwayat Pada Sendiri</td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <input type="text" class="form-control form-control-user" id="riwayatsendiri1" name="riwayatsendiri1"  value="<?php echo $tampil['riwayatsendiri1']?>" readonly>
+                                <input type="text" class="form-control form-control-user" id="riwayatsendiri1" name="riwayatsendiri1"  value="<?php echo $tampil['riwayatsendiri1']?>" style="font-size:12px" readonly>
                                 </td>
                             </tr>
                             <tr>
                                 <td width="150"></td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <input type="text" class="form-control form-control-user" id="riwayatsendiri2" name="riwayatsendiri2"  value="<?php echo $tampil['riwayatsendiri2']?>" readonly>
+                                <input type="text" class="form-control form-control-user" id="riwayatsendiri2" name="riwayatsendiri2"  value="<?php echo $tampil['riwayatsendiri2']?>" style="font-size:12px" readonly>
                                 </td>
                             </tr>
                             <tr>
                                 <td width="150"></td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <input type="text" class="form-control form-control-user" id="riwayatsendiri3" name="riwayatsendiri3"  value="<?php echo $tampil['riwayatsendiri3']?>" readonly>
+                                <input type="text" class="form-control form-control-user" id="riwayatsendiri3" name="riwayatsendiri3"  value="<?php echo $tampil['riwayatsendiri3']?>" style="font-size:12px" readonly>
                                 </td>
                             </tr>
                             <tr>
                                 <td width="150">Merokok</td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <input type="text" class="form-control form-control-user" id="merokok" name="merokok"  value="<?= $tampil['merokok']?>" readonly>
+                                <input type="text" class="form-control form-control-user" id="merokok" name="merokok"  value="<?= $tampil['merokok']?>" style="font-size:12px" readonly>
                                 </td>
                             </tr>
                             <tr>
                                 <td width="150">Aktivitas Fisik < 150 Menit/Minggu  </td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <input type="text" class="form-control form-control-user" id="fisik" name="fisik"  value="<?= $tampil['fisik']?>" readonly>
+                                <input type="text" class="form-control form-control-user" id="fisik" name="fisik"  value="<?= $tampil['fisik']?>" style="font-size:12px" readonly>
                                 </td>
                             </tr>
                             <tr>
                                 <td width="150">Konsumsi Gula >4 Sendok Makan / Hari</td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <input type="text" class="form-control form-control-user" id="gula" name="gula"  value="<?php echo $tampil['gula']?>" readonly>
+                                <input type="text" class="form-control form-control-user" id="gula" name="gula"  value="<?php echo $tampil['gula']?>" style="font-size:12px" readonly>
                                 </td>
                             </tr>
                             <tr>
                                 <td width="150">Konsumsi Garam >1 Sendok Teh/ Hari</td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <input type="text" class="form-control form-control-user" id="garam" name="garam"  value="<?php echo $tampil['garam']?>" readonly>
+                                <input type="text" class="form-control form-control-user" id="garam" name="garam"  value="<?php echo $tampil['garam']?>" style="font-size:12px" readonly>
                                 </td>
                             </tr>
                             <tr>
                                 <td width="150">Konsumsi Lemak >5 Sendok Makan / Hari </td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <input type="text" class="form-control form-control-user" id="lemak" name="lemak"  value="<?php echo $tampil['lemak']?>" readonly>
+                                <input type="text" class="form-control form-control-user" id="lemak" name="lemak"  value="<?php echo $tampil['lemak']?>" style="font-size:12px" readonly>
                                 </td>
                             </tr>
                             <tr>
                                 <td width="150">Konsumsi sayur dan buah ≤5 porsi/Hari</td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <input type="text" class="form-control form-control-user" id="sayur" name="sayur"  value="<?php echo $tampil['sayur']?>" readonly>
+                                <input type="text" class="form-control form-control-user" id="sayur" name="sayur"  value="<?php echo $tampil['sayur']?>" style="font-size:12px" readonly>
                                 </td>
                             </tr>
                             <tr>
                                 <td width="150">Konsumsi Alkohol</td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <input type="text" class="form-control form-control-user" id="alkohol" name="alkohol"  value="<?php echo $tampil['alkohol']?>" readonly>
+                                <input type="text" class="form-control form-control-user" id="alkohol" name="alkohol"  value="<?php echo $tampil['alkohol']?>" style="font-size:12px" readonly>
                                 </td>
                             </tr>
                             <tr>
                                 <td width="150">Tinggi Badan </td>
                                 <td>:&emsp;</td>
-                                <td><input type="text" class="form-control form-control-user" id="tinggi" name="tinggi" value="<?php echo $tampil['tinggi']?>" readonly></td>
-                                <td>cm</td>
+                                <td><input type="text" class="form-control form-control-user" id="tinggi" name="tinggi" value="<?php echo $tampil['tinggi']?>" style="font-size:12px" readonly></td>
+                                <td width="10">cm</td>
                             </tr>
                             <tr>
                                 <td width="150">Berat Badan </td>
                                 <td>:&emsp;</td>
-                                <td><input type="text" class="form-control form-control-user" id="berat" name="berat" value="<?php echo $tampil['berat']?>" readonly></td>
+                                <td><input type="text" class="form-control form-control-user" id="berat" name="berat" value="<?php echo $tampil['berat']?>" style="font-size:12px" readonly></td>
                                 <td>kg</td>
                             </tr>
                             
@@ -276,7 +276,7 @@ if (isset($_SESSION['role'])) {
                                 <td width="150">Tekanan Darah Sistol</td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <input type="text" class="form-control form-control-user" id="sistol" name="sistol"  value="<?php echo $tampil['sistol']?>" readonly>
+                                <input type="text" class="form-control form-control-user" id="sistol" name="sistol"  value="<?php echo $tampil['sistol']?>" style="font-size:12px" readonly>
                                 </td>
                                 <td><?php echo "&emsp;mmHg (<140/90)" ?></td>
                             </tr>
@@ -284,7 +284,7 @@ if (isset($_SESSION['role'])) {
                                 <td width="150">Tekanan Darah Diastol</td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <input type="text" class="form-control form-control-user" id="diastol" name="diastol"  value="<?php echo $tampil['diastol']?>" readonly>
+                                <input type="text" class="form-control form-control-user" id="diastol" name="diastol"  value="<?php echo $tampil['diastol']?>" style="font-size:12px" readonly>
                                 </td>
                                 <td><?php echo "&emsp;mmHg (<140/90)" ?></td>
                             </tr>
@@ -292,21 +292,21 @@ if (isset($_SESSION['role'])) {
                                 <td width="150">Lingkar Perut</td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <input type="text" class="form-control form-control-user" id="lingkar" name="lingkar"  value="<?php echo $tampil['lingkar']?>" readonly>
+                                <input type="text" class="form-control form-control-user" id="lingkar" name="lingkar"  value="<?php echo $tampil['lingkar']?>" style="font-size:12px" readonly>
                                 </td>
                                 <td>cm</td>
                             </tr>
                             <tr>
                                 <td width="150">Pemeriksaan Gula Darah Sewaktu</td>
                                 <td>:&emsp;</td>
-                                <td><input type="text" class="form-control form-control-user" id="periksa_gula" name="periksa_gula" value="<?php echo $tampil['periksa_gula']?>" readonly></td>
+                                <td><input type="text" class="form-control form-control-user" id="periksa_gula" name="periksa_gula" value="<?php echo $tampil['periksa_gula']?>" style="font-size:12px" readonly></td>
                                 <td><?php echo "&emsp;mg/dl (<200)" ?></td>
                             </tr>
                             
                             <tr>
                                 <td width="150"><h6>Rekomendasi Dokter</h6></td>
                                 <td>:&emsp;</td>
-                                <td><textarea class="form-control form-control-user" id="feedback" name="feedback" value="<?= $tampil['feedback']; ?>" readonly><?= $tampil['feedback']; ?></textarea></td>
+                                <td><textarea class="form-control form-control-user" id="feedback" name="feedback" value="<?= $tampil['feedback']; ?>" style="font-size:12px" readonly><?= $tampil['feedback']; ?></textarea></td>
                             </tr>
                         </table>    
                                         <br>
