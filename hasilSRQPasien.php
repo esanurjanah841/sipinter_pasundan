@@ -89,18 +89,8 @@ $tanggal= strftime("%A, %d %B %Y");
                     <a style="font-family: poppins; margin-top: 20px";>Berdasarkan gejala yang Anda pilih, berikut adalah hasil Skrining Anda:</a>
                 </div>
                 <div class="panel-body">
-                <div class="box-body table-responsive">
-                    <table id="example1" class="table table-bordered table-striped">
-                        <thead>
-                            <tr> 
-                                <th>Gejala</th>
-                                <th>Hasil Skrining</th>
-                                <th>Detail</th>
-                            </tr>
-                        </thead>
-                        <tbody>
                                     <?php	
-                                    if($_SERVER['REQUEST_METHOD']=='POST'){	
+                                    
                                     if(empty($_POST['gejala'])){
                                         $pesangejala = "Tidak ada gejala yang dipilih.";
                                         $hasil['penyakit'] = "Dalam Batas Normal";
@@ -111,12 +101,8 @@ $tanggal= strftime("%A, %d %B %Y");
                                         4. Kembangkan hobi bermanfaat <br>
                                         5. Meningkatkan ibadah, mendekatkan diri pada Tuhan <br>
                                         6. Selalu berpikir positif";
-                                        echo "
-                                        <tr>  
-                                            <td>0</td>
-                                            <td>Dalam Batas Normal</td>
-                                            <td><a href=\"#detail\"  ><i class='fas fa-pen'>Detail</i></a></td>
-                                        </tr>";
+                                        
+                                        include 'hasilSRQPasiennon.php';
                                             
                                     }elseif(isset($_POST['submit'])){
                                         $gejala = $_POST['gejala'];
@@ -132,12 +118,6 @@ $tanggal= strftime("%A, %d %B %Y");
                                                 4. Kembangkan hobi bermanfaat <br>
                                                 5. Meningkatkan ibadah, mendekatkan diri pada Tuhan <br>
                                                 6. Selalu berpikir positif";
-                                                echo "
-                                                <tr>  
-                                                    <td>".$x."</td>
-                                                    <td>Dalam Batas Normal</td>
-                                                    <td><a href=\"#detail\"  ><i class='fas fa-pen'>Detail</i></a></td>
-                                                </tr>";
 
                                         }else if($jumlah_dipilih>=6){
                                             for($x=0;$x<$jumlah_dipilih;$x++){
@@ -147,19 +127,11 @@ $tanggal= strftime("%A, %d %B %Y");
                                                 
                                                 }
                                                 $pesan = "Segera konsultasikan kesehatan Anda dengan tenaga kesehatan di Fasilitas Pelayanan Kesehatan terdekat.";
-                                                echo "
-                                                <tr>  
-                                                    <td>".$x."</td>
-                                                    <td>".$hasil['penyakit']."</td>
-                                                        <td><a href=\"#detail\"  ><i class='fas fa-pen'>Detail</i></a></td>
-                                                </tr>";
+                                                
                                         }
-                                    }
+                                    
                                                
-                                                    ?>
-                        </tbody>                 <br>
-                    </table>              
-                </div>
+                                    ?>
                 </div>            
             </div>
         </div>
@@ -167,7 +139,7 @@ $tanggal= strftime("%A, %d %B %Y");
 </section>
 
 <section id="detail">
-<div class="">
+<div style="margin-top:-70px">
         <div class="solid">
             <div class="form-row">
                 <div class="panel-heading">
@@ -240,7 +212,7 @@ $tanggal= strftime("%A, %d %B %Y");
                                     
                                 
                         <div class="modal-footer">
-                            <button type="button" style="margin:5px" onclick="history.back();" class="btn btn-danger">Batal</button>
+                            <button type="button" style="margin:5px" onclick="history.back();" class="btn btn-danger">Kembali</button>
                             <button type="submit" style="margin:5px" name="submit" id="tambah" value="tambah" class="btn btn-success">Simpan</button>
                             <button type="button" style="margin:5px" class="btn btn-warning" onclick="window.print()" style="color:white;"><i class="fas fa-print" > Print</i></button>
                         </div>

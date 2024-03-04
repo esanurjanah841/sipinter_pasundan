@@ -46,7 +46,7 @@
                                 <div class="form-group">
                                     <label for="gejala"><i>Daftar Gejala yang dipilih:</i></label>
                                     
-                                               <input class="form-control form-control-user" id="gejala" name="gejala[]" style="border: none; outline: none; margin-bottom:-5px;font-size: 16px;" value="<?php echo $read['gejala']?>" readonly>
+                                               <input class="form-control form-control-user" id="gejala" name="gejala[]" style="border: none; outline: none; margin-bottom:-5px;font-size: 16px;" value="Tidak ada gejala yang dipilih" readonly>
                                     
                                 </div>
                                 <br>
