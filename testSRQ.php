@@ -114,7 +114,7 @@ $tanggal= strftime("%A, %d %B %Y");
                             ?>   
                             </table>
                             <br>
-                            <button type="submit" name ="submit" onclick="return checkDiagnosa()" class="btn btn-primary">CEK HASIL SKRINING</button><br><br>
+                            <button type="submit" name ="submit" onclick="return checkDiagnosa()" class="btn btn-secondary">CEK HASIL SKRINING</button><br><br>
                         
                         </div>
                     </form>

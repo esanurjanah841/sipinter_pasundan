@@ -49,7 +49,7 @@ $tanggal= strftime("%A, %d %B %Y");
 <body>
 
 <!-- ======= Header ======= -->
-<header id="header" class="fixed-top d-flex align-items-center">
+<header id="header" class="fixed-top align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
@@ -87,57 +87,51 @@ $tanggal= strftime("%A, %d %B %Y");
                 <div class="panel-heading">
                     <h3 style="font-family: poppins; margin-top: 20px";>HASIL DIAGNOSA</h3>
                     <a style="font-family: poppins; margin-top: 20px";>Berdasarkan gejala yang Anda pilih, berikut adalah hasil Skrining Anda:</a>
-                </div>
-                <div class="panel-body">
-                                    <?php	
-                                    
-                                    if(empty($_POST['gejala'])){
-                                        $hasil['penyakit'] = "Dalam Batas Normal";
-                                        $pesan = "
-                                        Tetap jaga kesehatan jiwa dengan:
-                                        1. Bila Anda merasa ada keluhan, bicarakan keluhan dengan seseorang yang dapat dipercaya
-                                        2. Melakukan kegiatan yang sesuai dengan minat dan kemampuan
-                                        3. Tenangkan pikiran dengan relaksasi
-                                        4. Kembangkan hobi bermanfaat
-                                        5. Meningkatkan ibadah, mendekatkan diri pada Tuhan
-                                        6. Selalu berpikir positif";
-                                        
-                                        include 'hasilSRQPasiennon.php';
-                                            
-                                    }elseif(isset($_POST['submit'])){
-                                        $gejala = $_POST['gejala'];
-                                        $jumlah_dipilih = count($gejala);
-
-                                        if($jumlah_dipilih<6){
-                                            for($x=0;$x<$jumlah_dipilih;$x++)
-                                                $hasil['penyakit'] = "Dalam Batas Normal";
-                                                $pesan = "
-                                                Tetap jaga kesehatan jiwa dengan:
-                                                1. Bila Anda merasa ada keluhan, bicarakan keluhan dengan seseorang yang dapat dipercaya
-                                                2. Melakukan kegiatan yang sesuai dengan minat dan kemampuan
-                                                3. Tenangkan pikiran dengan relaksasi
-                                                4. Kembangkan hobi bermanfaat
-                                                5. Meningkatkan ibadah, mendekatkan diri pada Tuhan 
-                                                6. Selalu berpikir positif";
-
-                                        }else if($jumlah_dipilih>=6){
-                                            for($x=0;$x<$jumlah_dipilih;$x++){
-                                                $tampil ="SELECT DISTINCT p.id_penyakit, p.kode_penyakit, p.penyakit, g.gejala from relasi b, penyakit p, gejala g where b.id_gejala='$gejala[$x]' and p.id_penyakit=b.id_penyakit group by id_penyakit";
-                                                $result = mysqli_query($koneksi, $tampil);
-                                                $hasil  = mysqli_fetch_array($result);  
-                                                
-                                                }
-                                                $pesan = "Segera konsultasikan kesehatan Anda dengan tenaga kesehatan di Fasilitas Pelayanan Kesehatan terdekat.";
-                                                
-                                        }
-                                    
-                                               
-                                    ?>
-                </div>            
+                </div>          
             </div>
         </div>
     </div>
 </section>
+
+<?php	
+if(empty($_POST['gejala'])){
+    $hasil['penyakit'] = "Dalam Batas Normal";
+    $pesan = "
+    Tetap jaga kesehatan jiwa dengan:
+    1. Bila Anda merasa ada keluhan, bicarakan keluhan dengan seseorang yang dapat dipercaya
+    2. Melakukan kegiatan yang sesuai dengan minat dan kemampuan
+    3. Tenangkan pikiran dengan relaksasi
+    4. Kembangkan hobi bermanfaat
+    5. Meningkatkan ibadah, mendekatkan diri pada Tuhan
+    6. Selalu berpikir positif";
+                                        
+    include 'hasilSRQPasiennon.php';
+                                            
+}elseif(isset($_POST['submit'])){
+    $gejala = $_POST['gejala'];
+    $jumlah_dipilih = count($gejala);
+
+    if($jumlah_dipilih<6){
+        for($x=0;$x<$jumlah_dipilih;$x++)
+        $hasil['penyakit'] = "Dalam Batas Normal";
+        $pesan = "
+        Tetap jaga kesehatan jiwa dengan:
+        1. Bila Anda merasa ada keluhan, bicarakan keluhan dengan seseorang yang dapat dipercaya
+        2. Melakukan kegiatan yang sesuai dengan minat dan kemampuan
+        3. Tenangkan pikiran dengan relaksasi
+        4. Kembangkan hobi bermanfaat
+        5. Meningkatkan ibadah, mendekatkan diri pada Tuhan 
+        6. Selalu berpikir positif";
+
+    }else if($jumlah_dipilih>=6){
+        for($x=0;$x<$jumlah_dipilih;$x++){
+        $tampil ="SELECT DISTINCT p.id_penyakit, p.kode_penyakit, p.penyakit, g.gejala from relasi b, penyakit p, gejala g where b.id_gejala='$gejala[$x]' and p.id_penyakit=b.id_penyakit group by id_penyakit";
+        $result = mysqli_query($koneksi, $tampil);
+        $hasil  = mysqli_fetch_array($result);  
+        }
+    $pesan = "Segera konsultasikan kesehatan Anda dengan tenaga kesehatan di Fasilitas Pelayanan Kesehatan terdekat.";
+    }
+?>
 
 <section id="detail">
 <div style="margin-top:-70px">

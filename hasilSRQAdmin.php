@@ -32,44 +32,50 @@ include 'sidebar.php';
                 <h3 style="font-family: poppins; margin-top: 20px";>HASIL DIAGNOSA</h3>
                 <a style="font-family: poppins; margin-top: 20px";>Berdasarkan gejala yang Anda pilih, berikut adalah hasil Skrining Anda:</a>
         </div>
-            
-                    <table class="table table-bordered" id="dataTable">
-                        <thead>
-                            <tr> 
-                                <th>Gejala</th>
-                                <th>Kode Skrining</th>
-                                <th>Hasil Skrining</th>
-                                <th>Detail</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                                    <?php			
-                                    if(isset($_POST['submit'])){
-                                        $gejala = $_POST['gejala'];
-                                        $jumlah_dipilih = count($gejala);
-                                        for($x=0;$x<$jumlah_dipilih;$x++){
-                                                $tampil ="SELECT DISTINCT p.id_penyakit, p.kode_penyakit, p.penyakit, g.gejala from relasi b, penyakit p, gejala g where b.id_gejala='$gejala[$x]' and p.id_penyakit=b.id_penyakit group by id_penyakit";
-                                                $result = mysqli_query($koneksi, $tampil);
-                                                $hasil  = mysqli_fetch_array($result);  
-                                                
-                                                }
-                                                
-                                                echo "
-                                                    <tr>  
-                                                            <td>".$x."</td>
-                                                            <td>".$hasil['kode_penyakit']."</td> 
-                                                            <td>".$hasil['penyakit']."</td>
-                                                            <td><a href=\"#detail\"  ><i class='fas fa-pen'>Detail</i></a></td>
-                                                    </tr>";
-                                                    ?>
-                        </tbody>                 <br>
-                    </table>              
-                </div>
-                </div>            
-            </div>
-        </div>
-    </div>
+    </div>            
+</div>
 </section>
+
+<?php	
+if(empty($_POST['gejala'])){
+$pesangejala = "Tidak ada gejala yang dipilih.";
+$hasil['penyakit'] = "Dalam Batas Normal";
+$pesan = "
+Tetap jaga kesehatan jiwa dengan:
+1. Bila Anda merasa ada keluhan, bicarakan keluhan dengan seseorang yang dapat dipercaya <br>
+2. Melakukan kegiatan yang sesuai dengan minat dan kemampuan
+3. Tenangkan pikiran dengan relaksasi
+4. Kembangkan hobi bermanfaat
+5. Meningkatkan ibadah, mendekatkan diri pada Tuhan
+6. Selalu berpikir positif";
+                                        
+include 'hasilSRQAdminnon.php';
+                                            
+}elseif(isset($_POST['submit'])){
+$gejala = $_POST['gejala'];
+$jumlah_dipilih = count($gejala);
+    if($jumlah_dipilih<6){
+        for($x=0;$x<$jumlah_dipilih;$x++)
+            $hasil['penyakit'] = "Dalam Batas Normal";
+            $pesan = "
+            Tetap jaga kesehatan jiwa dengan:
+            1. Bila Anda merasa ada keluhan, bicarakan keluhan dengan seseorang yang dapat dipercaya
+            2. Melakukan kegiatan yang sesuai dengan minat dan kemampuan
+            3. Tenangkan pikiran dengan relaksasi
+            4. Kembangkan hobi bermanfaat
+            5. Meningkatkan ibadah, mendekatkan diri pada Tuhan
+            6. Selalu berpikir positif";
+                                                
+    }else if($jumlah_dipilih>=6){
+        for($x=0;$x<$jumlah_dipilih;$x++){
+            $tampil ="SELECT DISTINCT p.id_penyakit, p.kode_penyakit, p.penyakit, g.gejala from relasi b, penyakit p, gejala g where b.id_gejala='$gejala[$x]' and p.id_penyakit=b.id_penyakit group by id_penyakit";
+            $result = mysqli_query($koneksi, $tampil);
+            $hasil  = mysqli_fetch_array($result);  
+        }
+        $pesan = "Segera konsultasikan kesehatan Anda dengan tenaga kesehatan di Fasilitas Pelayanan Kesehatan terdekat.";
+                                                
+    }
+?>
 
 <section id="detail">
 <div class="">
@@ -90,10 +96,6 @@ include 'sidebar.php';
                                 <div class="form-group">
                                     <label for="nik">NIK</label>
                                     <input type="text" class="form-control form-control-user" id="nik" name="nik"  required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="bpjs">No. BPJS</label>
-                                    <input type="text" class="form-control form-control-user" id="bpjs" name="bpjs" >
                                 </div>
                                 <div class="form-group">
                                     <label for="nama_lengkap">Nama Lengkap</label>
@@ -126,10 +128,13 @@ include 'sidebar.php';
                                 <br>
                                 <i class="text">Berdasarkan dari gejala-gejala yang telah dipilih pasien di atas, hasil menunjukan:</i>
                                 <br>
-                                <input type="hidden" id="kode_penyakit" name="kode_penyakit" value="<?php echo $hasil['kode_penyakit']?>">
                                 <div class="form-group ">
                                     <label for="penyakit">Pasien Mengalami</label>
                                     <input type="text" class="form-control form-control-user" id="penyakit" name="penyakit" style="font-size: 16px;" value="<?php echo $hasil['penyakit']?>" readonly>
+                                </div>
+                                <div class="form-group ">
+                                    <input type="hidden" id="feedback" name="feedback" style="font-size: 16px;" value="<?php echo $pesan?>" readonly>
+                                    <p><?php echo $pesan ?></p>
                                 </div>
                                 <br>
                         <div class="modal-footer">

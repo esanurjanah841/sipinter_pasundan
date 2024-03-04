@@ -403,11 +403,11 @@ function tambahLaporanAdmin()
     $ttl = htmlspecialchars($_POST['ttl']);
     $alamat = htmlspecialchars($_POST['alamat']);
     $tlp = htmlspecialchars($_POST['tlp']);
-    $kode_penyakit = htmlspecialchars($_POST['kode_penyakit']);
     $penyakit = htmlspecialchars($_POST['penyakit']);
     $gejala = implode(", ", $_POST['gejala']);
+    $feedback = htmlspecialchars($_POST['feedback']);
     // $penyakit = $_POST['id_penyakit'];
-    $queryLaporan = "INSERT INTO riwayat VALUES ('','$tanggal_pengisian', '$nik', '$nama_lengkap', '$ttl', '$alamat', '$tlp', '$kode_penyakit', '$penyakit', '$gejala')";
+    $queryLaporan = "INSERT INTO riwayat VALUES ('','$tanggal_pengisian', '$nik', '$nama_lengkap', '$ttl', '$alamat', '$tlp', '$penyakit', '$gejala', '$feedback')";
     // $queryRelasi = "INSERT INTO relasi VALUES ('', '')"
     $exe = mysqli_query($koneksi, $queryLaporan);
     if (!$exe) {
