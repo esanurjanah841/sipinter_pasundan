@@ -93,7 +93,8 @@ $tanggal= strftime("%A, %d %B %Y");
                                     
                                     if(empty($_POST['gejala'])){
                                         $hasil['penyakit'] = "Dalam Batas Normal";
-                                        $pesan = "Tetap jaga kesehatan jiwa dengan:
+                                        $pesan = "
+                                        Tetap jaga kesehatan jiwa dengan:
                                         1. Bila Anda merasa ada keluhan, bicarakan keluhan dengan seseorang yang dapat dipercaya
                                         2. Melakukan kegiatan yang sesuai dengan minat dan kemampuan
                                         3. Tenangkan pikiran dengan relaksasi
@@ -110,8 +111,9 @@ $tanggal= strftime("%A, %d %B %Y");
                                         if($jumlah_dipilih<6){
                                             for($x=0;$x<$jumlah_dipilih;$x++)
                                                 $hasil['penyakit'] = "Dalam Batas Normal";
-                                                $pesan = "Tetap jaga kesehatan jiwa dengan:
-                                                1. Bila Anda merasa ada keluhan, bicarakan keluhan dengan seseorang yang dapat dipercaya <br>
+                                                $pesan = "
+                                                Tetap jaga kesehatan jiwa dengan:
+                                                1. Bila Anda merasa ada keluhan, bicarakan keluhan dengan seseorang yang dapat dipercaya
                                                 2. Melakukan kegiatan yang sesuai dengan minat dan kemampuan
                                                 3. Tenangkan pikiran dengan relaksasi
                                                 4. Kembangkan hobi bermanfaat
