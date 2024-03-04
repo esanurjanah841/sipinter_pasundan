@@ -127,6 +127,9 @@ if (isset($_SESSION['role'])) {
                                     <label for="penyakit">Hasil skrining kesehatan jiwa Anda menunjukan</label>
                                     <input type="text" class="form-control form-control-user" id="penyakit" name="penyakit" style="font-size: 14px;" value="<?php echo $tampil['penyakit']?>" readonly>
                                 </div>
+                                <div class="form-group " style="font-size:14px">
+                                    <p><?php echo $tampil['feedback'] ?></p>
+                                </div>
                                 <br>
                         <div class="modal-footer">
                             <button type="button" onclick="history.back();" class="btn btn-success" style="margin:5px">Kembali</button>

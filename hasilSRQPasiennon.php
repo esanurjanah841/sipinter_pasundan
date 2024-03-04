@@ -1,5 +1,5 @@
 <section id="detail">
-<div class="">
+<div>
         <div class="solid">
             <div class="form-row">
                 <div class="panel-heading">
@@ -56,15 +56,16 @@
                                     <label for="penyakit">Hasil skrining kesehatan jiwa Anda menunjukan</label>
                                     <input type="text" class="form-control form-control-user" id="penyakit" name="penyakit" style="font-size: 16px;" value="<?php echo $hasil['penyakit']?>" readonly>
                                 </div>
-                                <div class="form-group ">
-                                    
-                                    <textarea class="form-control form-control-user" id="penyakit" name="penyakit" style="font-size: 16px;" readonly>Segera konsultasikan kesehatan Anda dengan tenaga kesehatan di Fasilitas Pelayanan Kesehatan terdekat.</textarea>
+                                <div class="form-group " style="font-size:14px">
+                                <input type="hidden" class="form-control form-control-user" id="feedback" name="feedback" value="<?php echo $pesan?>"  readonly>
+                                    <p><?php echo $pesan ?></p>
                                 </div>
                                 <br>
                         <div class="modal-footer">
-                            <button type="button" onclick="history.back();" class="btn btn-danger">Kembali</button>
-                            <button type="submit" name="submit" id="tambah" value="tambah" class="btn btn-success">Simpan</button>
-                            <button type="button" class="btn btn-warning" onclick="window.print()" style="color:white;"><i class="fas fa-print" > Print</i></button>
+                            <button type="button" onclick="history.back();" style="margin:5px" class="btn btn-danger">Kembali</button>
+                            <button type="submit" name="submit" id="tambah" style="margin:5px" value="tambah" class="btn btn-success">Simpan</button>
+                            <button type="button" class="btn btn-warning" style="margin:5px" onclick="window.print()" style="color:white;"><i class="fas fa-print" > Print</i></button>
                         </div>
                     </form>
                 </div>
+</section>              

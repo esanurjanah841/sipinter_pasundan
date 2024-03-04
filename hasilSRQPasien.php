@@ -92,14 +92,13 @@ $tanggal= strftime("%A, %d %B %Y");
                                     <?php	
                                     
                                     if(empty($_POST['gejala'])){
-                                        $pesangejala = "Tidak ada gejala yang dipilih.";
                                         $hasil['penyakit'] = "Dalam Batas Normal";
-                                        $pesan = "Tetap jaga kesehatan jiwa dengan: <br>
-                                        1. Bila Anda merasa ada keluhan, bicarakan keluhan dengan seseorang yang dapat dipercaya <br>
-                                        2. Melakukan kegiatan yang sesuai dengan minat dan kemampuan <br>
-                                        3. Tenangkan pikiran dengan relaksasi <br>
-                                        4. Kembangkan hobi bermanfaat <br>
-                                        5. Meningkatkan ibadah, mendekatkan diri pada Tuhan <br>
+                                        $pesan = "Tetap jaga kesehatan jiwa dengan:
+                                        1. Bila Anda merasa ada keluhan, bicarakan keluhan dengan seseorang yang dapat dipercaya
+                                        2. Melakukan kegiatan yang sesuai dengan minat dan kemampuan
+                                        3. Tenangkan pikiran dengan relaksasi
+                                        4. Kembangkan hobi bermanfaat
+                                        5. Meningkatkan ibadah, mendekatkan diri pada Tuhan
                                         6. Selalu berpikir positif";
                                         
                                         include 'hasilSRQPasiennon.php';
@@ -111,12 +110,12 @@ $tanggal= strftime("%A, %d %B %Y");
                                         if($jumlah_dipilih<6){
                                             for($x=0;$x<$jumlah_dipilih;$x++)
                                                 $hasil['penyakit'] = "Dalam Batas Normal";
-                                                $pesan = "Tetap jaga kesehatan jiwa dengan: <br>
+                                                $pesan = "Tetap jaga kesehatan jiwa dengan:
                                                 1. Bila Anda merasa ada keluhan, bicarakan keluhan dengan seseorang yang dapat dipercaya <br>
-                                                2. Melakukan kegiatan yang sesuai dengan minat dan kemampuan <br>
-                                                3. Tenangkan pikiran dengan relaksasi <br>
-                                                4. Kembangkan hobi bermanfaat <br>
-                                                5. Meningkatkan ibadah, mendekatkan diri pada Tuhan <br>
+                                                2. Melakukan kegiatan yang sesuai dengan minat dan kemampuan
+                                                3. Tenangkan pikiran dengan relaksasi
+                                                4. Kembangkan hobi bermanfaat
+                                                5. Meningkatkan ibadah, mendekatkan diri pada Tuhan 
                                                 6. Selalu berpikir positif";
 
                                         }else if($jumlah_dipilih>=6){
@@ -195,8 +194,6 @@ $tanggal= strftime("%A, %d %B %Y");
                                                <input class="form-control form-control-user" id="gejala" name="gejala[]" style="border: none; outline: none; margin-bottom:-5px;font-size: 14px;" value="<?php echo $read['gejala']?>" readonly>
                                     <?php }?>
                                     <br>
-                                    
-                                    <?php echo $pesangejala ?>
                                 </div>
 
                                 <div class="form-group " style="font-size:14px" >
@@ -204,6 +201,7 @@ $tanggal= strftime("%A, %d %B %Y");
                                     <input type="text" class="form-control form-control-user" id="penyakit" name="penyakit" style="font-size: 14px;" value="<?php echo $hasil['penyakit']?>" readonly>
                                 </div>
                                 <div class="form-group " style="font-size:14px">
+                                <input type="hidden" class="form-control form-control-user" id="feedback" name="feedback" value="<?php echo $pesan?>"  readonly>
                                     <p><?php echo $pesan ?></p>
                                 </div>
                                 <div class="form-group ">
