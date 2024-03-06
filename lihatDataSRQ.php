@@ -65,6 +65,9 @@
                                     <label for="penyakit">Hasil skrining kesehatan jiwa Anda menunjukan</label>
                                     <input type="text" class="form-control form-control-user" id="penyakit" name="penyakit" style="font-size: 16px;" value="<?php echo $user['penyakit']?>" readonly>
                                 </div>
+                                <div class="form-group ">
+                                    <p><?php echo $pesan ?></p>
+                                </div>
                                 <br>                    
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" onclick="history.back();">Batal</button>

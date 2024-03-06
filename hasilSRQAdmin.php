@@ -131,10 +131,10 @@ $jumlah_dipilih = count($gejala);
                                     <?php }?>
                                 </div>
                                 <br>
-                                <i class="text">Berdasarkan dari gejala-gejala yang telah dipilih pasien di atas, hasil menunjukan:</i>
+                                <i class="text">Berdasarkan dari gejala-gejala yang telah dipilih pasien di atas,</i>
                                 <br>
                                 <div class="form-group ">
-                                    <label for="penyakit">Pasien Mengalami</label>
+                                    <label for="penyakit">Hasil skrining kesehatan jiwa Anda menunjukan</label>
                                     <input type="text" class="form-control form-control-user" id="penyakit" name="penyakit" style="font-size: 16px;" value="<?php echo $hasil['penyakit']?>" readonly>
                                 </div>
                                 <div class="form-group ">
