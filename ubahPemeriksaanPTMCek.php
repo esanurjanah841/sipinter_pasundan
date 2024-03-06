@@ -14,6 +14,33 @@
 
 
     $id_ptm = $_GET["id_ptm"];
+    // Data Cek
+    $tanggal_pengisian = $_GET['tanggal_pengisian'];
+    $nik = $_GET['nik'];
+    $nama_lengkap = $_GET['nama_lengkap'];
+    $ttl = $_GET['ttl'];
+    $jenis_kelamin = $_GET['jenis_kelamin'];
+    $alamat = $_GET['alamat'];
+    $provinsi = $_GET['provinsi'];
+    $kota = $_GET['kota'];
+    $tlp = $_GET['tlp'];
+    $pendidikan = $_GET['pendidikan'];
+    $pekerjaan = $_GET['pekerjaan'];
+    $status = $_GET['status'];
+    $goldar = $_GET['goldar'];
+    $riwayatkeluarga1 = $_GET['riwayatkeluarga1'];
+    $riwayatkeluarga2 = $_GET['riwayatkeluarga2'];
+    $riwayatkeluarga3 = $_GET['riwayatkeluarga3'];
+    $riwayatsendiri1 = $_GET['riwayatsendiri1'];
+    $riwayatsendiri2 = $_GET['riwayatsendiri2'];
+    $riwayatsendiri3 = $_GET['riwayatsendiri3'];
+    $merokok = $_GET['merokok'];
+    $fisik = $_GET['fisik'];
+    $gula = $_GET['gula'];
+    $garam = $_GET['garam'];
+    $lemak = $_GET['lemak'];
+    $sayur = $_GET['sayur'];
+    $alkohol = $_GET['alkohol'];
     $berat = $_GET['berat'];
     $tinggi = $_GET['tinggi'];
     $lingkar = $_GET['lingkar'];
