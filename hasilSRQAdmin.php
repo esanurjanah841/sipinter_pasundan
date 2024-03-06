@@ -11,6 +11,11 @@ $tanggal= strftime("%A, %d %B %Y");
 
 include 'sidebar.php';
 
+$nik = $_POST['nik'];
+$nama_lengkap = $_POST['nama_lengkap'];
+$ttl = $_POST['ttl'];
+$alamat = $_POST['alamat'];
+$tlp = $_POST['tlp'];
 ?>
 
 
@@ -90,28 +95,28 @@ $jumlah_dipilih = count($gejala);
                     <form action="function.php?act=tambahLaporanAdmin" id="tambah" method="POST" class="tambah_pasien">
                                 <div class="form-group ">
                                     <label for="tanggal_pengisian">Tanggal Pengisian</label>
-                                    <input type="text" class="form-control form-control-user" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?php echo $tanggal?>"  readonly>
+                                    <input type="text" class="form-control form-control-user" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?php echo $tanggal?>"  required>
                                 </div>
                                 
                                 <div class="form-group">
                                     <label for="nik">NIK</label>
-                                    <input type="text" class="form-control form-control-user" id="nik" name="nik"  required>
+                                    <input type="text" class="form-control form-control-user" id="nik" name="nik" value="<?= $nik ?>" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="nama_lengkap">Nama Lengkap</label>
-                                    <input type="text" class="form-control form-control-user" id="nama_lengkap" name="nama_lengkap"  required>
+                                    <input type="text" class="form-control form-control-user" id="nama_lengkap" name="nama_lengkap" value="<?= $nama_lengkap ?>" required>
                                 </div>
                                 <div class="form-group ">
                                     <label for="ttl">Tanggal Lahir</label>
-                                    <input type="date" class="form-control form-control-user" id="ttl" name="ttl" required>
+                                    <input type="date" class="form-control form-control-user" id="ttl" name="ttl" value="<?= $ttl ?>" required>
                                 </div>
                                 <div class="form-group ">
                                     <label for="alamat">Alamat Lengkap</label>
-                                    <input type="text" class="form-control form-control-user" id="alamat" name="alamat"  required>
+                                    <input type="text" class="form-control form-control-user" id="alamat" name="alamat" value="<?= $alamat ?>" required>
                                 </div>
                                 <div class="form-group ">
                                     <label for="tlp">No. Telepon</label>
-                                    <input type="text" class="form-control form-control-user" id="tlp" name="tlp" required>
+                                    <input type="text" class="form-control form-control-user" id="tlp" name="tlp" value="<?= $tlp ?>" required>
                                 </div>
                                 <br>
                                 <div class="form-group">

@@ -29,7 +29,30 @@ include 'sidebar.php';
     <div class="row">
         <div class="col align-self-center">
             <form action="hasilSRQAdmin.php" method="POST" enctype="multipart/form-data" role="form">
-                
+                <div class="form-group ">
+                    <label for="tanggal_pengisian">Tanggal Pengisian</label>
+                    <input type="text" class="form-control form-control-user" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?php echo $tanggal?>"  required>
+                </div>
+                <div class="form-group">
+                    <label for="nik">NIK</label>
+                    <input type="text" class="form-control form-control-user" id="nik" name="nik" required>
+                </div>
+                <div class="form-group">
+                    <label for="nama_lengkap">Nama Lengkap</label>
+                    <input type="text" class="form-control form-control-user" id="nama_lengkap" name="nama_lengkap" required>
+                </div>
+                <div class="form-group ">
+                    <label for="ttl">Tanggal Lahir</label>
+                    <input type="date" class="form-control form-control-user" id="ttl" name="ttl" required>
+                </div>
+                <div class="form-group ">
+                    <label for="alamat">Alamat Lengkap</label>
+                    <input type="text" class="form-control form-control-user" id="alamat" name="alamat" required>
+                </div>
+                <div class="form-group ">
+                    <label for="tlp">No. Telepon</label>
+                    <input type="text" class="form-control form-control-user" id="tlp" name="tlp" required>
+                </div>
                     <table class="table table-bordered" id="dataTable">
                         <thead>
                             <tr style="text-align:center";>

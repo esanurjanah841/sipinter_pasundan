@@ -15,23 +15,23 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="nik">NIK</label>
-                                    <input type="text" class="form-control form-control-user" id="nik" name="nik" required>
+                                    <input type="text" class="form-control form-control-user" id="nik" name="nik" value="<?= $nik ?>" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="nama_lengkap">Nama Lengkap</label>
-                                    <input type="text" class="form-control form-control-user" id="nama_lengkap" name="nama_lengkap" required>
+                                    <input type="text" class="form-control form-control-user" id="nama_lengkap" name="nama_lengkap" value="<?= $nama_lengkap ?>" required>
                                 </div>
                                 <div class="form-group ">
                                     <label for="ttl">Tanggal Lahir</label>
-                                    <input type="date" class="form-control form-control-user" id="ttl" name="ttl" required>
+                                    <input type="date" class="form-control form-control-user" id="ttl" name="ttl" value="<?= $ttl ?>" required>
                                 </div>
                                 <div class="form-group ">
                                     <label for="alamat">Alamat</label>
-                                    <input type="text" class="form-control form-control-user" id="alamat" name="alamat" required>
+                                    <input type="text" class="form-control form-control-user" id="alamat" name="alamat" value="<?= $alamat ?>" required>
                                 </div>
                                 <div class="form-group ">
                                     <label for="tlp">No. Telepon</label>
-                                    <input type="text" class="form-control form-control-user" id="tlp" name="tlp" required>
+                                    <input type="text" class="form-control form-control-user" id="tlp" name="tlp" value="<?= $tlp ?>" required>
                                 </div>
                                 <br>
                                 <div class="form-group">
