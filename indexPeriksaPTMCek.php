@@ -259,11 +259,11 @@
                                 <div class="row">
                                     <div class="form-group col-lg-6">
                                             <label for="imt">IMT</label><br>
-                                            <input type="text" class="form-control-tes col-lg-12" id="imt" name="imt" value="<?= $hasil_akhir ?>" readonly><?php echo "&emsp;cm" ?>
+                                            <input type="text" class="form-control form-control-user" id="imt" name="imt" value="<?= $hasil_akhir ?>" readonly>
                                     </div>
                                     <div class="form-group col-lg-6">
                                         <label for="hasil_imt">Hasil IMT</label><br>
-                                        <input type="text" class="form-control-tes col-lg-12" id="hasil_imt" name="hasil_imt" value="<?= $pesan ?>" readonly> <?php echo "&emsp;kg" ?>
+                                        <input type="text" class="form-control form-control-user" id="hasil_imt" name="hasil_imt" value="<?= $pesan ?>" readonly>
                                     </div>
                                 </div>
                                 <div class="row">

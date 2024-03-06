@@ -33,9 +33,9 @@
                         </div>
                         <div class="card-body">
                         <div class="modal-body">
-                        <form action="function.php?act=ubahPemeriksaanPTM&id_ptm=<?= $user['id_ptm']; ?>" id="tambah" method="POST">
+                        <form action="ubahPemeriksaanPTMCek.php?id_ptm=<?php echo $user["id_ptm"]; ?>" method="GET">
                         <input type="hidden" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?= $user['tanggal_pengisian']; ?>">
-                        
+                        <input type="hidden" id="id_ptm" name="id_ptm"   value="<?= $user['id_ptm']; ?>">
                                 <div class="form-group ">
                                     <label for="tanggal_pemeriksaan">Tanggal Pemeriksaan</label>
                                     <input type="text" class="form-control form-control-user" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan" value="<?= $user['tanggal_pemeriksaan']; ?>" required>
@@ -294,6 +294,16 @@
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-lg-6">
+                                            <label for="imt">IMT</label><br>
+                                            <input type="text" class="form-control form-control-user" id="imt" name="imt" value="<?= $user['imt']; ?>" readonly>
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label for="hasil_imt">Hasil IMT</label><br>
+                                        <input type="text" class="form-control form-control-user" id="hasil_imt" name="hasil_imt" value="<?= $user['hasil_imt']; ?>" readonly>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-lg-6">
                                         <label for="sistol">Tekanan Darah Sistol</label><br>
                                         <input type="text" class="form-control-tes col-lg-8" id="sistol" name="sistol" value="<?= $user['sistol']; ?>" required><?php echo "&emsp;mmHg (<140/90)" ?>
                                     </div>
@@ -302,6 +312,10 @@
                                         <label for="diastol">Tekanan Darah Diastol</label><br>
                                         <input type="text" class="form-control-tes col-lg-8" id="diastol" name="diastol" value="<?= $user['diastol']; ?>" required><?php echo "&emsp;mmHg (<140/90)" ?>
                                     </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label for="hasil_tensi">Hasil Tensi</label>
+                                    <input type="text" class="form-control form-control-user" id="hasil_tensi" name="hasil_tensi" value="<?= $user['hasil_tensi']; ?>" readonly>
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-lg-6">
@@ -313,9 +327,15 @@
                                         <input type="text" class="form-control-tes col-lg-9" id="periksa_gula" name="periksa_gula" value="<?= $user['periksa_gula']; ?>" required><?php echo "&emsp;mg/dl (<200)" ?>
                                     </div>
                                 </div>
-                                <div class="form-group ">
-                                    <h6>Teks Template</h6>
-                                    <p></p>
+                                <div class="row">
+                                    <div class="form-group col-lg-6">
+                                        <label for="hasil_lingkar">Hasil Pengukuran Lingkar Perut</label><br>
+                                        <input type="text" class="form-control form-control-user" id="hasil_lingkar" name="hasil_lingkar" value="<?= $user['hasil_lingkar']; ?>" readonly>
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label for="hasilperiksa_gula">Hasi Pemeriksaan Gula Darah Sewaktu</label>
+                                        <input type="text" class="form-control form-control-user" id="hasilperiksa_gula" name="hasilperiksa_gula" value="<?= $user['hasilperiksa_gula']; ?>" readonly>
+                                    </div>
                                 </div>
                                 <div class="form-group ">
                                     <label for="feedback">Rekomendasi Dokter</label>
@@ -323,7 +343,7 @@
                                 </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" onclick="history.back();">Batal</button>
-                            <button type="submit" id="ubah" name="ubah" value="Simpan Data" class="btn btn-success">Simpan</button>
+                            <button type="submit" id="hitung" name="hitung" value="hitung" class="btn btn-success">Cek</button>
                         </div>
 
                         

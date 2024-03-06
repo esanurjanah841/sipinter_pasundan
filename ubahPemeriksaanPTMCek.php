@@ -7,17 +7,85 @@
     } else {
         header("location:index.php");
     }
-    $id_ptm = $_GET["id_ptm"];
-
-    $queryPTM = mysqli_query($koneksi, "SELECT * FROM ptm_hasil where id_ptm = '$id_ptm'");
-    $user = mysqli_fetch_assoc($queryPTM);
-
-
     setlocale(LC_ALL, 'id-ID', 'id_ID');
     $tanggal= strftime("%A, %d %B %Y");
     
     include 'sidebar.php';
-   
+
+
+    $id_ptm = $_GET["id_ptm"];
+    $berat = $_GET['berat'];
+    $tinggi = $_GET['tinggi'];
+    $lingkar = $_GET['lingkar'];
+    $sistol = $_GET['sistol'];
+    $diastol = $_GET['diastol'];
+    $periksa_gula = $_GET['periksa_gula'];
+
+    $queryPTM = mysqli_query($koneksi, "SELECT * FROM ptm_hasil where id_ptm = '$id_ptm'");
+    $user = mysqli_fetch_assoc($queryPTM);
+
+    
+    if(isset($_GET['hitung'])){
+       
+        // IMT dan Hasil
+        $tinggi_meter = $tinggi / 100;
+        $tinggi_kuadrat = $tinggi_meter * $tinggi_meter;
+        $hasil_tinggi = number_format($tinggi_kuadrat, 2, '.', '');
+        $hasil_imt = $berat/$hasil_tinggi;
+        $hasil_akhir = number_format($hasil_imt,1, '.', '');
+
+        $pesan = "";
+        if($hasil_akhir < 17){
+            $pesan = "Sangat Kurus";
+        }else if($hasil_akhir <= 17){
+            $pesan = "Kurus";
+        }else if(($hasil_akhir >= 18.5) && ($hasil_akhir <= 25)){
+            $pesan = "Normal";
+        }else if(($hasil_akhir > 25) && ($hasil_akhir <=27)){
+            $pesan = "Gemuk";
+        }else if($hasil_akhir > 27){
+            $pesan = "Obesitas";
+        }
+
+        // Tensi 
+        $pesan_tensi = "";
+        if(($sistol < 120) && ($diastol < 80)){
+            $pesan_tensi = "Normal";
+        }else if((($sistol >= 120) && ($sistol <= 139))  && (($diastol >= 80) && ($diastol <= 89))){
+            $pesan_tensi = "Prehipertensi";
+        }else if(($sistol >= 140) && ($diastol >= 90)){
+            $pesan_tensi = "Hipertensi";
+        }
+
+        // Lingkar Perut
+        $jenis_kelamin = $_GET['jenis_kelamin'];
+        $jk = $jenis_kelamin;
+        
+        $pesan_lingkar = "";
+    
+        if(($jk = 'Laki-laki') && ($lingkar < 90)){
+            $pesan_lingkar =  "Normal";
+        }elseif(($jk = 'Laki-laki') && ($lingkar >= 90)){
+            $pesan_lingkar = "Obesitas Central";
+        }
+
+        if(($jk = 'Perempuan') && ($lingkar < 80)){
+            $pesan_lingkar =  "Normal";
+        }elseif(($jk = 'Perempuan') && ($lingkar >= 80)){
+            $pesan_lingkar = "Obesitas Central";
+        }
+
+        // Hasil Pemeriksaan Gula Darah
+        $pesan_gula = "";
+        if($periksa_gula < 80){
+            $pesan_gula = "Hipoglikemi";
+        }elseif(($periksa_gula >= 80) && ($periksa_gula <= 144)){
+            $pesan_gula = "Normal";
+        }else if(($periksa_gula >= 145) && ($periksa_gula <= 199)){
+            $pesan_gula = "Prehiperglikemi";
+        }else if($periksa_gula >= 200){
+            $pesan_gula = "Hiperglikemi";
+        }}
 ?>
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
@@ -33,11 +101,12 @@
                         </div>
                         <div class="card-body">
                         <div class="modal-body">
-                        <form action="" id="ubah" method="POST">
+                        <form action="function.php?act=ubahPemeriksaanPTM&id_ptm=<?= $user['id_ptm']; ?>" id="tambah" method="POST">
+                        <input type="hidden" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?= $user['tanggal_pengisian']; ?>">
                         
                                 <div class="form-group ">
                                     <label for="tanggal_pemeriksaan">Tanggal Pemeriksaan</label>
-                                    <input type="text" class="form-control form-control-user" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan" value="<?= $user['tanggal_pemeriksaan']; ?>" readonly>
+                                    <input type="text" class="form-control form-control-user" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan" value="<?= $user['tanggal_pemeriksaan']; ?>" required>
                                 </div>
                                 <div class="form-group ">
                                     <label for="nik">NIK</label>
@@ -95,6 +164,7 @@
                                         <input type="text" class="form-control form-control-user" id="goldar" name="goldar" value="<?= $user['goldar']; ?>" readonly>
                                     </div>
                                 </div>
+                                
                                 <div class="row">
                                     <div class="form-group col-lg-4">
                                         <label for="riwayatkeluarga1">Riwayat Pada Keluarga</label><br>
@@ -102,7 +172,7 @@
                                     </div>
                                     <div class="form-group col-lg-4">
                                         <label for="riwayatkeluarga2"></label><br>
-                                        <input type="text" class="form-control form-control-user " id="riwayatkeluarga2" name="riwayatkeluarga2" value="<?= $user['riwayatkeluarga2']; ?>" readonly>
+                                        <input type="text" class="form-control form-control-user" id="riwayatkeluarga2" name="riwayatkeluarga2" value="<?= $user['riwayatkeluarga2']; ?>" readonly>
                                     </div>
                                     <div class="form-group col-lg-4">
                                         <label for="riwayatkeluarga3"></label><br>
@@ -116,7 +186,7 @@
                                     </div>
                                     <div class="form-group col-lg-4">
                                         <label for="riwayatsendiri2"></label><br>
-                                        <input type="text" class="form-control form-control-user " id="riwayatsendiri2" name="riwayatsendiri2" value="<?= $user['riwayatsendiri2']; ?>" readonly>
+                                        <input type="text" class="form-control form-control-user" id="riwayatsendiri2" name="riwayatsendiri2" value="<?= $user['riwayatsendiri2']; ?>" readonly>
                                     </div>
                                     <div class="form-group col-lg-4">
                                         <label for="riwayatsendiri3"></label><br>
@@ -152,72 +222,67 @@
                                     <input type="text" class="form-control form-control-user" id="alkohol" name="alkohol" value="<?= $user['alkohol']; ?>" readonly>
                                 </div>
                                 <div class="row">
-                                <div class="form-group col-lg-6">
+                                    <div class="form-group col-lg-6">
                                         <label for="tinggi">Tinggi Badan</label><br>
-                                        <input type="text" class="form-control-tes col-lg-12" style="background-color: #eaecf4;" id="tinggi" name="tinggi" value="<?= $user['tinggi']; ?>" readonly><?php echo "&emsp;cm" ?>
+                                        <input type="text" class="form-control-tes col-lg-12" id="tinggi" name="tinggi" value="<?= $tinggi?>" required><?php echo "&emsp;cm" ?>
                                     </div>
                                     <div class="form-group col-lg-6">
                                         <label for="berat">Berat Badan</label><br>
-                                        <input type="text" class="form-control-tes col-lg-12" style="background-color: #eaecf4;" id="berat" name="berat" value="<?= $user['berat']; ?>" readonly> <?php echo "&emsp;kg" ?>
+                                        <input type="text" class="form-control-tes col-lg-12" id="berat" name="berat" value="<?= $berat ?>" required> <?php echo "&emsp;kg" ?>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-lg-6">
                                             <label for="imt">IMT</label><br>
-                                            <input type="text" class="form-control form-control-user" id="imt" name="imt" value="<?= $user['imt']; ?>" readonly>
+                                            <input type="text" class="form-control-tes col-lg-12" id="imt" name="imt" value="<?= $hasil_akhir?>" readonly>
                                     </div>
                                     <div class="form-group col-lg-6">
                                         <label for="hasil_imt">Hasil IMT</label><br>
-                                        <input type="text" class="form-control form-control-user" id="hasil_imt" name="hasil_imt" value="<?= $user['hasil_imt']; ?>" readonly>
+                                        <input type="text" class="form-control-tes col-lg-12" id="hasil_imt" name="hasil_imt" value="<?= $pesan?>" readonly>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-lg-6">
                                         <label for="sistol">Tekanan Darah Sistol</label><br>
-                                        <input type="text" class="form-control-tes col-lg-8" style="background-color: #eaecf4;" id="sistol" name="sistol" value="<?= $user['sistol']; ?>" readonly><?php echo "&emsp;mmHg (<140/90)" ?>
+                                        <input type="text" class="form-control-tes col-lg-8" id="sistol" name="sistol" value="<?= $sistol ?>" required><?php echo "&emsp;mmHg (<140/90)" ?>
                                     </div>
                                     
                                     <div class="form-group col-lg-6">
                                         <label for="diastol">Tekanan Darah Diastol</label><br>
-                                        <input type="text" class="form-control-tes col-lg-8" style="background-color: #eaecf4;" id="diastol" name="diastol" value="<?= $user['diastol']; ?>" readonly><?php echo "&emsp;mmHg (<140/90)" ?>
+                                        <input type="text" class="form-control-tes col-lg-8" id="diastol" name="diastol" value="<?= $diastol ?>" required><?php echo "&emsp;mmHg (<140/90)" ?>
                                     </div>
                                 </div>
                                 <div class="form-group ">
                                     <label for="hasil_tensi">Hasil Tensi</label>
-                                    <input type="text" class="form-control form-control-user" id="hasil_tensi" name="hasil_tensi" value="<?= $user['hasil_tensi']; ?>" readonly>
+                                    <input type="text" class="form-control form-control-user" id="hasil_tensi" name="hasil_tensi" value="<?= $pesan_tensi ?>" readonly>
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-lg-6">
                                         <label for="lingkar">Lingkar Perut</label><br>
-                                        <input type="text" class="form-control-tes col-lg-12" style="background-color: #eaecf4;" id="lingkar" name="lingkar" value="<?= $user['lingkar']; ?>" readonly><?php echo "&emsp;cm" ?>
+                                        <input type="text" class="form-control-tes col-lg-12" id="lingkar" name="lingkar" value="<?= $lingkar ?>" required><?php echo "&emsp;cm" ?>
                                     </div>
                                     <div class="form-group col-lg-6">
                                         <label for="periksa_gula">Pemeriksaan Gula Darah Sewaktu</label>
-                                        <input type="text" class="form-control-tes col-lg-9" style="background-color: #eaecf4;" id="periksa_gula" name="periksa_gula" value="<?= $user['periksa_gula']; ?>" readonly><?php echo "&emsp;mg/dl (<200)" ?>
+                                        <input type="text" class="form-control-tes col-lg-9" id="periksa_gula" name="periksa_gula" value="<?= $periksa_gula ?>" required><?php echo "&emsp;mg/dl (<200)" ?>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-lg-6">
                                         <label for="hasil_lingkar">Hasil Pengukuran Lingkar Perut</label><br>
-                                        <input type="text" class="form-control form-control-user" id="hasil_lingkar" name="hasil_lingkar" value="<?= $user['hasil_lingkar']; ?>" readonly>
+                                        <input type="text" class="form-control form-control-user" id="hasil_lingkar" name="hasil_lingkar" value="<?= $pesan_lingkar ?>" readonly>
                                     </div>
                                     <div class="form-group col-lg-6">
                                         <label for="hasilperiksa_gula">Hasi Pemeriksaan Gula Darah Sewaktu</label>
-                                        <input type="text" class="form-control form-control-user" id="hasilperiksa_gula" name="hasilperiksa_gula" value="<?= $user['hasilperiksa_gula']; ?>" readonly>
+                                        <input type="text" class="form-control form-control-user" id="hasilperiksa_gula" name="hasilperiksa_gula" value="<?= $pesan_gula ?>" readonly>
                                     </div>
                                 </div>
                                 <div class="form-group ">
                                     <label for="feedback">Rekomendasi Dokter</label>
-                                    <textarea class="form-control form-control-user" id="feedback" name="feedback" value="<?= $user['feedback']; ?>" readonly><?= $user['feedback']; ?></textarea>
+                                    <textarea class="form-control form-control-user" id="feedback" name="feedback" value="<?= $user['feedback']; ?>" required><?= $user['feedback']; ?></textarea>
                                 </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" onclick="history.back();">Batal</button>
-                            <a href="ubahPemeriksaanPTM.php?id_ptm=<?php echo $user["id_ptm"]; ?>" class="btn btn-warning btn-icon-split">
-                                <span class="icon text-white-50">
-                                <i class="fas fa-pen"></i>
-                                </span>
-                                 <span class="text">Edit</span>
-                            </a>
+                            <button type="submit" id="ubah" name="ubah" value="Simpan Data" class="btn btn-success">Simpan</button>
                         </div>
 
                         
@@ -265,7 +330,7 @@
                 </div>
                 <div class="modal-body">Pilih "Logout" di bawah ini jika kamu ingin mengakhiri sesi.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batalazz</button>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
                     <a class="btn btn-primary" href="logout.php">Logout</a>
                 </div>
             </div>

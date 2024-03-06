@@ -519,11 +519,11 @@ function tambahPTMHasil()
     if (!$exe) {
         echo "<script>
             alert('Hasil Pemeriksaan gagal ditambahkan! Periksa kembali, diharapkan melengkapi semua data.');
-            document.location.href = 'indexptm.php'</script>";
+            document.location.href = 'indexPTM.php'</script>";
     }
             echo "<script>
             alert('Hasil Pemeriksaan berhasil ditambahkan dan dikirimkan ke pasien!');
-            document.location.href = 'indexptm.php'</script>";
+            document.location.href = 'indexPTM.php'</script>";
 }
 
 function ubahGejala($id_gejala)
