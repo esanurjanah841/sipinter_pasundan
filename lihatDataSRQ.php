@@ -67,7 +67,7 @@
                                 </div>
                                 <div class="form-group ">
                                     <p><?= $user['feedback']; ?></p>
-                                    
+
                                 </div>
                                 <br>                    
                         <div class="modal-footer">
@@ -119,7 +119,7 @@
                 </div>
                 <div class="modal-body">Pilih "Logout" di bawah ini jika kamu ingin mengakhiri sesi.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batalazz</button>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
                     <a class="btn btn-primary" href="logout.php">Logout</a>
                 </div>
             </div>
