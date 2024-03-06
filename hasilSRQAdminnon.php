@@ -8,7 +8,7 @@
                 </div>
                 <div class="panel-body">
                 <div class="box-body table-responsive">
-                    <form action="function.php?act=tambahLaporan" id="tambah" method="POST" class="tambah_pasien">
+                    <form action="function.php?act=tambahLaporanAdmin" id="tambah" method="POST" class="tambah_pasien">
                                 <div class="form-group ">
                                     <label for="tanggal_pengisian">Tanggal Pengisian</label>
                                     <input type="text" class="form-control form-control-user" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?php echo $tanggal?>"  required>

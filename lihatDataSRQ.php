@@ -39,10 +39,6 @@
                                     <input type="text" class="form-control form-control-user" id="nik" name="nik" value="<?= $user['nik']; ?>" readonly>
                                 </div>
                                 <div class="form-group ">
-                                    <label for="bpjs">No. BPJS</label>
-                                    <input type="text" class="form-control form-control-user" id="bpjs" name="bpjs" value="<?= $user['bpjs']; ?>" readonly>
-                                </div>
-                                <div class="form-group ">
                                     <label for="nama_lengkap">Nama Lengkap</label>
                                     <input type="text" class="form-control form-control-user" id="nama_lengkap" name="nama_lengkap" value="<?= $user['nama_lengkap']; ?>" readonly>
                                 </div>
@@ -63,10 +59,10 @@
                                     <textarea type="text" class="form-control form-control-user" id="gejala" name="gejala" value="<?= $user['gejala']; ?>" readonly><?= $user['gejala']; ?></textarea>
                                 </div>            
                                 <br>
-                                <i class="text">Berdasarkan dari gejala-gejala yang telah dipilih pasien di atas, hasil menunjukan:</i>
+                                <i class="text">Berdasarkan dari gejala-gejala yang telah dipilih pasien di atas,</i>
                                 <br>
                                 <div class="form-group ">
-                                    <label for="penyakit">Pasien Mengalami</label>
+                                    <label for="penyakit">Hasil skrining kesehatan jiwa Anda menunjukan</label>
                                     <input type="text" class="form-control form-control-user" id="penyakit" name="penyakit" style="font-size: 16px;" value="<?php echo $user['penyakit']?>" readonly>
                                 </div>
                                 <br>                    
