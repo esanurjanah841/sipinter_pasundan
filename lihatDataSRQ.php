@@ -66,7 +66,8 @@
                                     <input type="text" class="form-control form-control-user" id="penyakit" name="penyakit" style="font-size: 16px;" value="<?php echo $user['penyakit']?>" readonly>
                                 </div>
                                 <div class="form-group ">
-                                    <p><?php echo $pesan ?></p>
+                                    <p><?= $user['feedback']; ?></p>
+                                    
                                 </div>
                                 <br>                    
                         <div class="modal-footer">
