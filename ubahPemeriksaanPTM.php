@@ -143,6 +143,7 @@
                                         <label for="riwayatkeluarga1">Riwayat Pada Keluarga</label><br>
                                         <select name="riwayatkeluarga1" id="riwayatkeluarga1" class="form-control form-control-user" aria-label="Default select example">
                                             <option selected></option>
+                                            <option value="Tidak Ada" <?php if ($user['riwayatkeluarga1'] == "Tidak Ada") echo "selected" ?>>Tidak Ada</option>
                                             <option value="Penyakit Diabetes" <?php if ($user['riwayatkeluarga1'] == "Penyakit Diabetes") echo "selected" ?>>Penyakit Diabetes</option>
                                             <option value="Penyakit Hipertensi" <?php if ($user['riwayatkeluarga1'] == "Penyakit Hipertensi") echo "selected" ?>>Penyakit Hipertensi</option>
                                             <option value="Penyakit Asma" <?php if ($user['riwayatkeluarga1'] == "Penyakit Asma") echo "selected" ?>>Penyakit Asma</option>
@@ -156,6 +157,7 @@
                                         <label for="riwayatkeluarga2"></label><br>
                                         <select name="riwayatkeluarga2" id="riwayatkeluarga2" class="form-control form-control-user" aria-label="Default select example">
                                             <option selected></option>
+                                            <option value="Tidak Ada" <?php if ($user['riwayatkeluarga2'] == "Tidak Ada") echo "selected" ?>>Tidak Ada</option>
                                             <option value="Penyakit Diabetes" <?php if ($user['riwayatkeluarga2'] == "Penyakit Diabetes") echo "selected" ?>>Penyakit Diabetes</option>
                                             <option value="Penyakit Hipertensi" <?php if ($user['riwayatkeluarga2'] == "Penyakit Hipertensi") echo "selected" ?>>Penyakit Hipertensi</option>
                                             <option value="Penyakit Asma" <?php if ($user['riwayatkeluarga2'] == "Penyakit Asma") echo "selected" ?>>Penyakit Asma</option>
@@ -169,6 +171,7 @@
                                         <label for="riwayatkeluarga3"></label><br>
                                         <select name="riwayatkeluarga3" id="riwayatkeluarga3" class="form-control form-control-user" aria-label="Default select example">
                                             <option selected></option>
+                                            <option value="Tidak Ada" <?php if ($user['riwayatkeluarga3'] == "Tidak Ada") echo "selected" ?>>Tidak Ada</option>
                                             <option value="Penyakit Diabetes" <?php if ($user['riwayatkeluarga3'] == "Penyakit Diabetes") echo "selected" ?>>Penyakit Diabetes</option>
                                             <option value="Penyakit Hipertensi" <?php if ($user['riwayatkeluarga3'] == "Penyakit Hipertensi") echo "selected" ?>>Penyakit Hipertensi</option>
                                             <option value="Penyakit Asma" <?php if ($user['riwayatkeluarga3'] == "Penyakit Asma") echo "selected" ?>>Penyakit Asma</option>
@@ -184,6 +187,7 @@
                                         <label for="riwayatsendiri1">Riwayat Pada Diri Sendiri</label><br>
                                         <select name="riwayatsendiri1" id="riwayatsendiri1" class="form-control form-control-user" aria-label="Default select example">
                                             <option selected></option>
+                                            <option value="Tidak Ada" <?php if ($user['riwayatsendiri1'] == "Tidak Ada") echo "selected" ?>>Tidak Ada</option>
                                             <option value="Penyakit Diabetes" <?php if ($user['riwayatsendiri1'] == "Penyakit Diabetes") echo "selected" ?>>Penyakit Diabetes</option>
                                             <option value="Penyakit Hipertensi" <?php if ($user['riwayatsendiri1'] == "Penyakit Hipertensi") echo "selected" ?>>Penyakit Hipertensi</option>
                                             <option value="Penyakit Asma" <?php if ($user['riwayatsendiri1'] == "Penyakit Asma") echo "selected" ?>>Penyakit Asma</option>
@@ -197,6 +201,7 @@
                                         <label for="riwayatsendiri2"></label><br>
                                         <select name="riwayatsendiri2" id="riwayatsendiri2" class="form-control form-control-user" aria-label="Default select example">
                                             <option selected></option>
+                                            <option value="Tidak Ada" <?php if ($user['riwayatsendiri2'] == "Tidak Ada") echo "selected" ?>>Tidak Ada</option>
                                             <option value="Penyakit Diabetes" <?php if ($user['riwayatsendiri2'] == "Penyakit Diabetes") echo "selected" ?>>Penyakit Diabetes</option>
                                             <option value="Penyakit Hipertensi" <?php if ($user['riwayatsendiri2'] == "Penyakit Hipertensi") echo "selected" ?>>Penyakit Hipertensi</option>
                                             <option value="Penyakit Asma" <?php if ($user['riwayatsendiri2'] == "Penyakit Asma") echo "selected" ?>>Penyakit Asma</option>
@@ -210,6 +215,7 @@
                                         <label for="riwayatsendiri3"></label><br>
                                         <select name="riwayatsendiri3" id="riwayatsendiri3" class="form-control form-control-user" aria-label="Default select example">
                                             <option selected></option>
+                                            <option value="Tidak Ada" <?php if ($user['riwayatsendiri3'] == "Tidak Ada") echo "selected" ?>>Tidak Ada</option>
                                             <option value="Penyakit Diabetes" <?php if ($user['riwayatsendiri3'] == "Penyakit Diabetes") echo "selected" ?>>Penyakit Diabetes</option>
                                             <option value="Penyakit Hipertensi" <?php if ($user['riwayatsendiri3'] == "Penyakit Hipertensi") echo "selected" ?>>Penyakit Hipertensi</option>
                                             <option value="Penyakit Asma" <?php if ($user['riwayatsendiri3'] == "Penyakit Asma") echo "selected" ?>>Penyakit Asma</option>

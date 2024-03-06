@@ -33,7 +33,7 @@
                         </div>
                         <div class="card-body">
                         <div class="modal-body">
-                        <form action="function.php?act=tambahPTMHasil" id="tambah" method="POST">
+                        <form action="indexPeriksaPTMCek.php" method="GET">
                         <input type="hidden" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?= $user['tanggal_pengisian']; ?>">
                                 <div class="form-group ">
                                     <label for="tanggal_pemeriksaan">Tanggal Pemeriksaan</label>
@@ -141,6 +141,7 @@
                                         <label for="riwayatkeluarga1">Riwayat Pada Keluarga</label><br>
                                         <select name="riwayatkeluarga1" id="riwayatkeluarga1" class="form-control form-control-user" aria-label="Default select example">
                                             <option selected></option>
+                                            <option value="Tidak Ada" <?php if ($user['riwayatkeluarga1'] == "Tidak Ada") echo "selected" ?>>Tidak Ada</option>
                                             <option value="Penyakit Diabetes" <?php if ($user['riwayatkeluarga1'] == "Penyakit Diabetes") echo "selected" ?>>Penyakit Diabetes</option>
                                             <option value="Penyakit Hipertensi" <?php if ($user['riwayatkeluarga1'] == "Penyakit Hipertensi") echo "selected" ?>>Penyakit Hipertensi</option>
                                             <option value="Penyakit Asma" <?php if ($user['riwayatkeluarga1'] == "Penyakit Asma") echo "selected" ?>>Penyakit Asma</option>
@@ -154,6 +155,7 @@
                                         <label for="riwayatkeluarga2"></label><br>
                                         <select name="riwayatkeluarga2" id="riwayatkeluarga2" class="form-control form-control-user" aria-label="Default select example">
                                             <option selected></option>
+                                            <option value="Tidak Ada" <?php if ($user['riwayatkeluarga2'] == "Tidak Ada") echo "selected" ?>>Tidak Ada</option>
                                             <option value="Penyakit Diabetes" <?php if ($user['riwayatkeluarga2'] == "Penyakit Diabetes") echo "selected" ?>>Penyakit Diabetes</option>
                                             <option value="Penyakit Hipertensi" <?php if ($user['riwayatkeluarga2'] == "Penyakit Hipertensi") echo "selected" ?>>Penyakit Hipertensi</option>
                                             <option value="Penyakit Asma" <?php if ($user['riwayatkeluarga2'] == "Penyakit Asma") echo "selected" ?>>Penyakit Asma</option>
@@ -167,6 +169,7 @@
                                         <label for="riwayatkeluarga3"></label><br>
                                         <select name="riwayatkeluarga3" id="riwayatkeluarga3" class="form-control form-control-user" aria-label="Default select example">
                                             <option selected></option>
+                                            <option value="Tidak Ada" <?php if ($user['riwayatkeluarga3'] == "Tidak Ada") echo "selected" ?>>Tidak Ada</option>
                                             <option value="Penyakit Diabetes" <?php if ($user['riwayatkeluarga3'] == "Penyakit Diabetes") echo "selected" ?>>Penyakit Diabetes</option>
                                             <option value="Penyakit Hipertensi" <?php if ($user['riwayatkeluarga3'] == "Penyakit Hipertensi") echo "selected" ?>>Penyakit Hipertensi</option>
                                             <option value="Penyakit Asma" <?php if ($user['riwayatkeluarga3'] == "Penyakit Asma") echo "selected" ?>>Penyakit Asma</option>
@@ -182,6 +185,7 @@
                                         <label for="riwayatsendiri1">Riwayat Pada Diri Sendiri</label><br>
                                         <select name="riwayatsendiri1" id="riwayatsendiri1" class="form-control form-control-user" aria-label="Default select example">
                                             <option selected></option>
+                                            <option value="Tidak Ada" <?php if ($user['riwayatsendiri1'] == "Tidak Ada") echo "selected" ?>>Tidak Ada</option>
                                             <option value="Penyakit Diabetes" <?php if ($user['riwayatsendiri1'] == "Penyakit Diabetes") echo "selected" ?>>Penyakit Diabetes</option>
                                             <option value="Penyakit Hipertensi" <?php if ($user['riwayatsendiri1'] == "Penyakit Hipertensi") echo "selected" ?>>Penyakit Hipertensi</option>
                                             <option value="Penyakit Asma" <?php if ($user['riwayatsendiri1'] == "Penyakit Asma") echo "selected" ?>>Penyakit Asma</option>
@@ -195,6 +199,7 @@
                                         <label for="riwayatsendiri2"></label><br>
                                         <select name="riwayatsendiri2" id="riwayatsendiri2" class="form-control form-control-user" aria-label="Default select example">
                                             <option selected></option>
+                                            <option value="Tidak Ada" <?php if ($user['riwayatsendiri2'] == "Tidak Ada") echo "selected" ?>>Tidak Ada</option>
                                             <option value="Penyakit Diabetes" <?php if ($user['riwayatsendiri2'] == "Penyakit Diabetes") echo "selected" ?>>Penyakit Diabetes</option>
                                             <option value="Penyakit Hipertensi" <?php if ($user['riwayatsendiri2'] == "Penyakit Hipertensi") echo "selected" ?>>Penyakit Hipertensi</option>
                                             <option value="Penyakit Asma" <?php if ($user['riwayatsendiri2'] == "Penyakit Asma") echo "selected" ?>>Penyakit Asma</option>
@@ -208,6 +213,7 @@
                                         <label for="riwayatsendiri3"></label><br>
                                         <select name="riwayatsendiri3" id="riwayatsendiri3" class="form-control form-control-user" aria-label="Default select example">
                                             <option selected></option>
+                                            <option value="Tidak Ada" <?php if ($user['riwayatsendiri3'] == "Tidak Ada") echo "selected" ?>>Tidak Ada</option>
                                             <option value="Penyakit Diabetes" <?php if ($user['riwayatsendiri3'] == "Penyakit Diabetes") echo "selected" ?>>Penyakit Diabetes</option>
                                             <option value="Penyakit Hipertensi" <?php if ($user['riwayatsendiri3'] == "Penyakit Hipertensi") echo "selected" ?>>Penyakit Hipertensi</option>
                                             <option value="Penyakit Asma" <?php if ($user['riwayatsendiri3'] == "Penyakit Asma") echo "selected" ?>>Penyakit Asma</option>
@@ -305,17 +311,10 @@
                                         <input type="text" class="form-control-tes col-lg-9" id="periksa_gula" name="periksa_gula"><?php echo "&emsp;mg/dl (<200)" ?>
                                     </div>
                                 </div>
-                                <div class="form-group ">
-                                    <h6>Teks Template</h6>
-                                    <p></p>
-                                </div>
-                                <div class="form-group ">
-                                    <label for="feedback">Rekomendasi Dokter</label>
-                                    <textarea class="form-control form-control-user" id="feedback" name="feedback" required></textarea>
-                                </div>
+                                
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" onclick="history.back();">Batal</button>
-                            <button type="submit" id="tambah" value="tambah" class="btn btn-success">Simpan</button>
+                            <button type="submit" name="hitung" id="hitung" value="hitung" class="btn btn-success">Cek</button>
                         </div>
 
                         

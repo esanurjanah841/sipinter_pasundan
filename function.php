@@ -506,19 +506,24 @@ function tambahPTMHasil()
     $diastol = htmlspecialchars($_POST['diastol']);
     $periksa_gula = htmlspecialchars($_POST['periksa_gula']);
     $feedback = htmlspecialchars($_POST['feedback']);
+    $imt = htmlspecialchars($_POST['imt']);
+    $hasil_imt = htmlspecialchars($_POST['hasil_imt']);
+    $hasil_tensi = htmlspecialchars($_POST['hasil_tensi']);
+    $hasil_lingkar = htmlspecialchars($_POST['hasil_lingkar']);
+    $hasilperiksa_gula = htmlspecialchars($_POST['hasilperiksa_gula']);
     
     // $penyakit = $_POST['id_penyakit'];
-    $queryPTM = "INSERT INTO ptm_hasil VALUES ('', '$tanggal_pengisian','$tanggal_pemeriksaan','$nik','$nama_lengkap', '$ttl', '$jenis_kelamin', '$alamat', '$provinsi', '$kota', '$tlp', '$pendidikan', '$pekerjaan', '$status', '$goldar', '$riwayatkeluarga1', '$riwayatkeluarga2', '$riwayatkeluarga3', '$riwayatsendiri1', '$riwayatsendiri2', '$riwayatsendiri3', '$merokok', '$fisik', '$gula', '$garam', '$lemak', '$sayur', '$alkohol', '$berat', '$tinggi', '$lingkar', '$sistol', '$diastol', '$periksa_gula', '$feedback')";
+    $queryPTM = "INSERT INTO ptm_hasil VALUES ('', '$tanggal_pengisian','$tanggal_pemeriksaan','$nik','$nama_lengkap', '$ttl', '$jenis_kelamin', '$alamat', '$provinsi', '$kota', '$tlp', '$pendidikan', '$pekerjaan', '$status', '$goldar', '$riwayatkeluarga1', '$riwayatkeluarga2', '$riwayatkeluarga3', '$riwayatsendiri1', '$riwayatsendiri2', '$riwayatsendiri3', '$merokok', '$fisik', '$gula', '$garam', '$lemak', '$sayur', '$alkohol', '$berat', '$tinggi', '$lingkar', '$sistol', '$diastol', '$periksa_gula', '$feedback', '$imt', '$hasil_imt', '$hasil_tensi', '$hasil_lingkar', '$hasilperiksa_gula')";
     // $queryRelasi = "INSERT INTO relasi VALUES ('', '')"
     $exe = mysqli_query($koneksi, $queryPTM);
     if (!$exe) {
         echo "<script>
             alert('Hasil Pemeriksaan gagal ditambahkan! Periksa kembali, diharapkan melengkapi semua data.');
-            document.location.href = 'indexPTM.php'</script>";
+            document.location.href = 'indexptm.php'</script>";
     }
             echo "<script>
             alert('Hasil Pemeriksaan berhasil ditambahkan dan dikirimkan ke pasien!');
-            document.location.href = 'indexPTM.php'</script>";
+            document.location.href = 'indexptm.php'</script>";
 }
 
 function ubahGejala($id_gejala)

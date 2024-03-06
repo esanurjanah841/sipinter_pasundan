@@ -126,6 +126,7 @@
                         <hr class="collapse-divider my-1">
                         <a class="collapse-item" href="indexLaporan.php">Laporan SRQ-29</a>
                         <a class="collapse-item" href="laporanPemeriksaanPTM.php">Laporan PTM</a>
+                        <a class="collapse-item" href="laporanSkriningKesehatan.php">Laporan Skrining Kesehatan</a>
                     </div>
                 </div>
             </li>

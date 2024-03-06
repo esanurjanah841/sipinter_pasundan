@@ -141,6 +141,7 @@
                                         <label for="riwayatkeluarga1">Riwayat Pada Keluarga</label><br>
                                         <select name="riwayatkeluarga1" id="riwayatkeluarga1" class="form-control form-control-user" aria-label="Default select example">
                                             <option selected></option>
+                                            <option value="Tidak Ada">Tidak Ada</option>
                                             <option value="Penyakit Diabetes">Penyakit Diabetes</option>
                                             <option value="Penyakit Hipertensi">Penyakit Hipertensi</option>
                                             <option value="Penyakit Asma">Penyakit Asma</option>
@@ -154,6 +155,7 @@
                                         <label for="riwayatkeluarga2"></label><br>
                                         <select name="riwayatkeluarga2" id="riwayatkeluarga2" class="form-control form-control-user" aria-label="Default select example">
                                             <option selected></option>
+                                            <option value="Tidak Ada">Tidak Ada</option>
                                             <option value="Penyakit Diabetes">Penyakit Diabetes</option>
                                             <option value="Penyakit Hipertensi">Penyakit Hipertensi</option>
                                             <option value="Penyakit Asma">Penyakit Asma</option>
@@ -167,6 +169,7 @@
                                         <label for="riwayatkeluarga3"></label><br>
                                         <select name="riwayatkeluarga3" id="riwayatkeluarga3" class="form-control form-control-user" aria-label="Default select example">
                                             <option selected></option>
+                                            <option value="Tidak Ada">Tidak Ada</option>
                                             <option value="Penyakit Diabetes">Penyakit Diabetes</option>
                                             <option value="Penyakit Hipertensi">Penyakit Hipertensi</option>
                                             <option value="Penyakit Asma">Penyakit Asma</option>
@@ -181,7 +184,8 @@
                                     <div class="form-group col-lg-4">
                                         <label for="riwayatsendiri1">Riwayat Pada Diri Sendiri</label><br>
                                         <select name="riwayatsendiri1" id="riwayatsendiri1" class="form-control form-control-user" aria-label="Default select example">
-                                        <option selected></option>
+                                            <option selected></option>
+                                            <option value="Tidak Ada">Tidak Ada</option>
                                             <option value="Penyakit Diabetes">Penyakit Diabetes</option>
                                             <option value="Penyakit Hipertensi">Penyakit Hipertensi</option>
                                             <option value="Penyakit Asma">Penyakit Asma</option>
@@ -194,7 +198,8 @@
                                     <div class="form-group col-lg-4">
                                         <label for="riwayatsendiri2"></label><br>
                                         <select name="riwayatsendiri2" id="riwayatsendiri2" class="form-control form-control-user" aria-label="Default select example">
-                                        <option selected></option>
+                                            <option selected></option>
+                                            <option value="Tidak Ada">Tidak Ada</option>
                                             <option value="Penyakit Diabetes">Penyakit Diabetes</option>
                                             <option value="Penyakit Hipertensi">Penyakit Hipertensi</option>
                                             <option value="Penyakit Asma">Penyakit Asma</option>
@@ -207,7 +212,8 @@
                                     <div class="form-group col-lg-4">
                                         <label for="riwayatsendiri3"></label><br>
                                         <select name="riwayatsendiri3" id="riwayatsendiri3" class="form-control form-control-user" aria-label="Default select example">
-                                        <option selected></option>
+                                            <option selected></option>
+                                            <option value="Tidak Ada">Tidak Ada</option>
                                             <option value="Penyakit Diabetes">Penyakit Diabetes</option>
                                             <option value="Penyakit Hipertensi">Penyakit Hipertensi</option>
                                             <option value="Penyakit Asma">Penyakit Asma</option>

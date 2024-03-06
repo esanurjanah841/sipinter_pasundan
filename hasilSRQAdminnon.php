@@ -1,8 +1,3 @@
-<?php 
-include 'sidebar.php';
-
-?>
-
 <section id="detail">
 <div>
         <div class="solid">
@@ -16,36 +11,27 @@ include 'sidebar.php';
                     <form action="function.php?act=tambahLaporan" id="tambah" method="POST" class="tambah_pasien">
                                 <div class="form-group ">
                                     <label for="tanggal_pengisian">Tanggal Pengisian</label>
-                                    <input type="text" class="form-control form-control-user" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?php echo $tanggal?>"  readonly>
+                                    <input type="text" class="form-control form-control-user" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?php echo $tanggal?>"  required>
                                 </div>
-                                <?php 
-                                    $tampiluser = mysqli_query($koneksi, "SELECT DISTINCT p.id_user, p.nama_lengkap, p.nik, p.ttl, p.jenis_kelamin, p.alamat, p.kota, p.provinsi, p.tlp, p.pendidikan, p.pekerjaan, p.status, p.goldar from user b, profil_user p where b.nik=p.nik and b.id_user='$_SESSION[id_user]' group by nik");
-                                    $tampil = mysqli_fetch_array($tampiluser);
-                                        $alamat = $tampil['alamat'];
-                                        $kota = $tampil['kota'];
-                                        $provinsi = $tampil['provinsi'];
-                                ?>
-                                
-                                <input type="hidden" id="id_user" name="id_user" value="<?php echo $tampil['id_user']?>">
                                 <div class="form-group">
                                     <label for="nik">NIK</label>
-                                    <input type="text" class="form-control form-control-user" id="nik" name="nik"  value="<?php echo $tampil['nik']?>" readonly>
+                                    <input type="text" class="form-control form-control-user" id="nik" name="nik" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="nama_lengkap">Nama Lengkap</label>
-                                    <input type="text" class="form-control form-control-user" id="nama_lengkap" name="nama_lengkap"  value="<?php echo $tampil['nama_lengkap']?>" readonly>
+                                    <input type="text" class="form-control form-control-user" id="nama_lengkap" name="nama_lengkap" required>
                                 </div>
                                 <div class="form-group ">
                                     <label for="ttl">Tanggal Lahir</label>
-                                    <input type="date" class="form-control form-control-user" id="ttl" name="ttl"  value="<?php echo $tampil['ttl']?>" readonly>
+                                    <input type="date" class="form-control form-control-user" id="ttl" name="ttl" required>
                                 </div>
                                 <div class="form-group ">
                                     <label for="alamat">Alamat</label>
-                                    <input type="text" class="form-control form-control-user" id="alamat" name="alamat"  value="<?php echo "$alamat, "; echo "$kota, "; echo "$provinsi, ";?>" readonly>
+                                    <input type="text" class="form-control form-control-user" id="alamat" name="alamat" required>
                                 </div>
                                 <div class="form-group ">
                                     <label for="tlp">No. Telepon</label>
-                                    <input type="text" class="form-control form-control-user" id="tlp" name="tlp" value="<?php echo $tampil['tlp']?>" readonly>
+                                    <input type="text" class="form-control form-control-user" id="tlp" name="tlp" required>
                                 </div>
                                 <br>
                                 <div class="form-group">

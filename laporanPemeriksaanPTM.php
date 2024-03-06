@@ -28,13 +28,19 @@
                 <h6 class="m-0 font-weight-bold text-primary">Data PTM Pemeriksaan</h6>
             </div>
             <div style="font-size: 14px;">
-                <a href="PTMcsv.php" class=" btn btn-primary btn-icon-split" style="font-size 14px; margin:10px">
+                <a href="PTMcsv.php" class=" btn btn-primary btn-icon-split" style="font-size 14px; margin: 7px;">
                     <span class="icon text-white-50">
                         <i class="fas fa-file-csv"></i>
                     </span>
                     <span class="text">CSV</span>
                 </a>
-                <a href="LaporanPTM.php" target="_BLANK" class="btn btn-info btn-icon-split">
+                <a onclick="window.open('laporanPTMExcel.php')" target="_BLANK" class="btn btn-success btn-icon-split" style="font-size 14px; margin: 7px;">
+                    <span class="icon text-white-50">
+                        <i class="fas fa-print"></i>
+                    </span>
+                    <span class="text">Excel</span>
+                </a>
+                <a href="LaporanPTM.php" target="_BLANK" class="btn btn-info btn-icon-split" style="font-size 14px; margin: 7px;">
                     <span class="icon text-white-50">
                         <i class="fas fa-print"></i>
                     </span>
