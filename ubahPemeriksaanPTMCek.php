@@ -104,122 +104,122 @@
                         <form action="function.php?act=ubahPemeriksaanPTM&id_ptm=<?= $user['id_ptm']; ?>" id="tambah" method="POST">
                         <input type="hidden" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?= $user['tanggal_pengisian']; ?>">
                         
-                                <div class="form-group ">
+                        <div class="form-group ">
                                     <label for="tanggal_pemeriksaan">Tanggal Pemeriksaan</label>
-                                    <input type="text" class="form-control form-control-user" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan" value="<?= $user['tanggal_pemeriksaan']; ?>" required>
+                                    <input type="text" class="form-control form-control-user" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan" value="<?php echo $tanggal?>" required>
                                 </div>
                                 <div class="form-group ">
                                     <label for="nik">NIK</label>
-                                    <input type="text" class="form-control form-control-user" id="nik" name="nik" value="<?= $user['nik']; ?>" readonly>
+                                    <input type="text" class="form-control form-control-user" id="nik" name="nik" value="<?= $nik ?>" readonly>
                                 </div>
                                 <div class="form-group ">
                                     <label for="nama_lengkap">Nama Lengkap</label>
-                                    <input type="text" class="form-control form-control-user" id="nama_lengkap" name="nama_lengkap" value="<?= $user['nama_lengkap']; ?>" readonly>
+                                    <input type="text" class="form-control form-control-user" id="nama_lengkap" name="nama_lengkap" value="<?= $nama_lengkap?>" readonly>
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-lg-6">
                                         <label for="ttl">Tanggal Lahir</label>
-                                        <input type="date" class="form-control form-control-user" id="ttl" name="ttl" value="<?= $user['ttl']; ?>" readonly>
+                                        <input type="date" class="form-control form-control-user" id="ttl" name="ttl" value="<?= $ttl ?>" readonly>
                                     </div>
                                     <div class="form-group col-lg-6">
                                         <label for="jenis_kelamin">Jenis Kelamin</label>
-                                        <input type="text" class="form-control form-control-user" id="jenis_kelamin" name="jenis_kelamin" value="<?= $user['jenis_kelamin']; ?>" readonly>
+                                        <input type="text" class="form-control form-control-user" id="jenis_kelamin" name="jenis_kelamin" value="<?= $jenis_kelamin ?>" readonly>
+                                        
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-lg-6">
                                         <label for="provinsi">Provinsi</label>
-                                        <input type="text" class="form-control form-control-user" id="provinsi" name="provinsi" value="<?= $user['provinsi']; ?>" readonly>
+                                        <input type="text" class="form-control form-control-user" id="provinsi" name="provinsi" value="<?= $provinsi ?>" readonly>
                                     </div>
                                     <div class="form-group col-lg-6">
                                         <label for="kota">Kota/Kabupaten</label>
-                                        <input type="text" class="form-control form-control-user" id="kota" name="kota" value="<?= $user['kota']; ?>" readonly>
+                                        <input type="text" class="form-control form-control-user" id="kota" name="kota" value="<?= $kota ?>" readonly>
                                     </div>
                                 </div>
                                 <div class="form-group ">
                                     <label for="alamat">Alamat Lengkap</label>
-                                    <input type="text" class="form-control form-control-user" id="alamat" name="alamat" value="<?= $user['alamat']; ?>" readonly>
+                                    <input type="text" class="form-control form-control-user" id="alamat" name="alamat" value="<?= $alamat ?>" readonly>
                                 </div>
                                 <div class="form-group ">
                                     <label for="tlp">No. Telepon</label>
-                                    <input type="text" class="form-control form-control-user" id="tlp" name="tlp" value="<?= $user['tlp']; ?>" readonly>
+                                    <input type="text" class="form-control form-control-user" id="tlp" name="tlp" value="<?= $tlp ?>" readonly>
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-lg-6">
                                         <label for="pendidikan">Pendidikan Terakhir</label>
-                                        <input type="text" class="form-control form-control-user" id="pendidikan" name="pendidikan" value="<?= $user['pendidikan']; ?>" readonly>
+                                        <input type="text" class="form-control form-control-user" id="pendidikan" name="pendidikan" value="<?= $pendidikan ?>" readonly>
                                     </div> 
                                     <div class="form-group col-lg-6">
                                         <label for="pekerjaan">Pekerjaan</label>
-                                        <input type="text" class="form-control form-control-user" id="pekerjaan" name="pekerjaan" value="<?= $user['pekerjaan']; ?>" readonly>
+                                        <input type="text" class="form-control form-control-user" id="pekerjaan" name="pekerjaan" value="<?= $pekerjaan ?>" readonly>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-lg-6">
                                         <label for="status">Status Perkawinan</label>
-                                        <input type="text" class="form-control form-control-user" id="status" name="status" value="<?= $user['status']; ?>" readonly>
+                                        <input type="text" class="form-control form-control-user" id="status" name="status" value="<?= $status ?>" readonly>
                                     </div>
                                     <div class="form-group col-lg-6">
                                         <label for="goldar">Golongan Darah</label>
-                                        <input type="text" class="form-control form-control-user" id="goldar" name="goldar" value="<?= $user['goldar']; ?>" readonly>
+                                        <input type="text" class="form-control form-control-user" id="goldar" name="goldar" value="<?= $goldar ?>" readonly>
                                     </div>
                                 </div>
-                                
                                 <div class="row">
                                     <div class="form-group col-lg-4">
                                         <label for="riwayatkeluarga1">Riwayat Pada Keluarga</label><br>
-                                        <input type="text" class="form-control form-control-user" id="riwayatkeluarga1" name="riwayatkeluarga1" value="<?= $user['riwayatkeluarga1']; ?>" readonly>
+                                        <input type="text" class="form-control form-control-user" id="riwayatkeluarga1" name="riwayatkeluarga1" value="<?= $riwayatkeluarga1 ?>" readonly>
                                     </div>
                                     <div class="form-group col-lg-4">
                                         <label for="riwayatkeluarga2"></label><br>
-                                        <input type="text" class="form-control form-control-user" id="riwayatkeluarga2" name="riwayatkeluarga2" value="<?= $user['riwayatkeluarga2']; ?>" readonly>
+                                        <input type="text" class="form-control form-control-user" id="riwayatkeluarga2" name="riwayatkeluarga2" value="<?= $riwayatkeluarga2 ?>" readonly>
                                     </div>
                                     <div class="form-group col-lg-4">
                                         <label for="riwayatkeluarga3"></label><br>
-                                        <input type="text" class="form-control form-control-user" id="riwayatkeluarga3" name="riwayatkeluarga3" value="<?= $user['riwayatkeluarga3']; ?>" readonly>
+                                        <input type="text" class="form-control form-control-user" id="riwayatkeluarga3" name="riwayatkeluarga3" value="<?= $riwayatkeluarga3 ?>" readonly>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-lg-4">
                                         <label for="riwayatsendiri1">Riwayat Pada Diri Sendiri</label><br>
-                                        <input type="text" class="form-control form-control-user" id="riwayatsendiri1" name="riwayatsendiri1" value="<?= $user['riwayatsendiri1']; ?>" readonly>
+                                        <input type="text" class="form-control form-control-user" id="riwayatsendiri1" name="riwayatsendiri1" value="<?= $riwayatsendiri1 ?>" readonly>
                                     </div>
                                     <div class="form-group col-lg-4">
                                         <label for="riwayatsendiri2"></label><br>
-                                        <input type="text" class="form-control form-control-user" id="riwayatsendiri2" name="riwayatsendiri2" value="<?= $user['riwayatsendiri2']; ?>" readonly>
+                                        <input type="text" class="form-control form-control-user" id="riwayatsendiri2" name="riwayatsendiri2" value="<?= $riwayatsendiri2 ?>" readonly>
                                     </div>
                                     <div class="form-group col-lg-4">
                                         <label for="riwayatsendiri3"></label><br>
-                                        <input type="text" class="form-control form-control-user" id="riwayatsendiri3" name="riwayatsendiri3" value="<?= $user['riwayatsendiri3']; ?>" readonly>
+                                        <input type="text" class="form-control form-control-user" id="riwayatsendiri3" name="riwayatsendiri3" value="<?= $riwayatsendiri3 ?>" readonly>
                                     </div>
                                 </div>
                                 <div class="form-group ">
                                     <label for="merokok">Merokok</label>
-                                    <input type="text" class="form-control form-control-user" id="merokok" name="merokok" value="<?= $user['merokok']; ?>" readonly>
+                                    <input type="text" class="form-control form-control-user" id="merokok" name="merokok" value="<?= $merokok ?>" readonly>
                                 </div>
                                 <div class="form-group ">
                                     <label for="fisik">Aktivitas Fisik < 150 Menit/Minggu</label>
-                                    <input type="text" class="form-control form-control-user" id="fisik" name="fisik" value="<?= $user['fisik']; ?>" readonly>
+                                    <input type="text" class="form-control form-control-user" id="fisik" name="fisik" value="<?= $fisik ?>" readonly>
                                 </div>
                                 <div class="form-group ">
                                     <label for="gula">Konsumsi Gula >4 Sendok Makan / Hari</label>
-                                    <input type="text" class="form-control form-control-user" id="gula" name="gula" value="<?= $user['gula']; ?>" readonly>
+                                    <input type="text" class="form-control form-control-user" id="gula" name="gula" value="<?= $gula ?>" readonly>
                                 </div>
                                 <div class="form-group ">
                                     <label for="garam">Konsumsi Garam >1 Sendok Teh/ Hari</label>
-                                    <input type="text" class="form-control form-control-user" id="garam" name="garam" value="<?= $user['garam']; ?>" readonly>
+                                    <input type="text" class="form-control form-control-user" id="garam" name="garam" value="<?= $garam ?>" readonly>
                                 </div>
                                 <div class="form-group ">
                                     <label for="lemak">Konsumsi Lemak >5 Sendok Makan / Hari </label>
-                                    <input type="text" class="form-control form-control-user" id="lemak" name="lemak" value="<?= $user['lemak']; ?>" readonly>
+                                    <input type="text" class="form-control form-control-user" id="lemak" name="lemak" value="<?= $lemak ?>" readonly>
                                 </div>
                                 <div class="form-group ">
                                     <label for="sayur">Konsumsi sayur dan buah ≤5 porsi/Hari</label>
-                                    <input type="text" class="form-control form-control-user" id="sayur" name="sayur" value="<?= $user['sayur']; ?>" readonly>
+                                    <input type="text" class="form-control form-control-user" id="sayur" name="sayur" value="<?= $sayur ?>" readonly>
                                 </div>
                                 <div class="form-group ">
                                     <label for="alkohol">Konsumsi Alkohol</label>
-                                    <input type="text" class="form-control form-control-user" id="alkohol" name="alkohol" value="<?= $user['alkohol']; ?>" readonly>
+                                    <input type="text" class="form-control form-control-user" id="alkohol" name="alkohol" value="<?= $alkohol ?>" readonly>
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-lg-6">
