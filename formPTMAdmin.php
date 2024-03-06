@@ -29,7 +29,7 @@
                         </div>
                         <div class="card-body">
                         <div class="modal-body">
-                        <form action="function.php?act=tambahPTMHasil" id="tambah" method="POST">
+                        <form action="formPTMAdminCek.php" method="GET">
                             
                             <div class="form-group ">
                                     <label for="tanggal_pengisian">Tanggal Pengisian</label>
@@ -311,13 +311,10 @@
                                         <input type="text" class="form-control-tes col-lg-9" id="periksa_gula" name="periksa_gula" required><?php echo "&emsp;mg/dl (<200)" ?>
                                     </div>
                                 </div>
-                                <div class="form-group ">
-                                    <label for="feedback">Rekomendasi Dokter</label>
-                                    <textarea class="form-control form-control-user" id="feedback" name="feedback" required></textarea>
-                                </div>
+                                
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" onclick="history.back();">Batal</button>
-                            <button type="submit" id="tambah" value="tambah" class="btn btn-success">Simpan</button>
+                            <button type="submit" id="hitung" value="hitung" name="hitung" class="btn btn-success">Cek</button>
                         </div>
 
                         
