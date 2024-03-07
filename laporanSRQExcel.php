@@ -43,7 +43,6 @@
                                             <th>No</th>
                                             <th>Tanggal Pengisian</th>
                                             <th>NIK</th>
-                                            <th>No. BPJS</th>
                                             <th>Nama Lengkap</th>
                                             <th>Tanggal Lahir</th>
                                             <th>Alamat</th>
@@ -60,7 +59,6 @@
                                             <td><?= $no ?></td>
                                             <td><?= $data['tanggal_pengisian']; ?></td>
                                             <td><?= $data['nik']; ?></td>
-                                            <td><?= $data['bpjs']; ?></td>
                                             <td><?= $data['nama_lengkap']; ?></td>
                                             <td><?= $data['ttl']; ?></td>
                                             <td><?= $data['alamat']; ?></td>
