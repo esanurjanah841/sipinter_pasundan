@@ -31,8 +31,6 @@
     $tahun = new DateTime($tahun);
     $sekarang = new Datetime('today');
     $thnlahir = $sekarang->diff($tahun)->y;
-    
-    echo $thnlahir;
     }
     
     $no=0;
@@ -293,7 +291,7 @@
                         <th class="kuning" colspan="2">LEMAK BERLEBIH</th>
                         <th class="kuning" colspan="2">KURANG SAYUR & BUAH</th>
                         <th class="kuning" colspan="2">KONSUMSI ALKOHOL</th>
-                        <th colspan="2"><?php echo "<120 / 80 mmHg" ?></th>
+                        <th colspan="2"><?php echo " <120 / 80 mmHg" ?></th>
                         <th colspan="2"><?php echo "120-139 /80-89 mmHg"?></th>
                         <th colspan="2"><?php echo ">139/90 mmHg"?></th>
                         <th colspan="2">IMT <br> >27,0</th>
@@ -301,8 +299,8 @@
                         <th colspan="2">IMT <br> 18.5 - 25.0</th>
                         <th colspan="2">IMT <br> 17.0 - 18,5</th>
                         <th colspan="2">IMT<?php echo "<17.0"?> </th>
-                        <th colspan="2"><?php echo "LINGKAR PERUT <br> L : <90 / P: <80"?></th>
-                        <th colspan="2"><?php echo "LINGKAR PERUT <br> L : >90 / P: >80"?></th>
+                        <th colspan="2"><?php echo "LINGKAR PERUT <br> L:<90 / P:<80"?></th>
+                        <th colspan="2"><?php echo "LINGKAR PERUT <br> L:>90 / P:>80"?></th>
                         <th colspan="2">GULA <br> 80 - 144 mg/dL</th>
                         <th colspan="2">GULA<br>145 - 199  mg/dL</th>
                         <th colspan="2"><?php echo "GULA <br> > 200 mg/dL"?></th>
