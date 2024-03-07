@@ -218,7 +218,7 @@ if (isset($_SESSION['role'])) {
                     <div class="modal-body border-0 p-4">
                             <!-- Name input-->
                       <div class="modal-body">
-                        <form class="tambah_pasien" id="login-form" action="send_email.php" method="POST">
+                        <form class="tambah_pasien" id="login-form" action="cekforget.php" method="POST">
                           <div class="form-group">
                             <label for="email">Inputkan Email Anda</label>
                               <input type="text" class="form-control form-control-user" id="email" name="email"
