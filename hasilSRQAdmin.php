@@ -87,7 +87,7 @@ $jumlah_dipilih = count($gejala);
         <div class="solid">
             <div class="form-row">
                 <div class="panel-heading">
-                    <h3 style="font-family: poppins; margin-top: 20px; text-align:center;">LAPORAN HASIL DIAGNOSA SRQ-29</h3>
+                    <h3 style="font-family: poppins; margin-top: 20px; text-align:center;">LAPORAN HASIL SKRINING KESEHATAN JIWA (SRQ-29)</h3>
                     <a style="font-family: poppins; margin-top: 20px"></a>
                 </div>
                 <div class="panel-body">
@@ -97,7 +97,10 @@ $jumlah_dipilih = count($gejala);
                                     <label for="tanggal_pengisian">Tanggal Pengisian</label>
                                     <input type="text" class="form-control form-control-user" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?php echo $tanggal?>"  required>
                                 </div>
-                                
+                                <div class="form-group ">
+                                    <label for="tanggal_pemeriksaan">Tanggal Pemeriksaan</label>
+                                    <input type="text" class="form-control form-control-user" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan"   value="<?php echo $tanggal?>"  required>
+                                </div>
                                 <div class="form-group">
                                     <label for="nik">NIK</label>
                                     <input type="text" class="form-control form-control-user" id="nik" name="nik" value="<?= $nik ?>" required>

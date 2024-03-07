@@ -115,18 +115,18 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDiagnosa"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-laptop-medical"></i>
-                    <span>Diagnosa</span>
+                    <span>Input Skrining</span>
                 </a>
                 <div id="collapseDiagnosa" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Diagnosa:</h6>
+                        <h6 class="collapse-header">Input Skrining:</h6>
                         <!-- Divider -->
                         <hr class="collapse-divider my-1">
                         <a class="collapse-item" href="indexDiagnosa.php">Form SRQ-29</a>
                         <hr class="collapse-divider my-1">
                         <a class="collapse-item" href="formPTMAdmin.php">Form PTM</a>
-                        <a class="collapse-item" href="indexPTM.php">Periksa PTM</a>
+                        <a class="collapse-item" href="indexPTM.php">Validasi Hasil Skrining</a>
                     </div>
                 </div>
             </li>

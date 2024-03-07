@@ -177,6 +177,7 @@ if(($nik)==1){
                                 <td>
                                 <select name="riwayatkeluarga1" id="riwayatkeluarga1" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px">
                                     <option selected></option>
+                                    <option value="Tidak Ada">Tidak Ada</option>
                                     <option value="Penyakit Diabetes">Penyakit Diabetes</option>
                                     <option value="Penyakit Hipertensi">Penyakit Hipertensi</option>
                                     <option value="Penyakit Asma">Penyakit Asma</option>
@@ -193,6 +194,7 @@ if(($nik)==1){
                                 <td>
                                 <select name="riwayatkeluarga2" id="riwayatkeluarga2" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px">
                                     <option selected></option>
+                                    <option value="Tidak Ada">Tidak Ada</option>
                                     <option value="Penyakit Diabetes">Penyakit Diabetes</option>
                                     <option value="Penyakit Hipertensi">Penyakit Hipertensi</option>
                                     <option value="Penyakit Asma">Penyakit Asma</option>
@@ -209,6 +211,7 @@ if(($nik)==1){
                                 <td>
                                 <select name="riwayatkeluarga3" id="riwayatkeluarga3" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px">
                                     <option selected></option>
+                                    <option value="Tidak Ada">Tidak Ada</option>
                                     <option value="Penyakit Diabetes">Penyakit Diabetes</option>
                                     <option value="Penyakit Hipertensi">Penyakit Hipertensi</option>
                                     <option value="Penyakit Asma">Penyakit Asma</option>
@@ -225,6 +228,7 @@ if(($nik)==1){
                                 <td>
                                 <select name="riwayatsendiri1" id="riwayatsendiri1" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px">
                                     <option selected></option>
+                                    <option value="Tidak Ada">Tidak Ada</option>
                                     <option value="Penyakit Diabetes">Penyakit Diabetes</option>
                                     <option value="Penyakit Hipertensi">Penyakit Hipertensi</option>
                                     <option value="Penyakit Asma">Penyakit Asma</option>
@@ -241,6 +245,7 @@ if(($nik)==1){
                                 <td>
                                 <select name="riwayatsendiri2" id="riwayatsendiri2" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px">
                                     <option selected></option>
+                                    <option value="Tidak Ada">Tidak Ada</option>
                                     <option value="Penyakit Diabetes">Penyakit Diabetes</option>
                                     <option value="Penyakit Hipertensi">Penyakit Hipertensi</option>
                                     <option value="Penyakit Asma">Penyakit Asma</option>
@@ -257,6 +262,7 @@ if(($nik)==1){
                                 <td>
                                 <select name="riwayatsendiri3" id="riwayatsendiri3" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px">
                                     <option selected></option>
+                                    <option value="Tidak Ada">Tidak Ada</option>
                                     <option value="Penyakit Diabetes">Penyakit Diabetes</option>
                                     <option value="Penyakit Hipertensi">Penyakit Hipertensi</option>
                                     <option value="Penyakit Asma">Penyakit Asma</option>

@@ -39,12 +39,7 @@
                     </span>
                     <span class="text">Excel</span>
                 </a>
-                <a href="#" target="_BLANK" class="btn btn-info btn-icon-split" style="font-size 14px; margin:5px">
-                    <span class="icon text-white-50">
-                        <i class="fas fa-print"></i>
-                    </span>
-                    <span class="text">Print</span>
-                </a>
+                
             </div>
                 <div class="card-body">
                     <div class="table-responsive">

@@ -19,7 +19,7 @@ include 'sidebar.php';
 <div class="container-fluid">
                 <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Halaman Diagnosa</h1>
+        <h1 class="h3 mb-0 text-gray-800">Skrining Kesehatan Jiwa (SRQ-29)</h1>
     </div>
     <div class="card shadow mb-4">
         <div class="card-header py-3">
@@ -32,6 +32,10 @@ include 'sidebar.php';
                 <div class="form-group ">
                     <label for="tanggal_pengisian">Tanggal Pengisian</label>
                     <input type="text" class="form-control form-control-user" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?php echo $tanggal?>"  required>
+                </div>
+                <div class="form-group ">
+                    <label for="tanggal_pemeriksaan">Tanggal Pemeriksaan</label>
+                    <input type="text" class="form-control form-control-user" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan"   value="<?php echo $tanggal?>"  required>
                 </div>
                 <div class="form-group">
                     <label for="nik">NIK</label>

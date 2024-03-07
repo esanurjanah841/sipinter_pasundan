@@ -35,12 +35,14 @@ $password = $r['password'];
 $to = $r['email'];
 $subject = "Your Recovered Password";
  
-$message = "Please use this password to login : " . $password;
+$message = "Gunakan password ini untuk login : " . $password;
 $headers =  'MIME-Version: 1.0' . "\r\n"; 
 $headers .= 'From: 	admin@sipinter-pasundan.id' . "\r\n";
 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 if(mail($to, $subject, $message, $headers)){
-echo "<script> alert('Silahkan cek email untuk mengetahui password'); </script>";
+echo "<script> alert('Silahkan cek email untuk mengetahui password'); 
+document.location.href = 'index.php'
+</script>";
 }else{
 echo "<script> alert('Gagal mengirim ke email'); </script>";
 }

@@ -32,6 +32,12 @@
                                 </span>
                                 <span class="text">CSV</span>
                             </a>
+                            <a onclick="window.open('laporanSRQExcel.php')" target="_BLANK" class="btn btn-success btn-icon-split" style="font-size 14px; margin: 7px;">
+                                <span class="icon text-white-50">
+                                    <i class="fas fa-print"></i>
+                                </span>
+                                <span class="text">Excel</span>
+                            </a>
                             <a href="LaporanSRQ.php" target="_BLANK" class="btn btn-info btn-icon-split">
                                 <span class="icon text-white-50">
                                     <i class="fas fa-print"></i>

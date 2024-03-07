@@ -35,6 +35,10 @@
                                     <input type="text" class="form-control form-control-user" id="tanggal_pengisian" name="tanggal_pengisian" value="<?= $user['tanggal_pengisian']; ?>" readonly>
                                 </div>
                                 <div class="form-group ">
+                                    <label for="tanggal_pemeriksaan">Tanggal Pemeriksaan</label>
+                                    <input type="text" class="form-control form-control-user" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan"   value="<?= $user['tanggal_pemeriksaan']; ?>"  readonly>
+                                </div>
+                                <div class="form-group ">
                                     <label for="nik">NIK</label>
                                     <input type="text" class="form-control form-control-user" id="nik" name="nik" value="<?= $user['nik']; ?>" readonly>
                                 </div>
