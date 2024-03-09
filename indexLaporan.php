@@ -26,7 +26,7 @@
                             <h6 class="m-0 font-weight-bold text-primary">Data SRQ</h6>
                         </div>
                         <div style="font-size: 14px;">
-                            <a href="SRQcsv.php" class=" btn btn-primary btn-icon-split" style="font-size 14px; margin:7x">
+                            <a href="SRQcsv.php" class=" btn btn-primary btn-icon-split" style="font-size 14px; margin:7px">
                                 <span class="icon text-white-50">
                                     <i class="fas fa-file-csv"></i>
                                 </span>

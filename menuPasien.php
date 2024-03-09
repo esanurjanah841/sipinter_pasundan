@@ -80,7 +80,10 @@ if (isset($_SESSION['role'])) {
 <!-- ======= Services Section ======= -->
 <section id="Menupasien" class="services" style="margin-top: 50px;">
   <div class="container">
-
+  <div style="position:fixed;left:20px;bottom:20px; z-index: 1000 !important;">
+      <a href="https://wa.me/6281321251201" target="_blank">
+      <img src="gambar/hotline.png" style="vertical-align:middle; max-height: 80px;"></a>
+    </div>
     <div class="section-title" data-aos="fade-up">
       <h2>Menu Pasien</h2>
       <p>Silahkan Pilih Salah Satu Menu:</p>
