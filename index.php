@@ -82,7 +82,7 @@ if (isset($_SESSION['role'])) {
 
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="d-flex align-items-center">
-<div style="position:fixed;right:20px;bottom:20px; z-index: 1000 !important;">
+<div style="position:fixed;left:20px;bottom:20px; z-index: 1000 !important;">
       <a href="https://wa.me/6281321251201" target="_blank">
       <img src="gambar/hotline.png" style="vertical-align:middle; max-height: 80px;"></a>
     </div>
