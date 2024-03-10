@@ -2,9 +2,9 @@
 include 'function.php';
 if (isset($_SESSION['role'])) {
   if ($_SESSION['role'] == "admin") {
-      header("location: indexAdminbiasa.php");
+      header("location: indexAdminBiasa.php");
   } elseif ($_SESSION['role'] == "administrator") {
-    header("location: indexadmin.php");
+    header("location: indexAdmin.php");
   }
 }
 
@@ -91,7 +91,7 @@ if (isset($_SESSION['role'])) {
 
     <div class="row">
     <div class="col-md-3 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+        <div class="icon-box" data-aos="fade-up" data-aos-delay="50">
         <a href="" style="color:black" data-bs-toggle="modal" data-bs-target="#profile">
           <img src="gambar/Profile-Sipinter.png" class="card-img-top" alt="...">
           <h4 class="title">Isi Profile</h4>
@@ -100,7 +100,7 @@ if (isset($_SESSION['role'])) {
         </div>
       </div>
       <div class="col-md-3 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-        <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+        <div class="icon-box" data-aos="fade-up" data-aos-delay="50">
         <a href="" style="color:black" data-bs-toggle="modal" data-bs-target="#skrining" >
           <img src="gambar/SFRPTM.png" class="card-img-top" alt="...">
           <h4 class="title">Skrining Faktor Resiko Penyakit Tidak Menular</h4>
@@ -109,7 +109,7 @@ if (isset($_SESSION['role'])) {
         </div>
       </div>
       <div class="col-md-3 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-        <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+        <div class="icon-box" data-aos="fade-up" data-aos-delay="50">
         <a href="" style="color:black" data-bs-toggle="modal" data-bs-target="#petunjuk">
           <img src="gambar/SRQ.png" class="card-img-top" alt="...">
           <h4 class="title">Skrining Kesehatan Jiwa (SRQ-29)</h4>
@@ -118,7 +118,7 @@ if (isset($_SESSION['role'])) {
         </div>
       </div>
       <div class="col-md-3 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-        <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+        <div class="icon-box" data-aos="fade-up" data-aos-delay="50">
         <a href="edukasi.php" style="color:black">
           <img src="gambar/SRQ.png" class="card-img-top" alt="...">
           <h4 class="title">Kumpulan Media Edukasi PTM</h4>
@@ -128,7 +128,7 @@ if (isset($_SESSION['role'])) {
       </div>
     </div>
     
-    
+
 
      <!-- Petunjuk -->
     <div class="modal fade" id="petunjuk" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
