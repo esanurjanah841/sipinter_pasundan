@@ -22,8 +22,7 @@
     $user = mysqli_fetch_assoc($queryPTM);
 
 
-    setlocale(LC_ALL, 'id-ID', 'id_ID');
-    $tanggal= strftime("%A, %d %B %Y");
+    $dt = new DateTime();
    
 ?>
                 <!-- Begin Page Content -->
@@ -44,7 +43,7 @@
                         <input type="hidden" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?= $user['tanggal_pengisian']; ?>">
                                 <div class="form-group ">
                                     <label for="tanggal_pemeriksaan">Tanggal Pemeriksaan</label>
-                                    <input type="text" class="form-control form-control-user" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan" value="<?php echo $tanggal;?>" required>
+                                    <input type="date" class="form-control form-control-user" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan" value="<?php echo $dt->format('Y-m-d')?>" required>
                                 </div>
                                 <div class="form-group ">
                                     <label for="nik">NIK</label>

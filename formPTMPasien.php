@@ -9,8 +9,7 @@ if (isset($_SESSION['role'])) {
   }
 
 
-    setlocale(LC_ALL, 'id-ID', 'id_ID');
-    $tanggal= strftime("%A, %d %B %Y");
+  $dt = new DateTime();
 
 
 ?>
@@ -110,7 +109,7 @@ if(($nik)==1){
                     <form action="function.php?act=tambahPTM" id="tambah" method="POST" class="tambah_pasien">
                         <table cellpadding="7" cellspacing="7" style="font-size:12px">
                         <input type="hidden" id="id_user" name="id_user"   value="<?php echo $tampil['id_user']?>">
-                        <input type="hidden" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?php echo $tanggal;?>" >
+                        <input type="hidden" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?php echo $dt->format('Y-m-d')?>" >
                             <tr>
                                 <td width="500">NIK</td>
                                 <td>:&emsp;</td>

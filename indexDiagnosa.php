@@ -15,8 +15,7 @@ if ($_SESSION['role'] == "administrator") {
     include "sidebarAdmin.php";
 }
 
-setlocale(LC_ALL, 'id-ID', 'id_ID');
-$tanggal= strftime("%A, %d %B %Y");
+$dt = new DateTime();
 
 
         
@@ -38,11 +37,11 @@ $tanggal= strftime("%A, %d %B %Y");
             <form action="hasilSRQAdmin.php" method="POST" enctype="multipart/form-data" role="form">
                 <div class="form-group ">
                     <label for="tanggal_pengisian">Tanggal Pengisian</label>
-                    <input type="text" class="form-control form-control-user" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?php echo $tanggal?>"  required>
+                    <input type="date" class="form-control form-control-user" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?php echo $dt->format('Y-m-d')?>"  required>
                 </div>
                 <div class="form-group ">
                     <label for="tanggal_pemeriksaan">Tanggal Pemeriksaan</label>
-                    <input type="text" class="form-control form-control-user" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan"   value="<?php echo $tanggal?>"  required>
+                    <input type="date" class="form-control form-control-user" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan"   value="<?php echo $dt->format('Y-m-d')?>"  required>
                 </div>
                 <div class="form-group">
                     <label for="nik">NIK</label>

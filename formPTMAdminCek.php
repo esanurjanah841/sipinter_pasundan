@@ -24,6 +24,7 @@
     $id_ptm = $_GET["id_ptm"];
     // Data Cek
     $tanggal_pengisian = $_GET['tanggal_pengisian'];
+    $tanggal_pemeriksaan = $_GET['tanggal_pemeriksaan'];
     $nik = $_GET['nik'];
     $nama_lengkap = $_GET['nama_lengkap'];
     $ttl = $_GET['ttl'];
@@ -139,11 +140,11 @@
                         <form action="function.php?act=tambahPTMHasil" id="tambah" method="POST">
                             <div class="form-group ">
                                     <label for="tanggal_pengisian">Tanggal Pengisian</label>
-                                    <input type="text" id="tanggal_pengisian" name="tanggal_pengisian" class="form-control form-control-user"  value="<?php echo $tanggal;?>" required>
+                                    <input type="date" id="tanggal_pengisian" name="tanggal_pengisian" class="form-control form-control-user"  value="<?= $tanggal_pengisian?>" required>
                             </div>
                                 <div class="form-group ">
                                     <label for="tanggal_pemeriksaan">Tanggal Pemeriksaan</label>
-                                    <input type="text" class="form-control form-control-user" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan" value="<?php echo $tanggal?>" required>
+                                    <input type="date" class="form-control form-control-user" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan" value="<?= $tanggal_pemeriksaan?>" required>
                                 </div>
                                 <div class="form-group ">
                                     <label for="nik">NIK</label>

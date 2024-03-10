@@ -21,8 +21,7 @@
     $user = mysqli_fetch_assoc($queryPTM);
 
 
-    setlocale(LC_ALL, 'id-ID', 'id_ID');
-    $tanggal= strftime("%A, %d %B %Y");
+    $dt = new DateTime();
     
 
    
@@ -42,11 +41,15 @@
                         <div class="card-body">
                         <div class="modal-body">
                         <form action="ubahPemeriksaanPTMCek.php?id_ptm=<?php echo $user["id_ptm"]; ?>" method="GET">
-                        <input type="hidden" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?= $user['tanggal_pengisian']; ?>">
+                        
                         <input type="hidden" id="id_ptm" name="id_ptm"   value="<?= $user['id_ptm']; ?>">
                                 <div class="form-group ">
+                                    <label for="tanggal_pengisian">Tanggal Pemeriksaan</label>
+                                    <input type="date" class="form-control form-control-user" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?= $user['tanggal_pengisian']; ?>">
+                                </div>
+                                <div class="form-group ">
                                     <label for="tanggal_pemeriksaan">Tanggal Pemeriksaan</label>
-                                    <input type="text" class="form-control form-control-user" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan" value="<?= $user['tanggal_pemeriksaan']; ?>" required>
+                                    <input type="date" class="form-control form-control-user" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan" value="<?= $user['tanggal_pemeriksaan']; ?>" required>
                                 </div>
                                 <div class="form-group ">
                                     <label for="nik">NIK</label>

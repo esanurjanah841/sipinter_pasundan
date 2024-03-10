@@ -38,11 +38,11 @@
                         <form action="" id="ubah" method="POST">
                             <div class="form-group ">
                                     <label for="nik">Tanggal Pengisian</label>
-                                    <input type="text" class="form-control form-control-user" id="tanggal_pengisian" name="tanggal_pengisian" value="<?= $user['tanggal_pengisian']; ?>" readonly>
+                                    <input type="date" class="form-control form-control-user" id="tanggal_pengisian" name="tanggal_pengisian" value="<?= $user['tanggal_pengisian']; ?>" readonly>
                                 </div>
                                 <div class="form-group ">
                                     <label for="tanggal_pemeriksaan">Tanggal Pemeriksaan</label>
-                                    <input type="text" class="form-control form-control-user" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan"   value="<?= $user['tanggal_pemeriksaan']; ?>"  readonly>
+                                    <input type="date" class="form-control form-control-user" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan"   value="<?= $user['tanggal_pemeriksaan']; ?>"  readonly>
                                 </div>
                                 <div class="form-group ">
                                     <label for="nik">NIK</label>

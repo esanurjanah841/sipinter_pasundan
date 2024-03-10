@@ -5,10 +5,7 @@ if (isset($_SESSION['role']))
         header("location: indexAdmin.php");
     }
 
-
-setlocale(LC_ALL, 'id-ID', 'id_ID');
-$tanggal= strftime("%A, %d %B %Y");
-
+    $dt = new DateTime();
 ?>
 
 <!DOCTYPE html>
@@ -96,7 +93,7 @@ $tanggal= strftime("%A, %d %B %Y");
                                 ?>
                     <form action="function.php?act=tambahPTM" id="tambah" method="POST" class="tambah_pasien">
                         <table cellpadding="7" cellspacing="7">
-                        <input type="hidden" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?php echo $tanggal?>" >
+                        <input type="hidden" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?php echo $dt->format('Y-m-d')?>" >
                         <input type="hidden" id="id_user" name="id_user" value="<?php echo $tampil['id_user']?>">
                             <tr>
                                 <td width="150">NIK</td>

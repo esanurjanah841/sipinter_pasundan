@@ -13,9 +13,9 @@ if (isset($_SESSION['role'])){
     }
 
 
-setlocale(LC_ALL, 'id-ID', 'id_ID');
-$tanggal= strftime("%A, %d %B %Y");
 
+$tanggal_pengisian = $_POST['tanggal_pengisian'];
+$tanggal_pemeriksaan = $_POST['tanggal_pemeriksaan'];
 $nik = $_POST['nik'];
 $nama_lengkap = $_POST['nama_lengkap'];
 $ttl = $_POST['ttl'];
@@ -100,11 +100,11 @@ $jumlah_dipilih = count($gejala);
                     <form action="function.php?act=tambahLaporanAdmin" id="tambah" method="POST" class="tambah_pasien">
                                 <div class="form-group ">
                                     <label for="tanggal_pengisian">Tanggal Pengisian</label>
-                                    <input type="text" class="form-control form-control-user" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?php echo $tanggal?>"  required>
+                                    <input type="date" class="form-control form-control-user" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?= $tanggal_pengisian?>"  required>
                                 </div>
                                 <div class="form-group ">
                                     <label for="tanggal_pemeriksaan">Tanggal Pemeriksaan</label>
-                                    <input type="text" class="form-control form-control-user" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan"   value="<?php echo $tanggal?>"  required>
+                                    <input type="date" class="form-control form-control-user" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan"   value="<?= $tanggal_pemeriksaan?>"  required>
                                 </div>
                                 <div class="form-group">
                                     <label for="nik">NIK</label>

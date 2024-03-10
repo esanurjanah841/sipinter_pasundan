@@ -8,8 +8,7 @@ if (isset($_SESSION['role'])) {
     }
 }
 
-setlocale(LC_ALL, 'id-ID', 'id_ID');
-$tanggal= strftime("%A, %d %B %Y");
+$dt = new DateTime();
 
 ?>
 
@@ -146,7 +145,8 @@ if(empty($_POST['gejala'])){
                     <form action="function.php?act=tambahLaporan" id="tambah" method="POST" class="tambah_pasien">
                                 <div class="form-group ">
                                     <label for="tanggal_pengisian">Tanggal Pengisian</label>
-                                    <input type="text" class="form-control form-control-user" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?php echo $tanggal?>"  readonly>
+                                    <input type="date" class="form-control form-control-user" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?php echo $dt->format('Y-m-d')?>"  readonly>
+                                    <input type="hidden" class="form-control form-control-user" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan"   value="<?php echo $dt->format('Y-m-d')?>"  readonly>
                                 </div>
                                 <?php 
                                     $tampiluser = mysqli_query($koneksi, "SELECT DISTINCT  p.nama_lengkap, p.nik, p.ttl, p.jenis_kelamin, p.alamat, p.kota, p.provinsi, p.tlp, p.pendidikan, p.pekerjaan, p.status, p.goldar from user b, profil_user p where b.nik=p.nik and b.id_user='$_SESSION[id_user]' group by nik");

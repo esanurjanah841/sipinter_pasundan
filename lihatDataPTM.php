@@ -20,10 +20,6 @@
     $queryPTM = mysqli_query($koneksi, "SELECT * FROM ptm_pasien where id_ptm = '$id_ptm'");
     $user = mysqli_fetch_assoc($queryPTM);
 
-
-    setlocale(LC_ALL, 'id-ID', 'id_ID');
-    $tanggal= strftime("%d %B %Y");
-   
 ?>
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
@@ -53,7 +49,7 @@
                             </div>
                                 <div class="form-group ">
                                     <label for="tanggal_pengisian">Tanggal Pengisian</label>
-                                    <input type="text" class="form-control form-control-user" id="tanggal_pengisian" name="tanggal_pengisian" value="<?= $user['tanggal_pengisian']; ?>" readonly>
+                                    <input type="dage" class="form-control form-control-user" id="tanggal_pengisian" name="tanggal_pengisian" value="<?= $user['tanggal_pengisian']; ?>" readonly>
                                 </div>
                                 <div class="form-group ">
                                     <label for="nik">NIK</label>

@@ -25,6 +25,7 @@
     $id_ptm = $_GET["id_ptm"];
     // Data Cek
     $tanggal_pengisian = $_GET['tanggal_pengisian'];
+    $tanggal_pemeriksaan = $_GET['tanggal_pemeriksaan'];
     $nik = $_GET['nik'];
     $nama_lengkap = $_GET['nama_lengkap'];
     $ttl = $_GET['ttl'];
@@ -138,11 +139,13 @@
                         <div class="card-body">
                         <div class="modal-body">
                         <form action="function.php?act=ubahPemeriksaanPTM&id_ptm=<?= $user['id_ptm']; ?>" id="tambah" method="POST">
-                        <input type="hidden" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?= $user['tanggal_pengisian']; ?>">
-                        
-                        <div class="form-group ">
+                                <div class="form-group ">
+                                    <label for="tanggal_pengisian">Tanggal Pemeriksaan</label>
+                                    <input type="date" class="form-control form-control-user" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?= $tanggal_pengisian ?>">
+                                </div>
+                                <div class="form-group ">
                                     <label for="tanggal_pemeriksaan">Tanggal Pemeriksaan</label>
-                                    <input type="text" class="form-control form-control-user" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan" value="<?php echo $tanggal?>" required>
+                                    <input type="date" class="form-control form-control-user" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan" value="<?php echo $tanggal_pemeriksaan?>" required>
                                 </div>
                                 <div class="form-group ">
                                     <label for="nik">NIK</label>

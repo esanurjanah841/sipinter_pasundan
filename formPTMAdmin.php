@@ -15,9 +15,7 @@
         include "sidebarAdmin.php";
     }
 
-
-    setlocale(LC_ALL, 'id-ID', 'id_ID');
-    $tanggal= strftime("%A, %d %B %Y");
+    $dt = new DateTime();
     
     
    
@@ -40,11 +38,11 @@
                             
                             <div class="form-group ">
                                     <label for="tanggal_pengisian">Tanggal Pengisian</label>
-                                    <input type="text" id="tanggal_pengisian" name="tanggal_pengisian" class="form-control form-control-user"  value="<?php echo $tanggal;?>" >
+                                    <input type="date" id="tanggal_pengisian" name="tanggal_pengisian" class="form-control form-control-user" value="<?php echo $dt->format('Y-m-d')?>">
                                 </div>
                                 <div class="form-group ">
                                     <label for="tanggal_pemeriksaan">Tanggal Pemeriksaan</label>
-                                    <input type="text" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan" class="form-control form-control-user"  value="<?php echo $tanggal;?>" >
+                                    <input type="date" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan" class="form-control form-control-user" value="<?php echo $dt->format('Y-m-d')?>">
                                 </div>
                                 <div class="form-group ">
                                     <label for="nik">NIK</label>

@@ -16,14 +16,14 @@
     }
 
 
-    setlocale(LC_ALL, 'id-ID', 'id_ID');
-    $tanggal= strftime("%A, %d %B %Y");
+    $dt = new DateTime();
 
 ?>
 
 <?php
     // Data Cek
     $tanggal_pengisian = $_GET['tanggal_pengisian'];
+    $tanggal_pemeriksaan = $_GET['tanggal_pemeriksaan'];
     $nik = $_GET['nik'];
     $nama_lengkap = $_GET['nama_lengkap'];
     $ttl = $_GET['ttl'];
@@ -138,7 +138,7 @@
                         <input type="hidden" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?php echo $tanggal_pengisian ?>">
                                 <div class="form-group ">
                                     <label for="tanggal_pemeriksaan">Tanggal Pemeriksaan</label>
-                                    <input type="text" class="form-control form-control-user" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan" value="<?php echo $tanggal?>" required>
+                                    <input type="text" class="form-control form-control-user" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan" value="<?php echo $tanggal_pemeriksaan?>" required>
                                 </div>
                                 <div class="form-group ">
                                     <label for="nik">NIK</label>
