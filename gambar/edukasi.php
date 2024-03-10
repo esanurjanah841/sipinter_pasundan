@@ -2,9 +2,9 @@
 include 'function.php';
 if (isset($_SESSION['role'])) {
   if ($_SESSION['role'] == "admin") {
-      header("location: indexAdminbiasa.php");
+      header("location: indexAdminBiasa.php");
   } else if ($_SESSION['role'] == "administrator") {
-    header("location: indexadmin.php");
+    header("location: indexAdmin.php");
 }
 }
 
@@ -50,7 +50,7 @@ if (isset($_SESSION['role'])) {
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-          <a class="navbar-brand fw-bold" href="menupasien.php">
+          <a class="navbar-brand fw-bold" href="menuPasien.php">
               <div class="sidebar-brand-icon">
                   <img src="gambar/Logo-Sipinter.png" width="175" height="auto" alt="logo" />
               </div>
@@ -61,7 +61,7 @@ if (isset($_SESSION['role'])) {
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="menupasien.php">Menu</a></li>
+          <li><a class="nav-link scrollto active" href="menuPasien.php">Menu</a></li>
           <li><a class="nav-link scrollto" href="riwayat.php">Riwayat</a></li>
           <li class="dropdown"><a href="#"><span>User Pasien</span> <i class="fas fa-user"></i></a>
             <ul>
