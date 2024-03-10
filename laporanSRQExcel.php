@@ -8,13 +8,21 @@
         header("location:index.php");
     }
     
-    $queryPasien = mysqli_query($koneksi, "SELECT * FROM riwayat");
+
     $no=0;
 
 
-    $filename = 'LaporanSkriningKesehatan'.date("Ymd").'.xls';
+    $filename = 'LaporanSRQ'.date("Ymd").'.xls';
     header("Content-type: application/vnd-ms-excel");
     header("Content-disposition: attachment; filename=$filename");
+
+    if (isset($_POST{['filter']})) {
+        $tgl_a = mysqli_real_escape_string($koneksi, $_POST['tgl_a']);
+        $tgl_b = mysqli_real_escape_string($koneksi, $_POST['tgl_b']);
+        $data = mysqli_query($koneksi, "SELECT * FROM riwayat WHERE tanggal_pengisian BETWEEN '$tgl_a' AND '$tgl_b'");
+     } else{
+        $data = mysqli_query($koneksi, "SELECT * FROM riwayat");
+     }
 ?>
 
 <!DOCTYPE html>
@@ -53,18 +61,18 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <?php while ($data = mysqli_fetch_assoc($queryPasien)) {
+                                    <?php while ($ambil_data = mysqli_fetch_array($data)) {
                                         $no++; ?>
                                         <tr>
                                             <td><?= $no ?></td>
-                                            <td><?= $data['tanggal_pengisian']; ?></td>
-                                            <td><?= $data['nik']; ?></td>
-                                            <td><?= $data['nama_lengkap']; ?></td>
-                                            <td><?= $data['ttl']; ?></td>
-                                            <td><?= $data['alamat']; ?></td>
-                                            <td><?= $data['tlp']; ?></td>
-                                            <td><?= $data['penyakit']; ?></td>
-                                            <td><?= $data['gejala']; ?></td>
+                                            <td><?= $ambil_data['tanggal_pengisian']; ?></td>
+                                            <td><?= $ambil_data['nik']; ?></td>
+                                            <td><?= $ambil_data['nama_lengkap']; ?></td>
+                                            <td><?= $ambil_data['ttl']; ?></td>
+                                            <td><?= $ambil_data['alamat']; ?></td>
+                                            <td><?= $ambil_data['tlp']; ?></td>
+                                            <td><?= $ambil_data['penyakit']; ?></td>
+                                            <td><?= $ambil_data['gejala']; ?></td>
                                         </tr>
                                         <?php } ?>
                                     </tbody>
