@@ -1,8 +1,8 @@
 <?php
     include 'function.php';
     if (isset($_SESSION['role'])) {
-        if ($_SESSION['id_user'] == "admin") {
-            header("location: indexAdmin.php");
+        if ($_SESSION['role'] == "pasien") {
+            header("location: menuPasien.php");
         }
     } else {
         header("location:index.php");
@@ -11,7 +11,13 @@
     $tampiluser = mysqli_query($koneksi, "SELECT * FROM user where id_user = '$_SESSION[id_user]'");
     $tampil = mysqli_fetch_array($tampiluser);
 
-    include 'sidebar.php';
+    if ($_SESSION['role'] == "administrator") {
+        include "sidebar.php";
+    
+    }elseif ($_SESSION['role'] == "admin"){
+        include "sidebarAdmin.php";
+    }
+
 ?>
 
 <div class="container bootstrap snippet">

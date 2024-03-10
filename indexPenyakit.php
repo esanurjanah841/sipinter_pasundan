@@ -2,11 +2,19 @@
     include "function.php";
     if (isset($_SESSION['role'])) {
         if ($_SESSION['role'] == "pasien") {
-            header("location: menupasien.php");
+            header("location: menuPasien.php");
         }
     } else {
         header("location:index.php");
     }
+
+    if ($_SESSION['role'] == "administrator") {
+        include "sidebar.php";
+    
+    }elseif ($_SESSION['role'] == "admin"){
+        include "sidebarAdmin.php";
+    }
+
     
     $queryPenyakit = mysqli_query($koneksi, "SELECT * FROM penyakit");
     $no= 0;
@@ -28,7 +36,7 @@
 	// angka yang diambil tadi digabungkan dengan kode huruf yang kita inginkan, misalnya BRG 
 	$huruf = "P";
 	$kodepenyakit = $huruf . sprintf("%03s", $urutan);
-    include 'sidebar.php';
+
     include 'tambahPenyakit.php';
 
 ?>

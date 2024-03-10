@@ -2,16 +2,23 @@
     include "function.php";
     if (isset($_SESSION['role'])) {
         if ($_SESSION['role'] == "pasien") {
-            header("location: menupasien.php");
+            header("location: menuPasien.php");
         }
     } else {
         header("location:index.php");
     }
 
+    if ($_SESSION['role'] == "administrator") {
+        include "sidebar.php";
+    
+    }elseif ($_SESSION['role'] == "admin"){
+        include "sidebarAdmin.php";
+    }
+
+
     $queryRelasi = mysqli_query($koneksi, "SELECT * FROM relasi, gejala, penyakit
     WHERE relasi.id_penyakit = penyakit.id_penyakit and relasi.id_gejala = gejala.id_gejala");
 
-    include 'sidebar.php';
 
 ?>
                 <!-- Begin Page Content -->

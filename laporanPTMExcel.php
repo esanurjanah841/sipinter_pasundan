@@ -2,7 +2,7 @@
     include "function.php";
     if (isset($_SESSION['role'])) {
         if ($_SESSION['role'] == "pasien") {
-            header("location: menupasien.php");
+            header("location: menuPasien.php");
         }
     } else {
         header("location:index.php");
@@ -11,8 +11,9 @@
     $queryPasien = mysqli_query($koneksi, "SELECT * FROM ptm_hasil");
     $no=0;
 
+    $filename = 'LaporanPTM'.date("Ymd").'.xls';
     header("Content-type: application/vnd-ms-excel");
-    header("Content-disposition: attachment; filename=laporan-skriningkesehatan.xls");
+    header("Content-disposition: attachment; filename=$filename");
 
 ?>
 <!-- Begin Page Content -->

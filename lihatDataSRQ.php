@@ -2,17 +2,23 @@
     include "function.php";
     if (isset($_SESSION['role'])) {
         if ($_SESSION['role'] == "pasien") {
-            header("location: menupasien.php");
+            header("location: menuPasien.php");
         }
     } else {
         header("location:index.php");
     }
+
+    if ($_SESSION['role'] == "administrator") {
+        include "sidebar.php";
+    
+    }elseif ($_SESSION['role'] == "admin"){
+        include "sidebarAdmin.php";
+    }
+
     $id_riwayat = $_GET["id_riwayat"];
 
     $queryRiwayat = mysqli_query($koneksi, "SELECT * FROM riwayat where id_riwayat = '$id_riwayat'");
     $user = mysqli_fetch_assoc($queryRiwayat);
-    
-    include 'sidebar.php';
    
 ?>
                 <!-- Begin Page Content -->

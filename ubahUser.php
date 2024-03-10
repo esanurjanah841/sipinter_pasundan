@@ -7,12 +7,20 @@
     } else {
         header("location:index.php");
     }
+
+    if ($_SESSION['role'] == "administrator") {
+        include "sidebar.php";
+    
+    }elseif ($_SESSION['role'] == "admin"){
+        include "sidebarAdmin.php";
+    }
+
     $id_user = $_GET["id_user"];
 
     $queryUser = mysqli_query($koneksi, "SELECT * FROM user where id_user = '$id_user'");
     $user = mysqli_fetch_assoc($queryUser);
 
-    include 'sidebar.php';
+
    
 ?>
                 <!-- Begin Page Content -->

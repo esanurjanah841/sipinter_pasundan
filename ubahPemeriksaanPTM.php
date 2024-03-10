@@ -2,11 +2,19 @@
     include "function.php";
     if (isset($_SESSION['role'])) {
         if ($_SESSION['role'] == "pasien") {
-            header("location: menupasien.php");
+            header("location: menuPasien.php");
         }
     } else {
         header("location:index.php");
     }
+
+    if ($_SESSION['role'] == "administrator") {
+        include "sidebar.php";
+    
+    }elseif ($_SESSION['role'] == "admin"){
+        include "sidebarAdmin.php";
+    }
+
     $id_ptm = $_GET["id_ptm"];
 
     $queryPTM = mysqli_query($koneksi, "SELECT * FROM ptm_hasil where id_ptm = '$id_ptm'");
@@ -16,7 +24,7 @@
     setlocale(LC_ALL, 'id-ID', 'id_ID');
     $tanggal= strftime("%A, %d %B %Y");
     
-    include 'sidebar.php';
+
    
 ?>
                 <!-- Begin Page Content -->

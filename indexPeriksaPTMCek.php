@@ -2,15 +2,22 @@
     include "function.php";
     if (isset($_SESSION['role'])) {
         if ($_SESSION['role'] == "pasien") {
-            header("location: menupasien.php");
+            header("location: menuPasien.php");
         }
     } else {
         header("location:index.php");
     }
+
+    if ($_SESSION['role'] == "administrator") {
+        include "sidebar.php";
+    
+    }elseif ($_SESSION['role'] == "admin"){
+        include "sidebarAdmin.php";
+    }
+
+
     setlocale(LC_ALL, 'id-ID', 'id_ID');
     $tanggal= strftime("%A, %d %B %Y");
-    
-    include 'sidebar.php';
 
 ?>
 

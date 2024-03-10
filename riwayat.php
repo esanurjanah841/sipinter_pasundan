@@ -2,7 +2,7 @@
 include 'function.php';
 if (isset($_SESSION['role'])) {
   if ($_SESSION['role'] == "admin") {
-      header("location: indexAdminbiasa.php");
+      header("location: indexAdmin.php");
   } else if ($_SESSION['role'] == "administrator") {
     header("location: indexadmin.php");
 }

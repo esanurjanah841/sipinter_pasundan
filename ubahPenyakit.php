@@ -2,17 +2,24 @@
     include "function.php";
     if (isset($_SESSION['role'])) {
         if ($_SESSION['role'] == "pasien") {
-            header("location: menupasien.php");
+            header("location: menuPasien.php");
         }
     } else {
         header("location:index.php");
     }
+
+    if ($_SESSION['role'] == "administrator") {
+        include "sidebar.php";
+    
+    }elseif ($_SESSION['role'] == "admin"){
+        include "sidebarAdmin.php";
+    }
+
     $id_penyakit = $_GET["id_penyakit"];
 
     $queryGejala = mysqli_query($koneksi, "SELECT * FROM penyakit where id_penyakit = '$id_penyakit'");
     $q = mysqli_fetch_assoc($queryGejala);
 
-    include 'sidebar.php';
    
 ?>
                 <!-- Begin Page Content -->

@@ -191,7 +191,7 @@ function login() {
                 $_SESSION['role'] = "admin";
                 $_SESSION['id_user'] = $data['id_user'];
                 echo "<script>
-                document.location.href = 'indexAdminBiasa.php';
+                document.location.href = 'indexAdmin.php';
                 </script>";
             }
         }

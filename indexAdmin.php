@@ -4,12 +4,19 @@
 include "function.php";
 if (isset($_SESSION['role'])) {
     if ($_SESSION['role'] == "pasien") {
-        header("location: menupasien.php");
+        header("location: menuPasien.php");
     }
 } else {
     header("location:index.php");
 }
 
+
+if ($_SESSION['role'] == "administrator") {
+    include "sidebar.php";
+
+}elseif ($_SESSION['role'] == "admin"){
+    include "sidebarAdmin.php";
+}
 
 $jumlahPasien = mysqli_query($koneksi, "SELECT COUNT('id_user') as jml_pasien FROM user");
 $pasien = mysqli_fetch_assoc($jumlahPasien);
@@ -25,9 +32,6 @@ $laporan = mysqli_fetch_assoc($jumlahLaporan);
 
 $jumlahLaporan = mysqli_query($koneksi, "SELECT COUNT('id_riwayat') as jml_riwayat FROM riwayat");
 $laporan = mysqli_fetch_assoc($jumlahLaporan);
-    
-    include 'sidebar.php';
-        
 
 ?>
                 <!-- Begin Page Content -->

@@ -1,15 +1,20 @@
 <?php 
 include 'function.php';
-if (isset($_SESSION['role'])) 
+if (isset($_SESSION['role'])){ 
     if ($_SESSION['role'] == "pasien") {
-        header("location: menupasien.php");
+        header("location: menuPasien.php");
+    }
+}
+    if ($_SESSION['role'] == "administrator") {
+        include "sidebar.php";
+    
+    }elseif ($_SESSION['role'] == "admin"){
+        include "sidebarAdmin.php";
     }
 
 
 setlocale(LC_ALL, 'id-ID', 'id_ID');
 $tanggal= strftime("%A, %d %B %Y");
-
-include 'sidebar.php';
 
 $nik = $_POST['nik'];
 $nama_lengkap = $_POST['nama_lengkap'];

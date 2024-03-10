@@ -2,16 +2,21 @@
     include "function.php";
     if (isset($_SESSION['role'])) {
         if ($_SESSION['role'] == "pasien") {
-            header("location: menupasien.php");
+            header("location: menuPasien.php");
         }
     } else {
         header("location:index.php");
     }
     
+    if ($_SESSION['role'] == "administrator") {
+        include "sidebar.php";
+    
+    }elseif ($_SESSION['role'] == "admin"){
+        include "sidebarAdmin.php";
+    }
+
     $queryPasien = mysqli_query($koneksi, "SELECT * FROM ptm_hasil");
     $no=0;
-
-    include 'sidebar.php';
 
 ?>
                 <!-- Begin Page Content -->

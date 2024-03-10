@@ -4,7 +4,7 @@ if (isset($_SESSION['role'])) {
     if ($_SESSION['role'] == "administrator") {
         header("location: indexAdmin.php");
     }elseif ($_SESSION['role'] == "admin") {
-        header("location: indexAdminBiasa.php");
+        header("location: indexAdmin.php");
     }
 }
 
