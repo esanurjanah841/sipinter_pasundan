@@ -90,34 +90,39 @@ if (isset($_SESSION['role'])) {
     </div>
 
     <div class="row">
-      <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+    <div class="col-md-3 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
         <a href="" style="color:black" data-bs-toggle="modal" data-bs-target="#profile">
           <img src="gambar/Profile-Sipinter.png" class="card-img-top" alt="...">
           <h4 class="title">Isi Profile</h4>
-          <p class="description">Pengguna diwajibkan mengisi kelengkapan profile user terlebih dahulu sebelum lanjut ke tahap skrining kesehatan. Ayo tambahkan Profile disini!!</p>
+          <p class="description">Pengguna diwajibkan mengisi kelengkapan profile user terlebih dahulu sebelum melanjutkan ke tahap skrining kesehatan. Ayo tambahkan Profile disini!!</p>
           </a>
         </div>
       </div>
-
-      
-
-      <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+      <div class="col-md-3 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
         <a href="" style="color:black" data-bs-toggle="modal" data-bs-target="#skrining" >
           <img src="gambar/SFRPTM.png" class="card-img-top" alt="...">
           <h4 class="title">Skrining Faktor Resiko Penyakit Tidak Menular</h4>
-          <p class="description">Pengguna akan diberikan form pengisian untuk diisi sesuai dengan keaadaan Anda yang sebenarnya.</p>
+          <p class="description">Pengguna akan diberikan form pengisian untuk diisi sesuai dengan keaadaan yang sebenarnya.</p>
           </a>
         </div>
       </div>
-
-      <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+      <div class="col-md-3 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
         <a href="" style="color:black" data-bs-toggle="modal" data-bs-target="#petunjuk">
           <img src="gambar/SRQ.png" class="card-img-top" alt="...">
-          <h4 class="title">Skrining Kesehatan Jiwa <br> (SRQ-29)</h4>
-          <p class="description">Pengguna akan diberikan beberapa pertanyaan terkait dengan gejala yang dialami dan lakukan ceklis/centang pada gejala yang dialami.</p>
+          <h4 class="title">Skrining Kesehatan Jiwa (SRQ-29)</h4>
+          <p class="description">Pengguna akan diberikan beberapa pertanyaan terkait dengan gejala dan lakukan ceklis/centang pada gejala yang dialami.</p>
+        </a>
+        </div>
+      </div>
+      <div class="col-md-3 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+        <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+        <a href="edukasi.php" style="color:black">
+          <img src="gambar/SRQ.png" class="card-img-top" alt="...">
+          <h4 class="title">Kumpulan Media Edukasi PTM</h4>
+          <p class="description">Pengguna dapat mengakses informasi edukasi seputar PTM.</p>
         </a>
         </div>
       </div>
