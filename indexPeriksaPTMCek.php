@@ -135,7 +135,11 @@
                         <div class="card-body">
                         <div class="modal-body">
                         <form action="function.php?act=tambahPTMHasil" id="tambah" method="POST">
-                        <input type="hidden" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?php echo $tanggal_pengisian ?>">
+                                <div class="form-group ">
+                                    <label for="tanggal_pemeriksaan">Tanggal Pemeriksaan</label>
+                                    <input type="date" class="form-control form-control-user" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?= $tanggal_pengisian ?>" required>
+                                    
+                                </div>        
                                 <div class="form-group ">
                                     <label for="tanggal_pemeriksaan">Tanggal Pemeriksaan</label>
                                     <input type="text" class="form-control form-control-user" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan" value="<?php echo $tanggal_pemeriksaan?>" required>
