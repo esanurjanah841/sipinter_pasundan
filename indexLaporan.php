@@ -68,7 +68,16 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <?php while ($data = mysqli_fetch_assoc($queryRiwayat)) { 
+                                    <?php 
+                                     if (isset($_POST{['filter']})) {
+                                        $tgl_a = mysqli_real_escape_string($koneksi, $_POST['tgl_a']);
+                                        $tgl_b = mysqli_real_escape_string($koneksi, $_POST['tgl_b']);
+                                        $data = mysqli_query($koneksi, "SELECT * FROM riwayat WHERE tanggal_pemeriksaan BETWEEN '$tgl_a' AND '$tgl_b'");
+                                     } else{
+                                        $data = mysqli_query($koneksi, "SELECT * FROM riwayat");
+                                     }
+
+                                    while ($data = mysqli_fetch_assoc($queryRiwayat)) { 
                                         $no ++;?>
                                     <tr>
                                         
@@ -111,7 +120,7 @@
                                     <span aria-hidden="true"></span>
                                 </button>
                             </div>
-                            <form action="laporanSRQExcel.php" method="POST">
+                            <form action="" method="POST">
                             <div class="modal-body">
                                 <div>
                                     <Label for="tgl_a">Periode Awal</Label>
@@ -125,7 +134,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                                <button type="submit" class="btn btn-primary" name="filter" id="filter" value="filter">Pilih</a>
+                                <button type="submit" class="btn btn-primary" name="filter" id="filter" value="Filter">Pilih</a>
                             </div>
                             </form>
                         </div>
