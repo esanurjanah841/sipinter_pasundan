@@ -48,9 +48,10 @@
                                     </thead>
                                     <tbody>
                                     <?php 
+                                    $tgl_a =  $_POST['tgl_a'];
+                                    $tgl_b = $_POST['tgl_b'];
                                      if (isset($_POST{['filter']})) {
-                                        $tgl_a =  $_POST['tgl_a'];
-                                        $tgl_b = $_POST['tgl_b'];
+                                        
                                         $data = mysqli_query($koneksi, "SELECT * FROM riwayat WHERE tanggal_pemeriksaan BETWEEN '$tgl_a' AND '$tgl_b'");
                                      } else{
                                         $data = mysqli_query($koneksi, "SELECT * FROM riwayat");
