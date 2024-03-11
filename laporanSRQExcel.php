@@ -52,6 +52,8 @@
                                         $tgl_a = mysqli_real_escape_string($koneksi, $_POST['tgl_a']);
                                         $tgl_b = mysqli_real_escape_string($koneksi, $_POST['tgl_b']);
                                         $data = mysqli_query($koneksi, "SELECT * FROM riwayat WHERE tanggal_pemeriksaan BETWEEN '$tgl_a' AND '$tgl_b'");
+                                     } else{
+                                        $data = mysqli_query($koneksi, "SELECT * FROM riwayat");
                                      }
                                      
                                     while ($ambil_data = mysqli_fetch_array($data)) {
