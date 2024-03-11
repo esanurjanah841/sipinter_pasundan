@@ -111,7 +111,7 @@
                                     <span aria-hidden="true"></span>
                                 </button>
                             </div>
-                            <form action="laporanSRQExcel.php">
+                            <form action="laporanSRQExcel.php" method="POST">
                             <div class="modal-body">
                                 <div>
                                     <Label for="tgl_a">Periode Awal</Label>
@@ -125,7 +125,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                                <button class="btn btn-primary" name="filter" id="filter">Pilih</a>
+                                <button class="btn btn-primary" name="filter" id="filter" value="filter">Pilih</a>
                             </div>
                             </form>
                         </div>
