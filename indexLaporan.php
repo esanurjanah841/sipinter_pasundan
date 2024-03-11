@@ -15,8 +15,8 @@
         include "sidebarAdmin.php";
     }
 
-    
     $queryRiwayat = mysqli_query($koneksi, "SELECT * FROM riwayat");
+
     $no= 0;
 ?>
                 <!-- Begin Page Content -->
