@@ -4,6 +4,10 @@
     $no=0;
 
 
+    $filename = 'LaporanSRQ'.date("Ymd").'.xls';
+    header("Content-type: application/vnd-ms-excel");
+    header("Content-disposition: attachment; filename=$filename");
+
    
 ?>
 
@@ -44,14 +48,12 @@
                                     </thead>
                                     <tbody>
                                     <?php 
-                                    $tgl_a = $_POST['tgl_a'];
-                                    $tgl_b = $_POST['tgl_b'];
                                      if (isset($_POST{['filter']})) {
+                                        $tgl_a = mysqli_real_escape_string($koneksi, $_POST['tgl_a']);
+                                        $tgl_b = mysqli_real_escape_string($koneksi, $_POST['tgl_b']);
                                         $data = mysqli_query($koneksi, "SELECT * FROM riwayat WHERE tanggal_pemeriksaan BETWEEN '$tgl_a' AND '$tgl_b'");
-                                     } else{
-                                        $data = mysqli_query($koneksi, "SELECT * FROM riwayat");
                                      }
-
+                                     
                                     while ($ambil_data = mysqli_fetch_array($data)) {
                                         $no++; ?>
                                         <tr>
