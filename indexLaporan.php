@@ -68,16 +68,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <?php 
-                                     if (isset($_POST{['filter']})) {
-                                        $tgl_a = mysqli_real_escape_string($koneksi, $_POST['tgl_a']);
-                                        $tgl_b = mysqli_real_escape_string($koneksi, $_POST['tgl_b']);
-                                        $data = mysqli_query($koneksi, "SELECT * FROM riwayat WHERE tanggal_pemeriksaan BETWEEN '$tgl_a' AND '$tgl_b'");
-                                     } else{
-                                        $data = mysqli_query($koneksi, "SELECT * FROM riwayat");
-                                     }
-
-                                    while ($data = mysqli_fetch_assoc($queryRiwayat)) { 
+                                    <?php while ($data = mysqli_fetch_assoc($queryRiwayat)) { 
                                         $no ++;?>
                                     <tr>
                                         
@@ -120,7 +111,7 @@
                                     <span aria-hidden="true"></span>
                                 </button>
                             </div>
-                            <form action="" method="POST">
+                            <form action="laporanSRQExcel.php" method="POST">
                             <div class="modal-body">
                                 <div>
                                     <Label for="tgl_a">Periode Awal</Label>
