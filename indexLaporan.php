@@ -125,7 +125,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                                <button class="btn btn-primary" name="filter" id="filter" value="filter">Pilih</a>
+                                <button type="submit" class="btn btn-primary" name="filter" id="filter" value="filter">Pilih</a>
                             </div>
                             </form>
                         </div>
