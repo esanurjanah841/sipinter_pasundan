@@ -32,10 +32,10 @@ if(isset($_POST) & !empty($_POST['email'])){
 }
 $r = mysqli_fetch_assoc($res);
 $password = $r['password'];
-$to = $r['email']; 
+$to = $r['email'];
 $subject = "Your Recovered Password";
  
-$message = "Klik link berikut untuk reset Password, <a href='http://sipinter-pasundan.id/resetPassword.php?email=$email'><a>";
+$message = "Klik link berikut untuk reset Password, <a href='http://sipinter-pasundan.id/resetPassword.php?emai=$email'>Tekan Link Ini<a>";
 $headers =  'MIME-Version: 1.0' . "\r\n"; 
 $headers .= 'From: 	admin@sipinter-pasundan.id' . "\r\n";
 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
