@@ -44,7 +44,7 @@ if (isset($_SESSION['role'])) {
                 <div class="form-row">
                     <div class="col">
                         <label class="papan" for="nama">Username</label>
-                        <input type="text" class="form-control" id="nama" name="nama" placeholder="Username" required>
+                        <input type="text" class="form-control" id="nama" name="nama" placeholder="Username" minlength="8" required>
                         <div class="valid-feedback">
                             Bagus!
                         </div>

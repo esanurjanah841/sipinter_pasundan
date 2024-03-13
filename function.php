@@ -85,6 +85,9 @@ if (isset($_GET["act"])) {
     } else if ($act == "ubahPakar") {
         $id_user = $_GET["id_user"];
         ubahPakar($id_user);
+    } else if ($act == "ubahPassword") {
+        $nik = $_GET["nik"];
+        ubahPassword($nik);
     } else if ($act == "ubahPenyakit") {
         $id_penyakit = $_GET["id_penyakit"];
         ubahPenyakit($id_penyakit);
@@ -617,7 +620,7 @@ function ubahPasien($id_user)
     $exe = mysqli_query($koneksi, $queryUser);
     if (!$exe) {
         echo "<script>
-            alert('Data Pasien berhasil diubah!');
+            alert('Data Pasien gagal diubah!');
             document.location.href = 'indexUser.php'</script>";
     }
             echo "<script>
@@ -641,7 +644,9 @@ function ubahGeneralPasien($id_user)
     // $queryRelasi = "INSERT INTO relasi VALUES ('', '')"
     $exe = mysqli_query($koneksi, $queryUser);
     if (!$exe) {
-        die('Error pada database');
+        echo "<script>
+        alert('Data Pasien gagal diubah!');
+        document.location.href = 'indexUser.php'</script>";
     }
             echo "<script>
             alert('Data Pasien berhasil diubah!');
@@ -662,10 +667,12 @@ function ubahAdmin($id_user)
     // $queryRelasi = "INSERT INTO relasi VALUES ('', '')"
     $exe = mysqli_query($koneksi, $queryUser);
     if (!$exe) {
-        die('Error pada database');
+        echo "<script>
+        alert('Data Admin gagal diubah!');
+        document.location.href = 'indexProfileAdmin.php'</script>";
     }
             echo "<script>
-            alert('Data Pasien berhasil diubah!');
+            alert('Data Admin berhasil diubah!');
             document.location.href = 'indexProfileAdmin.php'</script>";
 }
 
@@ -692,7 +699,9 @@ function ubahProfile($id_user)
     // $queryRelasi = "INSERT INTO relasi VALUES ('', '')"
     $exe = mysqli_query($koneksi, $queryUser);
     if (!$exe) {
-        die('Error pada database');
+        echo "<script>
+        alert('Data Profile gagal diubah!');
+        document.location.href = 'indexProfile.php'</script>";
     }
             echo "<script>
             alert('Data Profile berhasil diubah!');
@@ -721,7 +730,9 @@ function ubahProfilePasien($id_user)
     // $queryRelasi = "INSERT INTO relasi VALUES ('', '')"
     $exe = mysqli_query($koneksi, $queryUser);
     if (!$exe) {
-        die('Error pada database');
+        echo "<script>
+        alert('Data Profile gagal diubah!');
+        document.location.href = 'user_profile.php'</script>";
     }
             echo "<script>
             alert('Data Profile berhasil diubah!');
@@ -741,7 +752,9 @@ function ubahPakar($id_user)
     // $queryRelasi = "INSERT INTO relasi VALUES ('', '')"
     $exe = mysqli_query($koneksi, $queryUser);
     if (!$exe) {
-        die('Error pada database');
+        echo "<script>
+        alert('Data Profile gagal diubah!');
+        document.location.href = 'indexPakar.php'</script>";
     }
             echo "<script>
             alert('Data Pakar berhasil diubah!');
@@ -787,7 +800,9 @@ function ubahPTM($id_ptm)
     // $queryRelasi = "INSERT INTO relasi VALUES ('', '')"
     $exe = mysqli_query($koneksi, $queryUser);
     if (!$exe) {
-        die('Error pada database');
+        echo "<script>
+        alert('Data Validasi gagal diubah!');
+        document.location.href = 'indexPTM.php'</script>";
     }
             echo "<script>
             alert('Data Validasi berhasil diubah!');
@@ -839,7 +854,9 @@ function ubahPemeriksaanPTM($id_ptm)
     // $queryRelasi = "INSERT INTO relasi VALUES ('', '')"
     $exe = mysqli_query($koneksi, $queryUser);
     if (!$exe) {
-        die('Error pada database');
+        echo "<script>
+        alert('Data Pemeriksaan PTM gagal diubah!');
+        document.location.href = 'indexPTM.php'</script>";
     }
             echo "<script>
             alert('Data Pemeriksaan PTM berhasil diubah!');
@@ -1044,6 +1061,22 @@ function hapusPemeriksaanPTM($id_ptm)
     }
 }
 
-
+function ubahPassword($nik)
+{
+    global $koneksi;
+    $password = password_hash(htmlspecialchars($_POST['password']), PASSWORD_DEFAULT);
+    // $penyakit = $_POST['id_penyakit'];
+    $queryUser = "UPDATE user SET password = '$password' WHERE nik = '$nik'";
+    // $queryRelasi = "INSERT INTO relasi VALUES ('', '')"
+    $exe = mysqli_query($koneksi, $queryUser);
+    if (!$exe) {
+        echo "<script>
+            alert('Password gagal diubah!');
+            document.location.href = 'index.php'</script>";
+    }
+            echo "<script>
+            alert('Password berhasil diubah, silahkan login kembali!');
+            document.location.href = 'index.php'</script>";
+}
 
 ?>
