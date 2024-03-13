@@ -4,7 +4,9 @@
     $no=0;
 
 
-
+    $filename = 'LaporanSRQ'.date("Ymd").'.xls';
+    header("Content-type: application/vnd-ms-excel");
+    header("Content-disposition: attachment; filename=$filename");
 
    
 ?>
