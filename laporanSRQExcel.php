@@ -46,7 +46,7 @@
                                     </thead>
                                     <tbody>
                                     <?php 
-                                     if (isset($_POST{['filter']})) {
+                                     if (isset($_POST['filter'])) {
                                         $tgl_a = mysqli_real_escape_string($koneksi, $_POST['tgl_a']);
                                         $tgl_b = mysqli_real_escape_string($koneksi, $_POST['tgl_b']);
                                         $data = mysqli_query($koneksi, "SELECT * FROM riwayat WHERE tanggal_pemeriksaan BETWEEN '$tgl_a' AND '$tgl_b'");
