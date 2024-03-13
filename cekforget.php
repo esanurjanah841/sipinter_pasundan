@@ -32,7 +32,7 @@ if(isset($_POST) & !empty($_POST['email'])){
 }
 $r = mysqli_fetch_assoc($res);
 $password = $r['password'];
-$to = $r['email'];
+$to = $r['email']; 
 $subject = "Your Recovered Password";
  
 $message = "Klik link berikut untuk reset Password, <a href='http://sipinter-pasundan.id/resetPassword.php?email=$email'><a>";
