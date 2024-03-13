@@ -86,8 +86,8 @@ if (isset($_GET["act"])) {
         $id_user = $_GET["id_user"];
         ubahPakar($id_user);
     } else if ($act == "ubahPassword") {
-        $nik = $_GET["nik"];
-        ubahPassword($nik);
+        $email = $_GET["nik"];
+        ubahPassword($email);
     } else if ($act == "ubahPenyakit") {
         $id_penyakit = $_GET["id_penyakit"];
         ubahPenyakit($id_penyakit);
@@ -1061,12 +1061,12 @@ function hapusPemeriksaanPTM($id_ptm)
     }
 }
 
-function ubahPassword($nik)
+function ubahPassword($email)
 {
     global $koneksi;
     $password = password_hash(htmlspecialchars($_POST['password']), PASSWORD_DEFAULT);
     // $penyakit = $_POST['id_penyakit'];
-    $queryUser = "UPDATE user SET password = '$password' WHERE nik = '$nik'";
+    $queryUser = "UPDATE user SET password = '$password' WHERE email = '$email'";
     // $queryRelasi = "INSERT INTO relasi VALUES ('', '')"
     $exe = mysqli_query($koneksi, $queryUser);
     if (!$exe) {

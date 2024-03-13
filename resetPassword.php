@@ -1,7 +1,7 @@
 <?php 
 include 'function.php';
 
-$email = $_GET['email'];
+$email = $_GET[$email];
 
 $select = mysqli_query($koneksi, "SELECT * FROM user where email = '$email'");
 $tampil = mysqli_fetch_array($select);
@@ -34,17 +34,12 @@ $tampil = mysqli_fetch_array($select);
     <div class="card text-center">
         <div class="card-title">
             <h1 class="card-title">RESET PASSWORD</h1>
-            <i>Pastikan data yang muncul adalah data Anda.</i>
         </div>
         <div class="card-body">
-            <form method="POST" action="function.php?act=ubahPassword&nik=<?= $tampil['nik']; ?>" id="ubah" >
+            <form method="POST" action="function.php?act=ubahPassword&email=<?= $tampil['email']; ?>" id="ubah" >
                 <div class="form-row">
                     <label class="papan" for="email">Email</label>
                     <input type="email" class="form-control" id="email" name="email" placeholder="Email" value="<?= $tampil['email']?>" readonly>
-                </div>
-                <div class="form-row">
-                    <label class="papan" for="nik">NIK</label>
-                    <input type="text" class="form-control" id="nik" name="nik" value="<?= $tampil['nik']?>" readonly>
                 </div>
                 <div class="form-row">
                     <label class="papan" for="password">Password</label>
