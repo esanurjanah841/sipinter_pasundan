@@ -1,7 +1,7 @@
 <?php 
 include 'function.php';
 
-$email = $_POST[$email];
+$email = $_GET['email'];
 
 $select = mysqli_query($koneksi, "SELECT * FROM user where email = '$email'");
 $tampil = mysqli_fetch_array($select);
