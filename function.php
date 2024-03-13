@@ -86,7 +86,7 @@ if (isset($_GET["act"])) {
         $id_user = $_GET["id_user"];
         ubahPakar($id_user);
     } else if ($act == "ubahPassword") {
-        $email = $_GET["nik"];
+        $email = $_GET["email"];
         ubahPassword($email);
     } else if ($act == "ubahPenyakit") {
         $id_penyakit = $_GET["id_penyakit"];
