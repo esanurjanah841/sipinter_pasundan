@@ -111,7 +111,7 @@
                                     <span aria-hidden="true"></span>
                                 </button>
                             </div>
-                            <form action="laporanSRQExcel.php" method="POST">
+                            <form action="laporanSRQExcel.php" method="GET">
                             <div class="modal-body">
                                 <div>
                                     <Label for="tgl_a">Periode Awal</Label>
