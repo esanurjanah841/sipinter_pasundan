@@ -326,8 +326,8 @@
                                     <input type="checkbox" id="h_obc" name="h_obc" value="<?php if ($user['h_obc'] == "Obesitas Central") echo "checked" ?>">
                                     <label for="h_obc"> Obesitas Central</label><br>
                                     
-                                    <input type="checkbox" id="h_gm" name="h_gm" value="<?php if ($user['h_gm'] == "Hiperglikemi") echo "checked" ?>">
-                                    <label for="h_gm"> Hiperglikemi</label><br>
+                                    <input type="checkbox" id="h_gm" name="h_gm" value="<?php if ($user['h_gm'] == "Diabetes") echo "checked" ?>">
+                                    <label for="h_gm"> Diabetes Melitus</label><br>
                                 </div>
                                 <div class="form-group ">
                                     <label for="feedback">Rekomendasi Dokter</label>
