@@ -349,19 +349,19 @@
                                     </div>
                                 </div>
                                 <div class="form-group ">
-                                    
-                                    <input type="checkbox" id="h_imt" name="h_imt" value="<?php if ($user['h_imt'] == "IMT") echo "checked" ?>" disabled>
-                                    <label for="h_imt"> IMT</label><br>
+                                    <input type="checkbox" id="h_imt" name="h_imt" value="IMT" <?php if ($user['h_imt'] == "IMT") echo "checked" ?> disabled>
+                                    <label for="h_imt">IMT</label><br>
         
-                                    <input type="checkbox" id="h_hipertensi" name="h_hipertensi" value="<?php if ($user['h_hipertensi'] == "Hipertensi") echo "checked" ?>" disabled>
+                                    <input type="checkbox" id="h_hipertensi" name="h_hipertensi" value="Hipertensi" <?php if($user['h_hipertensi'] == "Hipertensi") echo "checked" ?> disabled>
                                     <label for="h_hipertensi"> Hipertensi</label><br>
                                     
-                                    <input type="checkbox" id="h_obc" name="h_obc" value="<?php if ($user['h_obc'] == "Obesitas Central") echo "checked" ?>" disabled>
-                                    <label for="h_obc"> Obesitas Central</label><br>
+                                    <input type="checkbox" id="h_obc" name="h_obc" value="Obesitas Central" <?php if ($user['h_obc'] == "Obesitas Central") echo "checked" ?> disabled>
+                                    <label for="h_obc">Obesitas Central</label><br>
                                     
-                                    <input type="checkbox" id="h_gm" name="h_gm" value="<?php if ($user['h_gm'] == "Diabetes") echo "checked" ?>" disabled>
-                                    <label for="h_gm"> Diabetes Melitus</label><br>
+                                    <input type="checkbox" id="h_gm" name="h_gm" value="Diabetes Melitus" <?php if ($user['h_gm'] == "Diabetes Melitus") echo "checked" ?> disabled>
+                                    <label for="h_gm">Diabetes Melitus</label><br>
                                 </div>
+
                                 <div class="form-group ">
                                     <label for="feedback">Rekomendasi Dokter</label>
                                     <textarea class="form-control form-control-user" id="feedback" name="feedback" value="<?= $user['feedback']; ?>" required><?= $user['feedback']; ?></textarea>

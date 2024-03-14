@@ -324,7 +324,7 @@
                                     <input type="checkbox" id="h_obc" name="h_obc" value="Obesitas Central">
                                     <label for="h_obc"> Obesitas Central</label><br>
                                     
-                                    <input type="checkbox" id="h_gm" name="h_gm" value="Diabetes">
+                                    <input type="checkbox" id="h_gm" name="h_gm" value="Diabetes Melitus">
                                     <label for="h_gm"> Diabetes Melitus</label><br>
                                 </div>
                                 <div class="form-group ">
