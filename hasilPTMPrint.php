@@ -44,7 +44,7 @@ include 'function.php';
 
 <body>
 <main id="main">
-<section style="margin-top:-50px">
+<section style="margin-top:-70px">
 <div>
         <div class="solid">
             <div class="form-row">
@@ -269,7 +269,7 @@ include 'function.php';
 
                             <tr>
                                 <td width="150"></td>
-                                <td>:&emsp;</td>
+                                <td></td>
                                 <td colspan="2"  style="text-align:center">UPTD PUSKESMAS PASUNDAN<br>
                                 <img src="gambar/barcode_uptd.jpg" width="150" height="auto">
                                 </td>
