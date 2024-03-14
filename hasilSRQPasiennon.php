@@ -62,7 +62,7 @@
                         <div class="modal-footer">
                             <button type="button" style="margin:5px" onclick="history.back();" class="btn btn-danger">Kembali</button>
                             <button type="submit" style="margin:5px" name="submit" id="tambah" value="tambah" class="btn btn-success">Simpan</button>
-                            <button type="button" style="margin:5px" class="btn btn-warning" onclick="window.print()" style="color:white;"><i class="fas fa-print" > Print</i></button>
+                            <button type="button" style="margin:5px; color:white" class="btn btn-warning" onclick="window.print()" style="color:white;"><i class="fas fa-print" > Print</i></button>
                         </div>
                     </form>
                 </div>
