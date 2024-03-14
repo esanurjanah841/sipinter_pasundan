@@ -39,7 +39,8 @@
                 
             </div>
             <div style="font-size: 14px;">
-                <a data-toggle="modal" data-target="#periode" target="_BLANK" class="btn btn-success btn-icon-split" style="font-size 14px; margin:5px; margin-left:20px">
+            <!-- data-toggle="modal" data-target="#periode" -->
+                <a href="laporanSkriningKesehatanExcel.php" target="_BLANK" class="btn btn-success btn-icon-split" style="font-size 14px; margin:5px; margin-left:20px">
                     <span class="icon text-white-50">
                         <i class="fas fa-print"></i>
                     </span>

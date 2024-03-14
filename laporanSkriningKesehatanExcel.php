@@ -357,18 +357,6 @@
                 <tbody>
                 <?php 
                     $no++; ?>
-                    <?php
-                    if (isset($_POST['filter'])) {
-                        $tgl_a = mysqli_real_escape_string($koneksi, $_POST['tgl_a']);
-                        $tgl_b = mysqli_real_escape_string($koneksi, $_POST['tgl_b']);
-                        $data = mysqli_query($koneksi, "SELECT * FROM ptm_hasil WHERE tanggal_pemeriksaan BETWEEN '$tgl_a' AND '$tgl_b'");
-                     } else{
-                        $data = mysqli_query($koneksi, "SELECT * FROM ptm_hasil");
-                     }
-                    
-                    if($lihat = mysqli_fetch_assoc($data)){
-                    
-                    ?>
                     <tr>
                         <td rowspan="2"><?= $no ?></td>
                         <td>15-59</td>
@@ -464,7 +452,6 @@
                 </tbody>
             </table>
         </div>
-        <?php } ?>
 </div>
 
 <style>
