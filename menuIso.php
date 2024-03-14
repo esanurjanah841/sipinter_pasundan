@@ -1,14 +1,4 @@
-<?php 
-include 'function.php';
-if (isset($_SESSION['role'])) {
-  if ($_SESSION['role'] == "admin") {
-      header("location: indexAdmin.php");
-  } else if ($_SESSION['role'] == "administrator") {
-    header("location: indexAdmin.php");
-    }
-}
 
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -76,7 +66,7 @@ if (isset($_SESSION['role'])) {
     </div>
   </header><!-- End Header -->
 
-  <main id="main">
+<main id="main">
 <!-- ======= Services Section ======= -->
 <section id="Menupasien" class="services" style="margin-top: 50px;">
   <div class="container">
@@ -85,62 +75,93 @@ if (isset($_SESSION['role'])) {
       <img src="gambar/hotline.png" style="vertical-align:middle; max-height: 80px;"></a>
     </div>
     <div class="section-title" data-aos="fade-up">
-      <h2>Media Si Pinter</h2>
-      <p>Silahkan Pilih Salah Satu Menu:</p>
+      <h2>INFO SEPUTAR OBESITAS</h2>
     </div>
+
 
     <div class="row">
-    <div class="col-md-4 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-        <div class="icon-box" data-aos="fade-up" data-aos-delay="50">
+    <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-5 mb-lg-0">
         <a href="menuPtm.php" style="color:black">
-          <img src="gambar/CPDC.png" class="card-img-top" alt="...">
-          <h4 class="title">CEGAH PTM DENGAN CERDIK</h4>
+          <img src="gambar/ISO/1.png" class="card-img-top" alt="...">
           </a>
-        </div>
       </div>
-      <div class="col-md-4 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-        <div class="icon-box" data-aos="fade-up" data-aos-delay="50">
-        <a href="menuAf.php" style="color:black">
-          <img src="gambar/AF.png" class="card-img-top" alt="...">
-          <h4 class="title">AKTIVITAS FISIK</h4>
+      <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-5 mb-lg-0">
+        <a href="menuPtm.php" style="color:black" data-bs-toggle="modal" data-bs-target="#skrining" >
+          <img src="gambar/ISO/2.png" class="card-img-top" alt="...">
           </a>
-        </div>
-      </div>
-      <div class="col-md-4 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-        <div class="icon-box" data-aos="fade-up" data-aos-delay="50">
-        <a href="menuIso.php" style="color:black">
-          <img src="gambar/ISO.png" class="card-img-top" alt="...">
-          <h4 class="title">INFO SEPUTAR OBESITAS</h4>
-        </a>
-        </div>
       </div>
     </div>
 
-    <div class="row" style="margin-top: 35px;">
-      <div class="col-md-2 col-lg-2 d-flex align-items-stretch mb-2 mb-lg-0">
-      </div>
-      <div class="col-md-4 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-        <div class="icon-box" data-aos="fade-up" data-aos-delay="50">
-        <a href="menuIsh.php" style="color:black">
-          <img src="gambar/ISH.png" class="card-img-top" alt="...">
-          <h4 class="title">INFO SEPUTAR HIPERTENSI</h4>
-        </a>
-        </div>
-      </div>
-      <div class="col-md-4 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-        <div class="icon-box" data-aos="fade-up" data-aos-delay="50">
-        <a href="menuIsd.php" style="color:black">
-          <img src="gambar/ISD.png" class="card-img-top" alt="...">
-          <h4 class="title">INFO SEPUTAR DIABETES</h4>
+    <div class="row" style="margin-top: 35px">
+    <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-5 mb-lg-0">
+        <a href="menuPtm.php" style="color:black">
+          <img src="gambar/ISO/3.png" class="card-img-top" alt="...">
           </a>
-        </div>
       </div>
-      <div class="col-md-2 col-lg-2 d-flex align-items-stretch mb-2 mb-lg-0">
+      <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-5 mb-lg-0">
+        <a href="menuPtm.php" style="color:black" data-bs-toggle="modal" data-bs-target="#skrining" >
+          <img src="gambar/ISO/4.png" class="card-img-top" alt="...">
+          </a>
       </div>
     </div>
-    
+
+    <button type="button" class="btn btn-danger" style="margin-top: 35px" onclick="history.back();">Kembali</button>
+
+  <!-- Profile -->
+  <div class="modal fade" id="profile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="dialog">
+            <div class="modal-content" style="font-family:poppins">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Bacalah terlebih dahulu</h5>
+                    <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <p style="text-align: poppins; text-align:justify">Isilah profile terlebih dahulu secara benar dan lengkap sebelum memulai  Skrining Kesehatan. Klik tombol 'Oke' untuk melakukan pengisian profile.<br>
+                          Jika Anda sudah mengisi profile klik 'Batal'.<br>
+                          Kunjungi User Pasien dan pilih 'Profile' untuk melihat dan mengubah data profile Anda. </p>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Batal</button>
+                        <button onclick="document.location='tambahProfilePasien.php'" class="btn btn-success">Oke</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+  </div>
+
+
+<!-- Skrining -->
+<div class="modal fade" id="skrining" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="dialog">
+            <div class="modal-content" style="font-family:poppins">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Bacalah terlebih dahulu</h5>
+                    <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                    <p style="text-align: poppins; text-align:justify"><b>Anda diwajibkan mengisi profile terlebih dahulu sebelum lanjut.</b></p>
+                        <p style="text-align: poppins; text-align:justify">Isilah form skrining dengan lengkap dan benar, data yang diinputkan akan diperiksa oleh petugas puskesmas untuk pemeriksaan.  </p>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Batal</button>
+                        <button onclick="document.location='formPTMPasien.php'" class="btn btn-success">Oke</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+  </div>
   
-
+</section><!-- End Services Section -->
 
 
 </section><!-- End Services Section -->
@@ -158,7 +179,6 @@ if (isset($_SESSION['role'])) {
 </div>
 </footer><!-- End Footer -->
 </main><!-- End #main -->
-
 
 
 

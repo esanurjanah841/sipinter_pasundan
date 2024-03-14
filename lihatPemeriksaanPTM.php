@@ -224,7 +224,7 @@
                                     <input type="checkbox" id="h_imt" name="h_imt" value="<?php if ($user['h_imt'] == "IMT") echo "checked" ?>" disabled>
                                     <label for="h_imt"> IMT</label><br>
         
-                                    <input type="checkbox" id="h_hipertensi" name="h_hipertensi" value="<?php if ($h_hipertensi == "Hipertensi") echo 'checked' ?>">
+                                    <input type="checkbox" id="h_hipertensi" name="h_hipertensi" value="<?php if ($h_hipertensi == "Hipertensi") echo "checked" ?>">
                                     <label for="h_hipertensi"> Hipertensi</label><br>
                                     
                                     <input type="checkbox" id="h_obc" name="h_obc" value="<?php if ($user['h_obc'] == "Obesitas Central") echo "checked" ?>" disabled>
