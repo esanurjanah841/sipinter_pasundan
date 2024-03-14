@@ -331,7 +331,6 @@
                                     <label for="feedback">Rekomendasi Dokter</label>
                                     <textarea class="form-control form-control-user" id="feedback" name="feedback" required></textarea>
                                 </div>
-                                
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" onclick="history.back();">Batal</button>
                             <button type="submit" id="tambah" value="tambah" class="btn btn-success">Simpan</button>

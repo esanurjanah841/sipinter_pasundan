@@ -229,7 +229,6 @@
                                     <input type="checkbox" id="h_gm" name="h_gm" value="Diabetes Melitus" <?php if ($user['h_gm'] == "Diabetes Melitus") echo "checked" ?> disabled>
                                     <label for="h_gm"> Diabetes Melitus</label><br>
                                 </div>
-
                                 <div class="form-group ">
                                     <label for="feedback">Rekomendasi Dokter</label>
                                     <textarea class="form-control form-control-user" id="feedback" name="feedback" value="<?= $user['feedback']; ?>" readonly><?= $user['feedback']; ?></textarea>

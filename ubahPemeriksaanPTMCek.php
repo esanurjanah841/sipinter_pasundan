@@ -316,7 +316,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group ">
-                                    <input type="checkbox" id="h_imt" name="h_imt" value="IMT" <?php if ($user['h_imt'] == "IMT") echo "checked" ?> >
+                                    <input type="checkbox" id="h_imt" name="h_imt" value="IMT" <?php if ($user['h_imt'] == "IMT") echo "checked" ?>>
                                     <label for="h_imt"> IMT</label><br>
         
                                     <input type="checkbox" id="h_hipertensi" name="h_hipertensi" value="Hipertensi" <?php if($user['h_hipertensi'] == "Hipertensi") echo "checked" ?> >
