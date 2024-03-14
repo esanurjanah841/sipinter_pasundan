@@ -1,12 +1,5 @@
 <?php 
 include 'function.php';
-if (isset($_SESSION['role'])) {
-    if ($_SESSION['role'] == "admin") {
-        header("location: indexAdmin.php");
-    } else if ($_SESSION['role'] == "administrator") {
-      header("location: indexAdmin.php");
-  }
-}
 
     $id_ptm = $_GET["id_ptm"];
 
@@ -51,36 +44,6 @@ if (isset($_SESSION['role'])) {
 
 <body>
 
-<!-- ======= Header ======= -->
-<header id="header" class="header fixed-top align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
-
-      <div class="logo">
-          <a class="navbar-brand fw-bold" href="#page-top">
-              <div class="sidebar-brand-icon">
-                  <img src="gambar/Logo-Sipinter.png" width="175" height="auto" alt="logo" />
-              </div>
-          </a>
-       
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-      </div>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="menuPasien.php">Menu</a></li>
-          <li><a class="nav-link scrollto" href="riwayat.php">Riwayat</a></li>
-          <li class="dropdown"><a href="#"><span>User Pasien</span> <i class="fas fa-user"></i></a>
-            <ul>
-              <li><a href="user_profile.php"><span>Profile</span> <i class="fas fa-address-card"></i></a></li>
-              <li><a href="logout.php"><span>Log Out</span> <i class="fas fa-door-open"></i></a></li>
-            </ul>
-          </li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
 
 <main id="main">
 <section class="test mt-5">
@@ -306,11 +269,7 @@ if (isset($_SESSION['role'])) {
                                 <td colspan="2"><?= $tampil['feedback']; ?></td>
                             </tr>
                         </table>    
-                                        <br>
-                        <div class="modal-footer">
-                            <a type=button  onclick="history.back();" class="btn btn-success" style="margin-right:10px">Kembali</a>
-                            <button type="button" class="btn btn-warning" style="color:white;"><i class="fas fa-print" href="hasilPTMPrint.php" style="color:white;"> Print</button>
-                        </div>
+                      
                     </form>
 
                 </div>
@@ -318,67 +277,10 @@ if (isset($_SESSION['role'])) {
 </section>    
 </main><!-- End #main -->
 
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-<script language="JavaScript" type="text/javascript">
-$(document).ready(function(){
-    $("#myBtn").click(function(){
-        $("#myModal").modal();
-    });
-});
-function checkDiagnosa(){
-    return confirm('Apakah sudah benar gejalanya?');
-}
+<script>
 
+window.print();
 </script>
- 
-<style>
-    @media print {
-    .modal-footer, .navbar, .logo, .main, .header{
-      display: none;
-      
-    }
-}
-.solid {
-    border: solid;
-    padding : 25px;
-    margin : 20px;
-    }
-
-
-.form-group{
-    font-family : "poppins";
-    font-size: 16px;
-    margin-top : 10px;
-    
-}
-
-.label-text{
-    margin-top:15px;
-    margin-bottom : 10px;
-
-}
-
-.text {
-    margin-top:30px;
-    margin-bottom : 10px;
-}
-
-.form-control{
-    
-}
-
-</style>
-<!-- Vendor JS Files -->
-<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
-
-<!-- Template Main JS File -->
-<script src="assets/js/main.js"></script>
 
 </body>
 
