@@ -268,6 +268,14 @@ include 'function.php';
                                 <td>:&emsp;</td>
                                 <td colspan="2"><?= $tampil['feedback']; ?></td>
                             </tr>
+
+                            <tr>
+                                <td width="150"></td>
+                                <td>:&emsp;</td>
+                                <td colspan="2"  style="text-align:center">UPTD PUSKESMAS PASUNDAN<br>
+                                <img src="gambar/barcode_uptd.jpg" width="100" height="auto">
+                                </td>
+                            </tr>
                         </table>    
                       
                     </form>
