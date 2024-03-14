@@ -306,7 +306,7 @@ if (isset($_SESSION['role'])) {
                                     $edukasi = "IMT Anda menunjukan hasil di atas standar. Terapkan perilaku hidup bersih dan sehat, serta lakukan aktivitas fisik rutin minimal 30 menit/hari.";
                                 ?>
                                 <tr>
-                                    <td width="150"></td>
+                                    <td width="150">Keterangan</td>
                                     <td>:&emsp;</td>
                                     <td colspan="2"><?= $edukasi?></td>
                                 </tr>
@@ -324,7 +324,7 @@ if (isset($_SESSION['role'])) {
                                     - Menghindari minuman beralkohol.";
                                 ?>
                                 <tr>
-                                    <td width="150"></td>
+                                    <td width="150">Keterangan</td>
                                     <td>:&emsp;</td>
                                     <td colspan="2"><?= $edukasi?></td>
                                 </tr>
@@ -343,7 +343,7 @@ if (isset($_SESSION['role'])) {
 
                                 ?>
                                 <tr>
-                                    <td width="150"></td>
+                                    <td width="150">Keterangan</td>
                                     <td>:&emsp;</td>
                                     <td colspan="2"><?= $edukasi?></td>
                                 </tr>
@@ -360,7 +360,7 @@ if (isset($_SESSION['role'])) {
                                     - Biasakan pola makan teratur sesuai kaidah Isi Piringku.<br>";
                                 ?>
                                 <tr>
-                                    <td width="150"></td>
+                                    <td width="150">Keterangan</td>
                                     <td>:&emsp;</td>
                                     <td colspan="2"><?= $edukasi?></td>
                                 </tr>
