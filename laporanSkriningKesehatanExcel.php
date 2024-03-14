@@ -13,15 +13,7 @@
     header("Content-disposition: attachment; filename=$filename");
 
 
-    if (isset($_POST['filter'])) {
-        $tgl_a = mysqli_real_escape_string($koneksi, $_POST['tgl_a']);
-        $tgl_b = mysqli_real_escape_string($koneksi, $_POST['tgl_b']);
-        $data = mysqli_query($koneksi, "SELECT * FROM ptm_hasil WHERE tanggal_pemeriksaan BETWEEN '$tgl_a' AND '$tgl_b'");
-     } else{
-        $data = mysqli_query($koneksi, "SELECT * FROM ptm_hasil");
-     }
     
-    while($lihat = mysqli_fetch_assoc($data)){
 
     
     // Ambil Tahun Laki-laki
@@ -282,7 +274,7 @@
             $LakiGulaD360 = mysqli_fetch_assoc($JumlahLakiGulaD360);
             $JumlahPerempuanGulaD360 = mysqli_query($koneksi, "SELECT COUNT('jenis_kelamin') as jml_pasien FROM ptm_hasil where jenis_kelamin = 'Perempuan' and periksa_gula >= 200 and $thnlahir >= 60");
             $PerempuanGulaD360 = mysqli_fetch_assoc($JumlahPerempuanGulaD360);
-    }
+    
 ?>
 <!-- Begin Page Content -->
 <div class="container-fluid">
@@ -365,6 +357,18 @@
                 <tbody>
                 <?php 
                     $no++; ?>
+                    <?php
+                    if (isset($_POST['filter'])) {
+                        $tgl_a = mysqli_real_escape_string($koneksi, $_POST['tgl_a']);
+                        $tgl_b = mysqli_real_escape_string($koneksi, $_POST['tgl_b']);
+                        $data = mysqli_query($koneksi, "SELECT * FROM ptm_hasil WHERE tanggal_pemeriksaan BETWEEN '$tgl_a' AND '$tgl_b'");
+                     } else{
+                        $data = mysqli_query($koneksi, "SELECT * FROM ptm_hasil");
+                     }
+                    
+                    while($lihat = mysqli_fetch_assoc($data)){
+                    
+                    ?>
                     <tr>
                         <td rowspan="2"><?= $no ?></td>
                         <td>15-59</td>
@@ -460,6 +464,7 @@
                 </tbody>
             </table>
         </div>
+        <?php } ?>
 </div>
 
 <style>
