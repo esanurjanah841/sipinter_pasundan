@@ -46,7 +46,7 @@ include 'function.php';
 
 
 <main id="main">
-<section class="test mt-5">
+<section>
 <div class="">
         <div class="solid">
             <div class="form-row">
