@@ -366,7 +366,7 @@
                         $data = mysqli_query($koneksi, "SELECT * FROM ptm_hasil");
                      }
                     
-                    while($lihat = mysqli_fetch_assoc($data)){
+                    if($lihat = mysqli_fetch_assoc($data)){
                     
                     ?>
                     <tr>
