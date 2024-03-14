@@ -316,6 +316,20 @@
                                     </div>
                                 </div>
                                 <div class="form-group ">
+                                    
+                                    <input type="checkbox" id="h_imt" name="h_imt" value="<?php if ($user['h_imt'] == "IMT") echo "checked" ?>">
+                                    <label for="h_imt"> IMT</label><br>
+        
+                                    <input type="checkbox" id="h_hipertensi" name="h_hipertensi" value="<?php if ($user['h_hipertensi'] == "Hipertensi") echo "checked" ?>">
+                                    <label for="h_hipertensi"> Hipertensi</label><br>
+                                    
+                                    <input type="checkbox" id="h_obc" name="h_obc" value="<?php if ($user['h_obc'] == "Obesitas Central") echo "checked" ?>">
+                                    <label for="h_obc"> Obesitas Central</label><br>
+                                    
+                                    <input type="checkbox" id="h_gm" name="h_gm" value="<?php if ($user['h_gm'] == "Hiperglikemi") echo "checked" ?>">
+                                    <label for="h_gm"> Hiperglikemi</label><br>
+                                </div>
+                                <div class="form-group ">
                                     <label for="feedback">Rekomendasi Dokter</label>
                                     <textarea class="form-control form-control-user" id="feedback" name="feedback" value="<?= $user['feedback']; ?>" required><?= $user['feedback']; ?></textarea>
                                 </div>

@@ -312,7 +312,21 @@
                                         <input type="text" class="form-control form-control-user" id="hasilperiksa_gula" name="hasilperiksa_gula" value="<?= $pesan_gula ?>" readonly>
                                     </div>
                                 </div>
-    <?php } ?>
+                                <?php } ?>
+                                <div class="form-group ">
+                                    
+                                    <input type="checkbox" id="h_imt" name="h_imt" value="IMT">
+                                    <label for="h_imt"> IMT</label><br>
+        
+                                    <input type="checkbox" id="h_hipertensi" name="h_hipertensi" value="Hipertensi">
+                                    <label for="h_hipertensi"> Hipertensi</label><br>
+                                    
+                                    <input type="checkbox" id="h_obc" name="h_obc" value="Obesitas Central">
+                                    <label for="h_obc"> Obesitas Central</label><br>
+                                    
+                                    <input type="checkbox" id="h_gm" name="h_gm" value="Hiperglikemi">
+                                    <label for="h_gm"> Hiperglikemi</label><br>
+                                </div>
                                 <div class="form-group ">
                                     <label for="feedback">Rekomendasi Dokter</label>
                                     <textarea class="form-control form-control-user" id="feedback" name="feedback" required></textarea>

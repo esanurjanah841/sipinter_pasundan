@@ -516,9 +516,13 @@ function tambahPTMHasil()
     $hasil_tensi = htmlspecialchars($_POST['hasil_tensi']);
     $hasil_lingkar = htmlspecialchars($_POST['hasil_lingkar']);
     $hasilperiksa_gula = htmlspecialchars($_POST['hasilperiksa_gula']);
+    $h_imt = htmlspecialchars($_POST['h_imt']);
+    $h_hipertensi = htmlspecialchars($_POST['h_hipertensi']);
+    $h_obc = htmlspecialchars($_POST['h_obc']);
+    $h_gm = htmlspecialchars($_POST['h_gm']);
     
     // $penyakit = $_POST['id_penyakit'];
-    $queryPTM = "INSERT INTO ptm_hasil VALUES ('', '$tanggal_pengisian','$tanggal_pemeriksaan','$nik','$nama_lengkap', '$ttl', '$jenis_kelamin', '$alamat', '$provinsi', '$kota', '$tlp', '$pendidikan', '$pekerjaan', '$status', '$goldar', '$riwayatkeluarga1', '$riwayatkeluarga2', '$riwayatkeluarga3', '$riwayatsendiri1', '$riwayatsendiri2', '$riwayatsendiri3', '$merokok', '$fisik', '$gula', '$garam', '$lemak', '$sayur', '$alkohol', '$berat', '$tinggi', '$lingkar', '$sistol', '$diastol', '$periksa_gula', '$feedback', '$imt', '$hasil_imt', '$hasil_tensi', '$hasil_lingkar', '$hasilperiksa_gula')";
+    $queryPTM = "INSERT INTO ptm_hasil VALUES ('', '$tanggal_pengisian','$tanggal_pemeriksaan','$nik','$nama_lengkap', '$ttl', '$jenis_kelamin', '$alamat', '$provinsi', '$kota', '$tlp', '$pendidikan', '$pekerjaan', '$status', '$goldar', '$riwayatkeluarga1', '$riwayatkeluarga2', '$riwayatkeluarga3', '$riwayatsendiri1', '$riwayatsendiri2', '$riwayatsendiri3', '$merokok', '$fisik', '$gula', '$garam', '$lemak', '$sayur', '$alkohol', '$berat', '$tinggi', '$lingkar', '$sistol', '$diastol', '$periksa_gula', '$feedback', '$imt', '$hasil_imt', '$hasil_tensi', '$hasil_lingkar', '$hasilperiksa_gula', '$h_imt', '$h_hipertensi', '$h_obc', '$h_gm')";
     // $queryRelasi = "INSERT INTO relasi VALUES ('', '')"
     $exe = mysqli_query($koneksi, $queryPTM);
     if (!$exe) {
@@ -847,9 +851,18 @@ function ubahPemeriksaanPTM($id_ptm)
     $diastol = htmlspecialchars($_POST['diastol']);
     $periksa_gula = htmlspecialchars($_POST['periksa_gula']);
     $feedback = htmlspecialchars($_POST['feedback']);
+    $imt = htmlspecialchars($_POST['imt']);
+    $hasil_imt = htmlspecialchars($_POST['hasil_imt']);
+    $hasil_tensi = htmlspecialchars($_POST['hasil_tensi']);
+    $hasil_lingkar = htmlspecialchars($_POST['hasil_lingkar']);
+    $hasilperiksa_gula = htmlspecialchars($_POST['hasilperiksa_gula']);
+    $h_imt = htmlspecialchars($_POST['h_imt']);
+    $h_hipertensi = htmlspecialchars($_POST['h_hipertensi']);
+    $h_obc = htmlspecialchars($_POST['h_obc']);
+    $h_gm = htmlspecialchars($_POST['h_gm']);
     
     // $penyakit = $_POST['id_penyakit'];
-    $queryUser = "UPDATE ptm_hasil SET tanggal_pengisian = '$tanggal_pengisian', tanggal_pemeriksaan = '$tanggal_pemeriksaan', nik = '$nik', nama_lengkap = '$nama_lengkap', ttl = '$ttl', jenis_kelamin = '$jenis_kelamin', alamat = '$alamat', provinsi = '$provinsi', kota = '$kota', tlp = '$tlp', pendidikan = '$pendidikan', pekerjaan = '$pekerjaan', status = '$status', goldar = '$goldar', riwayatkeluarga1 = '$riwayatkeluarga1', riwayatkeluarga2 = '$riwayatkeluarga2', riwayatkeluarga3 = '$riwayatkeluarga3', riwayatsendiri1 = '$riwayatsendiri1', riwayatsendiri2 = '$riwayatsendiri2', riwayatsendiri3 = '$riwayatsendiri3', merokok = '$merokok', fisik = '$fisik', gula = '$gula', garam = '$garam', lemak = '$lemak', sayur = '$sayur', alkohol = '$alkohol', berat = '$berat', tinggi = '$tinggi', lingkar = '$lingkar', sistol = '$sistol', diastol = '$diastol', periksa_gula = '$periksa_gula',  feedback = '$feedback'
+    $queryUser = "UPDATE ptm_hasil SET tanggal_pengisian = '$tanggal_pengisian', tanggal_pemeriksaan = '$tanggal_pemeriksaan', nik = '$nik', nama_lengkap = '$nama_lengkap', ttl = '$ttl', jenis_kelamin = '$jenis_kelamin', alamat = '$alamat', provinsi = '$provinsi', kota = '$kota', tlp = '$tlp', pendidikan = '$pendidikan', pekerjaan = '$pekerjaan', status = '$status', goldar = '$goldar', riwayatkeluarga1 = '$riwayatkeluarga1', riwayatkeluarga2 = '$riwayatkeluarga2', riwayatkeluarga3 = '$riwayatkeluarga3', riwayatsendiri1 = '$riwayatsendiri1', riwayatsendiri2 = '$riwayatsendiri2', riwayatsendiri3 = '$riwayatsendiri3', merokok = '$merokok', fisik = '$fisik', gula = '$gula', garam = '$garam', lemak = '$lemak', sayur = '$sayur', alkohol = '$alkohol', berat = '$berat', tinggi = '$tinggi', lingkar = '$lingkar', sistol = '$sistol', diastol = '$diastol', periksa_gula = '$periksa_gula',  feedback = '$feedback', imt = '$imt', hasil_imt = '$hasil_imt', hasil_tensi = '$hasil_tensi', hasil_lingkar = '$hasil_lingkar', hasilperiksa_gula = '$hasilperiksa_gula', h_imt = '$h_imt', h_hipertensi = '$h_hipertensi', h_obc = '$h_obc', h_gm = '$h_gm'
      WHERE id_ptm = '$id_ptm'";
     // $queryRelasi = "INSERT INTO relasi VALUES ('', '')"
     $exe = mysqli_query($koneksi, $queryUser);

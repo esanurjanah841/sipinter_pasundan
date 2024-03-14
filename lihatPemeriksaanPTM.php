@@ -19,6 +19,10 @@
 
     $queryPTM = mysqli_query($koneksi, "SELECT * FROM ptm_hasil where id_ptm = '$id_ptm'");
     $user = mysqli_fetch_assoc($queryPTM);
+        $h_imt = $user['h_imt'];
+        $h_hipertensi = $user['h_hipertensi'];
+        $h_obc = $user['h_obc'];
+        $h_gm = $user['h_gm'];
 
    
 ?>
@@ -211,6 +215,20 @@
                                         <label for="hasilperiksa_gula">Hasi Pemeriksaan Gula Darah Sewaktu</label>
                                         <input type="text" class="form-control form-control-user" id="hasilperiksa_gula" name="hasilperiksa_gula" value="<?= $user['hasilperiksa_gula']; ?>" readonly>
                                     </div>
+                                </div>
+                                <div class="form-group ">
+                                    
+                                    <input type="checkbox" id="h_imt" name="h_imt" value="<?php if ($user['h_imt'] == "IMT") echo "checked" ?>" disabled>
+                                    <label for="h_imt"> IMT</label><br>
+        
+                                    <input type="checkbox" id="h_hipertensi" name="h_hipertensi" value="<?php if ($user['h_hipertensi'] == "Hipertensi") echo "checked" ?>" disabled>
+                                    <label for="h_hipertensi"> Hipertensi</label><br>
+                                    
+                                    <input type="checkbox" id="h_obc" name="h_obc" value="<?php if ($user['h_obc'] == "Obesitas Central") echo "checked" ?>" disabled>
+                                    <label for="h_obc"> Obesitas Central</label><br>
+                                    
+                                    <input type="checkbox" id="h_gm" name="h_gm" value="<?php if ($user['h_gm'] == "Hiperglikemi") echo "checked" ?>" disabled>
+                                    <label for="h_gm"> Hiperglikemi</label><br>
                                 </div>
                                 <div class="form-group ">
                                     <label for="feedback">Rekomendasi Dokter</label>
