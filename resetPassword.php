@@ -42,7 +42,7 @@ $tampil = mysqli_fetch_array($select);
                     <input type="email" class="form-control" id="email" name="email" placeholder="Email" value="<?= $tampil['email']?>" readonly>
                 </div>
                 <div class="form-row">
-                    <label class="papan" for="password">Password</label>
+                    <label class="papan" for="password">Masukan Password Baru</label>
                     <input type="password" class="form-control" id="password" name="password" minlength="8" placeholder="Password" required>
                         <div class="valid-feedback">
                             Bagus!

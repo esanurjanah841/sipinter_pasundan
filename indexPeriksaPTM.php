@@ -42,7 +42,7 @@
                         <form action="indexPeriksaPTMCek.php" method="GET">
                         
                             <div class="form-group ">
-                                    <label for="tanggal_pemeriksaan">Tanggal Pemeriksaan</label>
+                                    <label for="tanggal_pemeriksaan">Tanggal Pengisian</label>
                                     <input type="date" class="form-control form-control-user" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?= $user['tanggal_pengisian']; ?>" required>
                                     
                                 </div>
