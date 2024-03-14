@@ -300,12 +300,6 @@ if (isset($_SESSION['role'])) {
                                
                             </tr>
                             
-                            <tr>
-                                <td width="150"><h6>Rekomendasi Dokter</h6></td>
-                                <td>:&emsp;</td>
-                                <td colspan="2"><?= $tampil['feedback']; ?></td>
-                            </tr>
-                            
                             <?php
                                 $h_imt = $tampil['h_imt'];
                                 if($h_imt == "IMT"){
