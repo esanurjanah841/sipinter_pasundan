@@ -276,7 +276,14 @@ include 'function.php';
                 
 </section>    
 </main><!-- End #main -->
+<style>
+    .solid {
+    border: solid;
+    padding : 25px;
+    margin : 20px;
+    }
 
+</style>
 <script>
 
 window.print();
