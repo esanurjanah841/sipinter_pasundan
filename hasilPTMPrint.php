@@ -260,7 +260,71 @@ include 'function.php';
                                 <td colspan="2"><input type="text" class="form-control form-control-user" id="periksa_gula" name="periksa_gula" value="<?php echo $tampil['periksa_gula']?>" style="font-size:12px" readonly></td>
                                
                             </tr>
-                            
+                            <?php
+                                $h_imt = $tampil['h_imt'];
+                                if($h_imt == "IMT"){
+                                    $edukasi = "IMT Anda menunjukan hasil di atas standar. Terapkan perilaku hidup bersih dan sehat, serta lakukan aktivitas fisik rutin minimal 30 menit/hari.";
+                                ?>
+                                <tr>
+                                    <td width="150">Keterangan</td>
+                                    <td>:&emsp;</td>
+                                    <td colspan="2"><?= $edukasi?></td>
+                                </tr>
+                                <?php } ?>  
+
+                                <?php
+                                $h_hipertensi = $tampil['h_hipertensi'];
+                                if($h_hipertensi == "Hipertensi"){
+                                    $edukasi = "Pengukuran tekanan darah Anda menunjukan hasil di atas standar. Cegah dan kendalikan hipertensi dengan:<br>
+                                    - Mengurangi konsumsi garam (Tidak lebih dari 1 sendok teh/hari <br>
+                                    - Melakukan aktivitas fisik teratur minimal 30 menit/hari.<br>
+                                    - Tidak merokok dan menghindari asap rokok.<br>
+                                    - Diet dengan gizi seimbang. <br>
+                                    - Mempertahankan berat badan ideal. <br>
+                                    - Menghindari minuman beralkohol.";
+                                ?>
+                                <tr>
+                                    <td width="150">Keterangan</td>
+                                    <td>:&emsp;</td>
+                                    <td colspan="2"><?= $edukasi?></td>
+                                </tr>
+                                <?php } ?> 
+                                
+                                <?php
+                                $h_gm = $tampil['h_gm'];
+                                if($h_gm == "Diabetes Melitus"){
+                                    $edukasi = "Pengukuran gula darah Anda menunjukan hasil di atas standar. Cegah diabetes dengan:<br>
+                                    - Mempertahankan berat badan ideal. <br>
+                                    - Makan makanan sehat antara 3-5 porsi buah dan sayuran sehari, dan kurangi asupan gula, garam, dan lemak jenuh.<br>
+                                    - Rutin beraktivitas fisik minimal 30 menit/hari.<br>
+                                    - Kelola stress. <br>
+                                    - Tidak merokok dan menghindari asap rokok.<br>
+                                    - Menghindari minuman beralkohol.";
+
+                                ?>
+                                <tr>
+                                    <td width="150">Keterangan</td>
+                                    <td>:&emsp;</td>
+                                    <td colspan="2"><?= $edukasi?></td>
+                                </tr>
+                                <?php } ?>
+
+                                <?php
+                                $h_obc = $tampil['h_obc'];
+                                if($h_obc == "Obesitas Central"){
+                                    $edukasi = "Pengukuran lingkar perut Anda menunjukan hasil di atas standar. Lemak perut berlebihan akan memicu masalah kesehatan yang serius seperti serangan jantung. Terapkan pola hidup sehat dengan:<br>
+                                    - Konsumsi buah dan sayur minimal 5 porsi setiap hari.<br>
+                                    - Batasi tidur berlebihan. <br>
+                                    - Rutin beraktivitas fisik minimal 30 menit/hari.<br>
+                                    - Batasi konsumsi gula, garam, dan lemak berlebih. <br>
+                                    - Biasakan pola makan teratur sesuai kaidah Isi Piringku.<br>";
+                                ?>
+                                <tr>
+                                    <td width="150">Keterangan</td>
+                                    <td>:&emsp;</td>
+                                    <td colspan="2"><?= $edukasi?></td>
+                                </tr>
+                                <?php } ?>
                             <tr>
                                 <td width="150"><h6>Rekomendasi Dokter</h6></td>
                                 <td>:&emsp;</td>
