@@ -62,43 +62,52 @@
                     </tr>
                 </thead>
                 <tbody>
-                <?php while ($data = mysqli_fetch_assoc($queryPasien)) {
+                <?php 
+                if (isset($_POST['filter'])) {
+                    $tgl_a = mysqli_real_escape_string($koneksi, $_POST['tgl_a']);
+                    $tgl_b = mysqli_real_escape_string($koneksi, $_POST['tgl_b']);
+                    $data = mysqli_query($koneksi, "SELECT * FROM riwayat WHERE tanggal_pemeriksaan BETWEEN '$tgl_a' AND '$tgl_b'");
+                 } else{
+                    $data = mysqli_query($koneksi, "SELECT * FROM riwayat");
+                 }
+                
+                while ($lihat = mysqli_fetch_assoc($data)) {
                     $no++; ?>
                     <tr>
                         <td><?= $no ?></td>
-                        <td><?= $data['tanggal_pengisian']; ?></td>
-                        <td><?= $data['tanggal_pemeriksaan']; ?></td>
-                        <td><?= $data['nik']; ?></td>
-                        <td><?= $data['nama_lengkap']; ?></td>
-                        <td><?= $data['ttl']; ?></td>
-                        <td><?= $data['jenis_kelamin']; ?></td>
-                        <td><?= $data['provinsi']; ?></td>
-                        <td><?= $data['kota']; ?></td>
-                        <td><?= $data['alamat']; ?></td>
-                        <td><?= $data['tlp']; ?></td>
-                        <td><?= $data['pendidikan']; ?></td>
-                        <td><?= $data['pekerjaan']; ?></td>
-                        <td><?= $data['status']; ?></td>
-                        <td><?= $data['goldar']; ?></td>
-                        <td><?= $data['riwayatkeluarga1']; ?></td>
-                        <td><?= $data['riwayatkeluarga2']; ?></td>
-                        <td><?= $data['riwayatkeluarga3']; ?></td>
-                        <td><?= $data['riwayatsendiri1']; ?></td>
-                        <td><?= $data['riwayatsendiri2']; ?></td>
-                        <td><?= $data['riwayatsendiri3']; ?></td>
-                        <td><?= $data['merokok']; ?></td>
-                        <td><?= $data['fisik']; ?></td>
-                        <td><?= $data['gula']; ?></td>
-                        <td><?= $data['garam']; ?></td>
-                        <td><?= $data['lemak']; ?></td>
-                        <td><?= $data['sayur']; ?></td>
-                        <td><?= $data['alkohol']; ?></td>
-                        <td><?= $data['tinggi']; ?></td>
-                        <td><?= $data['berat']; ?></td>
-                        <td><?= $data['sistol']; ?></td>
-                        <td><?= $data['diastol']; ?></td>
-                        <td><?= $data['lingkar']; ?></td>
-                        <td><?= $data['periksa_gula']; ?></td>
+                        <td><?= $lihat['tanggal_pengisian']; ?></td>
+                        <td><?= $lihat['tanggal_pemeriksaan']; ?></td>
+                        <td>'<?= $lihat['nik']; ?></td>
+                        <td><?= $lihat['nama_lengkap']; ?></td>
+                        <td><?= $lihat['ttl']; ?></td>
+                        <td><?= $lihat['jenis_kelamin']; ?></td>
+                        <td><?= $lihat['provinsi']; ?></td>
+                        <td><?= $lihat['kota']; ?></td>
+                        <td><?= $lihat['alamat']; ?></td>
+                        <td>'<?= $lihat['tlp']; ?></td>
+                        <td><?= $lihat['pendidikan']; ?></td>
+                        <td><?= $lihat['pekerjaan']; ?></td>
+                        <td><?= $lihat['status']; ?></td>
+                        <td><?= $lihat['goldar']; ?></td>
+                        <td><?= $lihat['riwayatkeluarga1']; ?></td>
+                        <td><?= $lihat['riwayatkeluarga2']; ?></td>
+                        <td><?= $lihat['riwayatkeluarga3']; ?></td>
+                        <td><?= $lihat['riwayatsendiri1']; ?></td>
+                        <td><?= $lihat['riwayatsendiri2']; ?></td>
+                        <td><?= $lihat['riwayatsendiri3']; ?></td>
+                        <td><?= $lihat['merokok']; ?></td>
+                        <td><?= $lihat['fisik']; ?></td>
+                        <td><?= $lihat['gula']; ?></td>
+                        <td><?= $lihat['garam']; ?></td>
+                        <td><?= $lihat['lemak']; ?></td>
+                        <td><?= $lihat['sayur']; ?></td>
+                        <td><?= $lihat['alkohol']; ?></td>
+                        <td><?= $lihat['tinggi']; ?></td>
+                        <td><?= $lihat['berat']; ?></td>
+                        <td><?= $lihat['sistol']; ?></td>
+                        <td><?= $lihat['diastol']; ?></td>
+                        <td><?= $lihat['lingkar']; ?></td>
+                        <td><?= $lihat['periksa_gula']; ?></td>
                     </tr>
                 <?php } ?>
                 </tbody>

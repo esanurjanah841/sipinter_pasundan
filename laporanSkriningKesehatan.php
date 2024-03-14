@@ -39,7 +39,7 @@
                 
             </div>
             <div style="font-size: 14px;">
-                <a onclick="window.open('laporanSkriningKesehatanExcel.php')" target="_BLANK" class="btn btn-success btn-icon-split" style="font-size 14px; margin:5px; margin-left:20px">
+                <a data-toggle="modal" data-target="#periode" target="_BLANK" class="btn btn-success btn-icon-split" style="font-size 14px; margin:5px; margin-left:20px">
                     <span class="icon text-white-50">
                         <i class="fas fa-print"></i>
                     </span>
@@ -55,7 +55,35 @@
 
                 </div>
                 <!-- /.container-fluid -->
-
+                <div class="modal fade" id="periode" tabdashboard="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Pilih periode</h5>
+                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true"></span>
+                                </button>
+                            </div>
+                            <form action="laporanSkriningKesehatanExcel.php" method="POST">
+                            <div class="modal-body">
+                                <div>
+                                    <Label for="tgl_a">Periode Awal</Label>
+                                    <input type="date" class="form-control form-control-user" name="tgl_a" id="tgl_a" required>
+                                </div>
+                                <br>
+                                <div>
+                                    <Label for="tgl_a">Periode Awal</Label>
+                                    <input type="date" class="form-control form-control-user" name="tgl_b" id="tgl_b" required>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                                <button type="submit" class="btn btn-primary" name="filter" id="filter" value="Filter">Pilih</a>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- End of Main Content -->
 

@@ -61,11 +61,11 @@
                                         <tr>
                                             <td><?= $no ?></td>
                                             <td><?= $ambil_data['tanggal_pengisian']; ?></td>
-                                            <td><?= $ambil_data['nik']; ?></td>
+                                            <td>'<?= $ambil_data['nik']; ?></td>
                                             <td><?= $ambil_data['nama_lengkap']; ?></td>
                                             <td><?= $ambil_data['ttl']; ?></td>
                                             <td><?= $ambil_data['alamat']; ?></td>
-                                            <td><?= $ambil_data['tlp']; ?></td>
+                                            <td>'<?= $ambil_data['tlp']; ?></td>
                                             <td><?= $ambil_data['penyakit']; ?></td>
                                             <td><?= $ambil_data['gejala']; ?></td>
                                         </tr>
