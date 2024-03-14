@@ -21,9 +21,9 @@
         $data = mysqli_query($koneksi, "SELECT * FROM ptm_hasil");
      }
     
-    $lihat = mysqli_fetch_assoc($data);
+    while($lihat = mysqli_fetch_assoc($data)){
 
-    if($lihat){
+    
     // Ambil Tahun Laki-laki
     $ambil_ttl = mysqli_query($koneksi, "SELECT * FROM ptm_hasil where jenis_kelamin = 'Laki-laki'");
     while ($ttl_lahir = mysqli_fetch_assoc($ambil_ttl)){
