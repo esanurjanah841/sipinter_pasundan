@@ -14,26 +14,32 @@
                                     <input type="date" class="form-control form-control-user" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?php echo $dt->format('Y-m-d')?>"  readonly>
                                     <input type="hidden" class="form-control form-control-user" id="tanggal_pemeriksaan" name="tanggal_pemeriksaan"   value="<?php echo $dt->format('Y-m-d')?>"  readonly>
                                 </div>
-                                
+                                <?php 
+                                    $tampiluser = mysqli_query($koneksi, "SELECT DISTINCT  p.nama_lengkap, p.nik, p.ttl, p.jenis_kelamin, p.alamat, p.kota, p.provinsi, p.tlp, p.pendidikan, p.pekerjaan, p.status, p.goldar from user b, profil_user p where b.nik=p.nik and b.id_user='$_SESSION[id_user]' group by nik");
+                                    $view = mysqli_fetch_array($tampiluser);
+                                        $alamat = $view['alamat'];
+                                        $kota = $view['kota'];
+                                        $provinsi = $view['provinsi'];
+                                ?>
                                 <div class="form-group">
                                     <label for="nik">NIK</label>
-                                    <input type="text" class="form-control form-control-user" id="nik" name="nik"  required>
+                                    <input type="text" class="form-control form-control-user" id="nik" name="nik" value="<?php echo $view['nik']?>" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="nama_lengkap">Nama Lengkap</label>
-                                    <input type="text" class="form-control form-control-user" id="nama_lengkap" name="nama_lengkap"  required>
+                                    <input type="text" class="form-control form-control-user" id="nama_lengkap" name="nama_lengkap" value="<?php echo $view['nama_lengkap']?>" required>
                                 </div>
                                 <div class="form-group ">
                                     <label for="ttl">Tanggal Lahir</label>
-                                    <input type="date" class="form-control form-control-user" id="ttl" name="ttl" required>
+                                    <input type="date" class="form-control form-control-user" id="ttl" name="ttl" value="<?php echo $view['ttl']?>" required>
                                 </div>
                                 <div class="form-group ">
                                     <label for="alamat">Alamat Lengkap</label>
-                                    <input type="text" class="form-control form-control-user" id="alamat" name="alamat"  required>
+                                    <input type="text" class="form-control form-control-user" id="alamat" name="alamat" value="<?php echo "$alamat, "; echo "$kota, "; echo "$provinsi";?>"  required>
                                 </div>
                                 <div class="form-group ">
                                     <label for="tlp">No. Telepon</label>
-                                    <input type="text" class="form-control form-control-user" id="tlp" name="tlp" required>
+                                    <input type="text" class="form-control form-control-user" id="tlp" name="tlp"  value="<?php echo $view['tlp']?>" required>
                                 </div>
                                 <br>
                                 <div class="form-group">
