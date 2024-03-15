@@ -368,7 +368,7 @@ include 'function.php';
 </main><!-- End #main -->
 <style>
     .solid {
-    border: solid;
+    border: 2px solid;
     padding : 25px;
     margin : 20px;
     }
