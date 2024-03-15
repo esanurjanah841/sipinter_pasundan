@@ -365,6 +365,26 @@ if (isset($_SESSION['role'])) {
                                     <td colspan="2"><?= $edukasi?></td>
                                 </tr>
                                 <?php } ?>
+
+                                <?php
+                                $h_normal = $tampil['h_normal'];
+                                if($h_normal == "Normal"){
+                                    $edukasi = "Terima kasih sudah melakukan skrining kesehatan. Selalu jaga kesehatan dan cegah penyakit tidak menular dengan CERDIK yaitu:<br>
+                                    - Cek kesehatan rutin.<br>
+                                    - Enyahkan asap rokok. <br>
+                                    - Rajin olahraga.<br>
+                                    - Diet seimbang. <br>
+                                    - Kelola stress dengan baik.<br>
+                                    
+                                    Salam Sehat.
+                                    ";
+                                ?>
+                                <tr>
+                                    <td width="150">Keterangan</td>
+                                    <td>:&emsp;</td>
+                                    <td colspan="2"><?= $edukasi?></td>
+                                </tr>
+                                <?php } ?>
                             <tr>
                                 <td width="150"><h6>Rekomendasi Dokter</h6></td>
                                 <td>:&emsp;</td>

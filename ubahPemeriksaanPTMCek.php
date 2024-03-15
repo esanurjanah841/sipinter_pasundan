@@ -326,6 +326,9 @@
                                     
                                     <input type="checkbox" id="h_gm" name="h_gm" value="Diabetes Melitus" <?php if ($user['h_gm'] == "Diabetes Melitus") echo "checked" ?> >
                                     <label for="h_gm"> Diabetes Melitus</label><br>
+
+                                    <input type="checkbox" id="h_normal" name="h_normal" value="Normal" <?php if ($user['h_normal'] == "Normal") echo "checked" ?> >
+                                    <label for="h_normal"> Normal</label><br>
                                 </div>
                                 <div class="form-group ">
                                     <label for="feedback">Rekomendasi Dokter</label>
