@@ -96,10 +96,12 @@
 
         // Lingkar Perut
         $jenis_kelamin = $_GET['jenis_kelamin'];
+        
+        $pesan_lingkar = "";
     
         if(($jenis_kelamin == "Laki-laki") && ($lingkar < 90)){
             $pesan_lingkar = "Normal";
-        }elseif(($jenis_kelamin = "Laki-laki") && ($lingkar >= 90)){
+        }elseif(($jenis_kelamin == "Laki-laki") && ($lingkar >= 90)){
             $pesan_lingkar = "Obesitas Central";
         }
 
