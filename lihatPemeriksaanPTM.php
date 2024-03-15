@@ -23,6 +23,7 @@
         $h_hipertensi = $user['h_hipertensi'];
         $h_obc = $user['h_obc'];
         $h_gm = $user['h_gm'];
+        $h_normal = $user['h_normal'];
 
    
 ?>
@@ -228,7 +229,7 @@
                         
                                     <input type="checkbox" id="h_gm" name="h_gm" value="Diabetes Melitus" <?php if ($user['h_gm'] == "Diabetes Melitus") echo "checked" ?> disabled>
                                     <label for="h_gm"> Diabetes Melitus</label><br>
-                                    <input type="checkbox" id="h_normal" name="h_normal" value="Normal" <?php if ($user['h_normal'] == "Normal") echo "checked" ?> >
+                                    <input type="checkbox" id="h_normal" name="h_normal" value="Normal" <?php if ($user['h_normal'] == "Normal") echo "checked" ?> disabled>
                                     <label for="h_normal"> Normal</label><br>
                                 </div>
                                 <div class="form-group ">
