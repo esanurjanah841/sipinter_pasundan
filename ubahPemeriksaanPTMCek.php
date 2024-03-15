@@ -332,7 +332,7 @@
                                 </div>
                                 <div class="form-group ">
                                     <label for="feedback">Rekomendasi Dokter</label>
-                                    <textarea class="form-control form-control-user" id="feedback" name="feedback" value="<?= $user['feedback']; ?>"><?= $user['feedback']; ?></textarea>
+                                    <textarea class="form-control form-control-user" id="feedback" name="feedback" value="<?= $user['feedback']; ?>" ><?= $user['feedback']; ?></textarea>
                                 </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" onclick="history.back();">Batal</button>
