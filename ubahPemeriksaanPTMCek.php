@@ -100,7 +100,7 @@
         $pesan_lingkar = "";
     
         if(($jenis_kelamin == "Laki-laki") && ($lingkar < 90)){
-            $pesan_lingkar ==  "Normal";
+            $pesan_lingkar =  "Normal";
         }elseif(($jenis_kelamin = "Laki-laki") && ($lingkar >= 90)){
             $pesan_lingkar = "Obesitas Central";
         }
