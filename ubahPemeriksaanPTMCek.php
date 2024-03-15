@@ -99,15 +99,15 @@
         
         $pesan_lingkar = "";
     
-        if(($jenis_kelamin = "Laki-laki") && ($lingkar < 90)){
-            $pesan_lingkar =  "Normal";
+        if(($jenis_kelamin == "Laki-laki") && ($lingkar < 90)){
+            $pesan_lingkar ==  "Normal";
         }elseif(($jenis_kelamin = "Laki-laki") && ($lingkar >= 90)){
             $pesan_lingkar = "Obesitas Central";
         }
 
-        if(($jenis_kelamin = "Perempuan") && ($lingkar < 80)){
+        if(($jenis_kelamin == "Perempuan") && ($lingkar < 80)){
             $pesan_lingkar =  "Normal";
-        }elseif(($jenis_kelamin = "Perempuan") && ($lingkar >= 80)){
+        }elseif(($jenis_kelamin == "Perempuan") && ($lingkar >= 80)){
             $pesan_lingkar = "Obesitas Central";
         }
 
