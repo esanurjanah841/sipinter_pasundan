@@ -807,11 +807,11 @@ function ubahPTM($id_ptm)
     if (!$exe) {
         echo "<script>
         alert('Data Validasi gagal diubah!');
-        document.location.href = 'indexPeriksaPTM.php'</script>";
+        document.location.href = 'indexPeriksaPTM.php?id_ptm=$id_ptm'</script>";
     }
             echo "<script>
             alert('Data Validasi berhasil diubah!');
-            document.location.href = 'indexPeriksaPTM.php'</script>";
+            document.location.href = 'indexPeriksaPTM.php?id_ptm=$id_ptm'</script>";
 }
 
 // Admin
