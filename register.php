@@ -101,7 +101,7 @@ if (isset($_SESSION['role'])) {
                 <button type="submit" name="submitButton" id="submitButton" class="registerbtn btn btn-primary">Register</button>
                 <br>
                 <div class="container signin">
-                    <p>Sudah punya akun? <a href="index.php">Log In</a></p>
+                    <p>Sudah punya akun? <a data-bs-toggle="modal" data-bs-target="#feedbackModal">Log In</a></p>
                 <!-- Modal -->
                 </div>
             </form>
@@ -109,6 +109,71 @@ if (isset($_SESSION['role'])) {
     </div>
 </div>
 
+
+<!-- Login Modal-->
+<div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-gradient-primary-to-secondary p-4">
+                        <h5 class="modal-title font-alt text-white" id="feedbackModalLabel">Login Aplikasi SIPINTER</h5>
+                        <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body border-0 p-4">
+                            <!-- Name input-->
+                      <div class="modal-body">
+                        <form class="tambah_pasien" id="login-form" action="function.php?act=login" method="POST">
+                            <div class="form-group ">
+                              <label for="nama">Username</label>
+                                <input type="text" class="form-control form-control-user" id="nama" name="nama"
+                                  placeholder="Username" required>
+                            </div>
+                            <div class="my-4"></div>
+                              <div class="form-group">
+                                <label for="pass">Password</label>
+                                  <input type="password" class="form-control form-control-user" id="password" name="password"
+                                    placeholder="Password" required>
+                              </div>
+                              <a href="#" data-bs-toggle="modal" data-bs-target="#LupaPassword" style="font-size:14px">Lupa Password?</a>
+                              <div class="my-4"></div>
+                              <div class="modal-footer">
+                                <button type="button" data-bs-dismiss="modal" class="btn btn-danger">Batal</button>
+                                <button type="submit" name="login_btn" id="login" value="Login" class="btn btn-success">Log In</button>
+                              </div>
+                        </form>
+                      </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lupa Password Modal-->
+          <div class="modal fade" id="LupaPassword" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                    <div class="modal-header bg-gradient-primary-to-secondary p-4">
+                        <h5 class="modal-title font-alt text-white" id="feedbackModalLabel">Lupa Password</h5>
+                        <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body border-0 p-4">
+                            <!-- Name input-->
+                      <div class="modal-body">
+                        <form class="tambah_pasien" id="login-form" action="cekforget.php" method="POST">
+                          <div class="form-group">
+                            <label for="email">Inputkan Email Anda</label>
+                              <input type="text" class="form-control form-control-user" id="email" name="email"
+                                  placeholder="Email" required>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" data-bs-dismiss="modal" class="btn btn-danger">Batal</button>
+                            <button type="submit" name="submit_email" id="login" value="Login" class="btn btn-success">Submit</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+              </div>
+            </div>
+        </div>
 
 
 

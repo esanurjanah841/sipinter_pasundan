@@ -152,7 +152,7 @@ if($status_post == 'Menunggu Validasi'){
       <div class="col-md-3 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="50">
         <a href="edukasi.php" style="color:black">
-          <img src="gambar/SRQ.png" class="card-img-top" alt="...">
+          <img src="gambar/edukasi.png" class="card-img-top" alt="...">
           <h4 class="title">Kumpulan Media Edukasi PTM</h4>
           <p class="description">Pengguna dapat mengakses informasi edukasi seputar PTM.</p>
         </a>
