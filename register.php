@@ -101,7 +101,7 @@ if (isset($_SESSION['role'])) {
                 <button type="submit" name="submitButton" id="submitButton" class="registerbtn btn btn-primary">Register</button>
                 <br>
                 <div class="container signin">
-                    <p>Sudah punya akun? <a data-bs-toggle="modal" data-bs-target="#feedbackModal">Log In</a></p>
+                    <p>Sudah punya akun? <a href="" data-bs-toggle="modal" data-bs-target="#feedbackModal">Log In</a></p>
                 <!-- Modal -->
                 </div>
             </form>
