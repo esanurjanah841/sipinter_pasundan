@@ -866,7 +866,7 @@ function ubahPemeriksaanPTM($id_ptm)
     // $penyakit = $_POST['id_penyakit'];
     $queryUser = "UPDATE ptm_hasil SET tanggal_pengisian = '$tanggal_pengisian', tanggal_pemeriksaan = '$tanggal_pemeriksaan', nik = '$nik', nama_lengkap = '$nama_lengkap', ttl = '$ttl', jenis_kelamin = '$jenis_kelamin', alamat = '$alamat', provinsi = '$provinsi', kota = '$kota', tlp = '$tlp', pendidikan = '$pendidikan', pekerjaan = '$pekerjaan', status = '$status', goldar = '$goldar', riwayatkeluarga1 = '$riwayatkeluarga1', riwayatkeluarga2 = '$riwayatkeluarga2', riwayatkeluarga3 = '$riwayatkeluarga3', riwayatsendiri1 = '$riwayatsendiri1', riwayatsendiri2 = '$riwayatsendiri2', riwayatsendiri3 = '$riwayatsendiri3', merokok = '$merokok', fisik = '$fisik', gula = '$gula', garam = '$garam', lemak = '$lemak', sayur = '$sayur', alkohol = '$alkohol', berat = '$berat', tinggi = '$tinggi', lingkar = '$lingkar', sistol = '$sistol', diastol = '$diastol', periksa_gula = '$periksa_gula',  feedback = '$feedback', imt = '$imt', hasil_imt = '$hasil_imt', hasil_tensi = '$hasil_tensi', hasil_lingkar = '$hasil_lingkar', hasilperiksa_gula = '$hasilperiksa_gula', h_imt = '$h_imt', h_hipertensi = '$h_hipertensi', h_obc = '$h_obc', h_gm = '$h_gm', h_normal = '$h_normal'
      WHERE id_ptm = '$id_ptm'";
-    // $queryRelasi = "INSERT INTO relasi VALUES ('', '')"
+    // $queryRelasi = "INSERT INTO relasi VALUES ('', '')" 
     $exe = mysqli_query($koneksi, $queryUser);
     if (!$exe) {
         echo "<script>

@@ -96,17 +96,11 @@
                                                     </span>
                                                    
                                                 </a>
-                                                <a style="margin-top: 10px; margin-left: 5px" href="lihatDataPTM.php?id_ptm=<?php echo $data["id_ptm"]; ?>" class="btn btn-success btn-icon-split" title="Lihat">
-                                                    <span class="icon text-white-50">
-                                                        <i class="fas fa-eye"></i>
-                                                    </span>
-                                                    
-                                                </a>
-                                                <a style="margin-top: 10px; margin-left: 5px" href="indexPeriksaPTM.php?id_ptm=<?php echo $data["id_ptm"]; ?>" class="btn btn-warning btn-icon-split" title="Periksa">
+                                                <a style="margin-top: 10px; margin-left: 5px" href="lihatDataPTM.php?id_ptm=<?php echo $data["id_ptm"]; ?>" class="btn btn-warning btn-icon-split" title="Periksa">
                                                     <span class="icon text-white-50">
                                                         <i class="fas fa-pen"></i>
                                                     </span>
-                                                   
+                                                    
                                                 </a>
                                             </td>
                                         </tr>
