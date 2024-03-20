@@ -44,7 +44,7 @@
                         
                         <input type="hidden" id="id_ptm" name="id_ptm"   value="<?= $user['id_ptm']; ?>">
                                 <div class="form-group ">
-                                    <label for="tanggal_pengisian">Tanggal Pemeriksaan</label>
+                                    <label for="tanggal_pengisian">Tanggal Pengisian</label>
                                     <input type="date" class="form-control form-control-user" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?= $user['tanggal_pengisian']; ?>">
                                 </div>
                                 <div class="form-group ">
@@ -360,6 +360,9 @@
                                     
                                     <input type="checkbox" id="h_gm" name="h_gm" value="Diabetes Melitus" <?php if ($user['h_gm'] == "Diabetes Melitus") echo "checked" ?> disabled>
                                     <label for="h_gm">Diabetes Melitus</label><br>
+
+                                    <input type="checkbox" id="h_normal" name="h_normal" value="Normal" <?php if ($user['h_normal'] == "Normal") echo "checked" ?> >
+                                    <label for="h_normal"> Normal</label><br>
                                 </div>
                                 <div class="form-group ">
                                     <label for="feedback">Rekomendasi Dokter</label>

@@ -139,7 +139,7 @@
                         <div class="modal-body">
                         <form action="function.php?act=ubahPemeriksaanPTM&id_ptm=<?= $user['id_ptm']; ?>" id="tambah" method="POST">
                                 <div class="form-group ">
-                                    <label for="tanggal_pengisian">Tanggal Pemeriksaan</label>
+                                    <label for="tanggal_pengisian">Tanggal Pengisian</label>
                                     <input type="date" class="form-control form-control-user" id="tanggal_pengisian" name="tanggal_pengisian"   value="<?= $tanggal_pengisian ?>">
                                 </div>
                                 <div class="form-group ">
