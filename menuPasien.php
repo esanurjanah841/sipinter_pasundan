@@ -16,7 +16,7 @@ $status_post = $read['status_post'];
 
 if($status_post == 'Menunggu Validasi'){
   echo '<script type="text/javascript">
-       window.onload = function () { alert("Hasil skrining mandiri Anda belum divalidasi. Silahkan kunjungi UPTD Puskesmas Pasundan, untuk mendapatkan pemeriksaan kesehatan lebih lanjut  (GRATIS), setiap hari senin s.d sabtu jam 08.00-11.00 WIB (hari minggu dan libur nasional tutup), atau hubungi hotline UPTD Puskesmas Pasundan di nomor 081321251201."); } 
+       window.onload = function () { alert("Hasil skrining mandiri Anda belum divalidasi. Silahkan kunjungi UPTD Puskesmas Pasundan, untuk mendapatkan pemeriksaan kesehatan lebih lanjut <b> (GRATIS)<b>, setiap hari senin s.d sabtu jam 08.00-11.00 WIB (hari minggu dan libur nasional tutup), atau hubungi hotline UPTD Puskesmas Pasundan di nomor 081321251201."); } 
         </script>';
   }
 }

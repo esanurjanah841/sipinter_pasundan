@@ -466,7 +466,7 @@ function tambahPTM()
             document.location.href = 'formPTMPasien.php'</script>";
     }
             echo "<script>
-            alert('Data berhasil dikirimkan! Terima kasih sudah melakukan skrining kesehatan secara mandiri, silahkan kunjungi UPTD Puskesmas Pasundan, untuk mendapatkan pemeriksaan kesehatan lebih lanjut  (GRATIS), setiap hari senin s.d sabtu jam 08.00-11.00 WIB (hari minggu dan libur nasional tutup), atau hubungi hotline UPTD Puskesmas Pasundan di nomor 081321251201.');
+            alert('Data berhasil dikirimkan! Terima kasih sudah melakukan skrining kesehatan secara mandiri, silahkan kunjungi UPTD Puskesmas Pasundan, untuk mendapatkan pemeriksaan kesehatan lebih lanjut <b> (GRATIS) <b>, setiap hari senin s.d sabtu jam 08.00-11.00 WIB (hari minggu dan libur nasional tutup), atau hubungi hotline UPTD Puskesmas Pasundan di nomor 081321251201.');
             document.location.href = 'riwayat.php'</script>";
 }
 
