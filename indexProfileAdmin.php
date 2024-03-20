@@ -38,10 +38,6 @@
                                     <label for="nama">Username</label>
                                     <input type="text" class="form-control form-control-user" name="nama" id="nama" value="<?=$tampil['nama']?>" required>
                                 </div>
-                                <div class="form-group ">
-                                    <label for="nama_lengkap">Nama</label>
-                                    <input type="text" class="form-control form-control-user" name="nama_lengkap" id="nama_lengkap" value="<?=$tampil['nama_lengkap']?>" required>
-                                </div>
                                 <div class="form-group">
                                     <label for="email">E-mail</label>
                                     <input type="email" class="form-control form-control-user" name="email" id="email" value="<?=$tampil['email']?>" required>
@@ -49,10 +45,6 @@
                                 <div class="form-group">
                                     <label for="ttl">Tanggal Lahir</label>
                                     <input type="date" class="form-control form-control-user" name="ttl" id="ttl" value="<?=$tampil['ttl']?>" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="telepon">Telepon</label>
-                                    <input type="number" class="form-control form-control-user" name="tlp" id="tlp" value="<?=$tampil['tlp']?>" required>
                                 </div>
                                 <div class="form-group">
                                         <label for="password">Password</label>

@@ -609,14 +609,12 @@ function ubahPasien($id_user)
 {
     global $koneksi;
     $nama = htmlspecialchars($_POST['nama']);
-    $nama_lengkap = htmlspecialchars($_POST['nama_lengkap']);
     $email = htmlspecialchars($_POST['email']);
     $ttl = htmlspecialchars($_POST['ttl']);
-    $tlp = htmlspecialchars($_POST['tlp']);
     $password = password_hash(htmlspecialchars($_POST['password']), PASSWORD_DEFAULT);
     $role = htmlspecialchars($_POST['role']);
     // $penyakit = $_POST['id_penyakit'];
-    $queryUser = "UPDATE user SET nama = '$nama', nama_lengkap = '$nama_lengkap', email = '$email', ttl = '$ttl', tlp = '$tlp', password = '$password', role = '$role' WHERE id_user = '$id_user'";
+    $queryUser = "UPDATE user SET nama = '$nama', email = '$email', ttl = '$ttl', password = '$password', role = '$role' WHERE id_user = '$id_user'";
     // $queryRelasi = "INSERT INTO relasi VALUES ('', '')"
     $exe = mysqli_query($koneksi, $queryUser);
     if (!$exe) {
@@ -634,14 +632,12 @@ function ubahGeneralPasien($id_user)
 {
     global $koneksi;
     $nama = htmlspecialchars($_POST['nama']);
-    $nama_lengkap = htmlspecialchars($_POST['nama_lengkap']);
     $email = htmlspecialchars($_POST['email']);
     $ttl = htmlspecialchars($_POST['ttl']);
-    $tlp = htmlspecialchars($_POST['tlp']);
     $password = password_hash(htmlspecialchars($_POST['password']), PASSWORD_DEFAULT);
     $role = htmlspecialchars($_POST['role']);
     // $penyakit = $_POST['id_penyakit'];
-    $queryUser = "UPDATE user SET nama = '$nama', nama_lengkap = '$nama_lengkap', email = '$email', ttl = '$ttl', tlp = '$tlp', password = '$password', role = '$role' WHERE id_user = '$id_user'";
+    $queryUser = "UPDATE user SET nama = '$nama', email = '$email', ttl = '$ttl', password = '$password', role = '$role' WHERE id_user = '$id_user'";
     // $queryRelasi = "INSERT INTO relasi VALUES ('', '')"
     $exe = mysqli_query($koneksi, $queryUser);
     if (!$exe) {
@@ -658,13 +654,11 @@ function ubahAdmin($id_user)
 {
     global $koneksi;
     $nama = htmlspecialchars($_POST['nama']);
-    $nama_lengkap = htmlspecialchars($_POST['nama_lengkap']);
     $email = htmlspecialchars($_POST['email']);
     $ttl = htmlspecialchars($_POST['ttl']);
-    $tlp = htmlspecialchars($_POST['tlp']);
     $password = password_hash(htmlspecialchars($_POST['password']), PASSWORD_DEFAULT);
     // $penyakit = $_POST['id_penyakit'];
-    $queryUser = "UPDATE user SET nama = '$nama', nama_lengkap = '$nama_lengkap', email = '$email', ttl = '$ttl', tlp = '$tlp', password = '$password' WHERE id_user = '$id_user'";
+    $queryUser = "UPDATE user SET nama = '$nama', email = '$email', ttl = '$ttl', password = '$password' WHERE id_user = '$id_user'";
     // $queryRelasi = "INSERT INTO relasi VALUES ('', '')"
     $exe = mysqli_query($koneksi, $queryUser);
     if (!$exe) {
