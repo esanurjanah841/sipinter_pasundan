@@ -105,7 +105,7 @@ if (isset($_SESSION['role'])) {
                 <!-- Modal -->
                 </div>
             </form>
-        </div>
+        </div> 
     </div>
 </div>
 
