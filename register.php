@@ -101,7 +101,7 @@ if (isset($_SESSION['role'])) {
                 <button type="submit" name="submitButton" id="submitButton" class="registerbtn btn btn-primary">Register</button>
                 <br>
                 <div class="container signin">
-                    <p>Sudah punya akun? <a href="" data-bs-toggle="modal" data-bs-target="#feedbackModal">Log In</a></p>
+                    <p>Sudah punya akun? <a href="#" data-toggle="modal" data-target="#feedbackModal">Log In</a></p>
                 <!-- Modal -->
                 </div>
             </form>
@@ -133,10 +133,10 @@ if (isset($_SESSION['role'])) {
                                   <input type="password" class="form-control form-control-user" id="password" name="password"
                                     placeholder="Password" required>
                               </div>
-                              <a href="#" data-bs-toggle="modal" data-bs-target="#LupaPassword" style="font-size:14px">Lupa Password?</a>
+                              <a href="#" data-toggle="modal" data-target="#LupaPassword" style="font-size:14px">Lupa Password?</a>
                               <div class="my-4"></div>
                               <div class="modal-footer">
-                                <button type="button" data-bs-dismiss="modal" class="btn btn-danger">Batal</button>
+                                <button type="button" data-dismiss="modal" class="btn btn-danger">Batal</button>
                                 <button type="submit" name="login_btn" id="login" value="Login" class="btn btn-success">Log In</button>
                               </div>
                         </form>
@@ -153,7 +153,7 @@ if (isset($_SESSION['role'])) {
               <div class="modal-content">
                     <div class="modal-header bg-gradient-primary-to-secondary p-4">
                         <h5 class="modal-title font-alt text-white" id="feedbackModalLabel">Lupa Password</h5>
-                        <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button class="btn-close btn-close-white" type="button" data-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body border-0 p-4">
                             <!-- Name input-->
