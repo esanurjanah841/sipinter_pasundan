@@ -96,7 +96,7 @@ include 'header-user.php';
             </div>
             <div class="text-center">
                 <h3>
-                <?=$tampil['nama_lengkap']?><span class="font-weight-light"></span>
+                <?=$tampil['nik']?><span class="font-weight-light"></span>
                 </h3>
                 
                 <div class="h5 font-weight-300">
@@ -131,36 +131,22 @@ include 'header-user.php';
                     </div>
                     <div class="col-lg-6">
                       <div class="form-group">
-                        <label class="form-control-label" for="nama_lengkap">Nama Lengkap</label>
-                        <input type="text" id="nama_lengkap" name="nama_lengkap" class="form-control form-control-alternative" value="<?=$tampil['nama_lengkap']?>" required>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                  <div class="col-lg-6">
-                      <div class="form-group">
                         <label class="form-control-label" for="nik">NIK</label>
                         <input type="text" id="nik" name="nik" class="form-control form-control-alternative" value="<?=$tampil['nik']?>" required>
                       </div>
                     </div>
+                  </div>
+                  <div class="row">
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label class="form-control-label" for="email">Email</label>
                         <input type="email" id="input-email" class="form-control form-control-alternative" value="<?=$tampil['email']?>" required>
                       </div>
                     </div>
-                  </div>
-                  <div class="row">
-                  <div class="col-lg-6">
+                    <div class="col-lg-6">
                       <div class="form-group focused">
                         <label class="form-control-label" for="ttl">Tanggal Lahir</label>
                         <input type="date" id="ttl" name="ttl" class="form-control form-control-alternative" value="<?=$tampil['ttl']?>" required>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="form-group focused">
-                        <label class="form-control-label" for="tlp">No. Telepon</label>
-                        <input type="text" id="tlp" name="tlp" class="form-control form-control-alternative" value="<?=$tampil['tlp']?>" required>
                       </div>
                     </div>
                   </div>

@@ -53,18 +53,6 @@ if (isset($_SESSION['role'])) {
                         </div>
                     </div>
                     <div class="col">
-                        <label class="papan" for="nama_lengkap">Nama Lengkap</label>
-                        <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" placeholder="Nama Lengkap" required>
-                        <div class="valid-feedback">
-                            Bagus!
-                        </div>
-                        <div class="invalid-feedback">
-                            Nama tidak boleh kosong
-                        </div>
-                    </div>
-                </div>
-                <div class="form-row">
-                <div class="col">
                         <label class="papan" for="nik">NIK</label>
                         <input type="text" class="form-control" id="nik" name="nik" placeholder="32xxxxxxxxxxxxxx" minlength="16" required>
                         <div class="valid-feedback">
@@ -74,6 +62,8 @@ if (isset($_SESSION['role'])) {
                         Min. 16 karakter
                         </div>
                     </div>
+                </div>
+                <div class="form-row">
                     <div class="col">
                         <label class="papan" for="email">Email</label>
                         <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
@@ -84,9 +74,6 @@ if (isset($_SESSION['role'])) {
                             Email tidak valid
                         </div>
                     </div>
-                </div>
-                
-                <div class="form-row">
                     <div class="col">
                         <label class="papan" for="ttl">Tanggal Lahir</label>
                         <input type="date" class="form-control" id="ttl" name="ttl" required>
@@ -96,18 +83,6 @@ if (isset($_SESSION['role'])) {
                         </div>
                         <div class="invalid-feedback">
                         
-                        </div>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="col">
-                        <label class="papan" for="tlp">No. Telepon</label>
-                        <input type="text" class="form-control" id="tlp" name="tlp" minlength="10" placeholder="08xxxxxxxxxx" required>
-                        <div class="valid-feedback">
-                            Bagus!
-                        </div>
-                        <div class="invalid-feedback">
-                            No telepon tidak valid
                         </div>
                     </div>
                 </div>

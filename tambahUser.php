@@ -16,10 +16,6 @@
                                     <input type="text" class="form-control form-control-user" name="nama" id="nama"  placeholder="username" required>
                                 </div>
                                 <div class="form-group ">
-                                    <label for="nama_lengkap">Nama Lengkap</label>
-                                    <input type="text" class="form-control form-control-user" name="nama_lengkap" id="nama_lengkap" placeholder="Nama Lengkap" required>
-                                </div>
-                                <div class="form-group ">
                                     <label for="nik">NIK</label>
                                     <input type="text" class="form-control form-control-user" name="nik" id="nik" placeholder="32xxxxxxxxxxxxxx" required>
                                 </div>
@@ -30,10 +26,6 @@
                                 <div class="form-group">
                                         <label for="ttl">Tanggal Lahir</label>
                                         <input type="date" class="form-control form-control-user" name="ttl" id="ttl"  required>
-                                </div>
-                                <div class="form-group">
-                                        <label for="tlp">No. Telepon</label>
-                                        <input type="text" class="form-control form-control-user" name="tlp" id="tlp"  placeholder="08xxxxxxxxxx" required>
                                 </div>
                                 <div class="form-group">
                                         <label for="password">Password</label>

@@ -176,9 +176,6 @@
                                 
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" onclick="history.back();">Batal</button>
-                            <a href="indexPeriksaPTM.php?id_ptm=<?php echo $user["id_ptm"]; ?>" class="btn btn-warning btn-icon-split">
-                                 <span class="text">Periksa</span>
-                            </a>
                             <button type="submit" name="ubah_btn" id="ubah" value="Ubah" class="btn btn-warning">Periksa</button>
                         </div>
 

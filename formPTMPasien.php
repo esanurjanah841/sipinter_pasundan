@@ -174,8 +174,8 @@ if(($nik)==1){
                                 <td>Riwayat Pada Keluarga </td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <select name="riwayatkeluarga1" id="riwayatkeluarga1" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px">
-                                    <option selected></option>
+                                <select name="riwayatkeluarga1" id="riwayatkeluarga1" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px" required>
+                                    <option value=""></option>
                                     <option value="Tidak Ada">Tidak Ada</option>
                                     <option value="Penyakit Diabetes">Penyakit Diabetes</option>
                                     <option value="Penyakit Hipertensi">Penyakit Hipertensi</option>
@@ -191,8 +191,8 @@ if(($nik)==1){
                                 <td></td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <select name="riwayatkeluarga2" id="riwayatkeluarga2" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px">
-                                    <option selected></option>
+                                <select name="riwayatkeluarga2" id="riwayatkeluarga2" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px" required>
+                                    <option value=""></option>
                                     <option value="Tidak Ada">Tidak Ada</option>
                                     <option value="Penyakit Diabetes">Penyakit Diabetes</option>
                                     <option value="Penyakit Hipertensi">Penyakit Hipertensi</option>
@@ -208,8 +208,8 @@ if(($nik)==1){
                                 <td></td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <select name="riwayatkeluarga3" id="riwayatkeluarga3" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px">
-                                    <option selected></option>
+                                <select name="riwayatkeluarga3" id="riwayatkeluarga3" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px" required>
+                                    <option value=""></option>
                                     <option value="Tidak Ada">Tidak Ada</option>
                                     <option value="Penyakit Diabetes">Penyakit Diabetes</option>
                                     <option value="Penyakit Hipertensi">Penyakit Hipertensi</option>
@@ -225,8 +225,8 @@ if(($nik)==1){
                                 <td>Riwayat Pada Diri Sendiri</td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <select name="riwayatsendiri1" id="riwayatsendiri1" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px">
-                                    <option selected></option>
+                                <select name="riwayatsendiri1" id="riwayatsendiri1" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px" required>
+                                    <option value=""></option>
                                     <option value="Tidak Ada">Tidak Ada</option>
                                     <option value="Penyakit Diabetes">Penyakit Diabetes</option>
                                     <option value="Penyakit Hipertensi">Penyakit Hipertensi</option>
@@ -242,8 +242,8 @@ if(($nik)==1){
                                 <td></td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <select name="riwayatsendiri2" id="riwayatsendiri2" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px">
-                                    <option selected></option>
+                                <select name="riwayatsendiri2" id="riwayatsendiri2" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px" required>
+                                    <option value=""></option>
                                     <option value="Tidak Ada">Tidak Ada</option>
                                     <option value="Penyakit Diabetes">Penyakit Diabetes</option>
                                     <option value="Penyakit Hipertensi">Penyakit Hipertensi</option>
@@ -259,8 +259,8 @@ if(($nik)==1){
                                 <td></td>
                                 <td>:&emsp;</td>
                                 <td>
-                                <select name="riwayatsendiri3" id="riwayatsendiri3" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px">
-                                    <option selected></option>
+                                <select name="riwayatsendiri3" id="riwayatsendiri3" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px" required>
+                                    <option value=""></option>
                                     <option value="Tidak Ada">Tidak Ada</option>
                                     <option value="Penyakit Diabetes">Penyakit Diabetes</option>
                                     <option value="Penyakit Hipertensi">Penyakit Hipertensi</option>
@@ -277,7 +277,7 @@ if(($nik)==1){
                                 <td>:&emsp;</td>
                                 <td>
                                 <select name="merokok" id="merokok" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px" required>
-                                    <option selected>Pilih Jawaban</option>
+                                    <option value="">Pilih Jawaban</option>
                                     <option value="Ya">Ya</option>
                                     <option value="Tidak">Tidak</option>
                                 </select>
@@ -288,7 +288,7 @@ if(($nik)==1){
                                 <td>:&emsp;</td>
                                 <td>
                                 <select name="fisik" id="fisik" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px" required>
-                                    <option selected>Pilih Jawaban</option>
+                                    <option value="">Pilih Jawaban</option>
                                     <option value="Ya">Ya</option>
                                     <option value="Tidak">Tidak</option>
                                 </select>
@@ -299,7 +299,7 @@ if(($nik)==1){
                                 <td>:&emsp;</td>
                                 <td>
                                 <select name="gula" id="gula" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px" required>
-                                    <option selected>Pilih Jawaban</option>
+                                    <option value="">Pilih Jawaban</option>
                                     <option value="Ya">Ya</option>
                                     <option value="Tidak">Tidak</option>
                                 </select>
@@ -310,7 +310,7 @@ if(($nik)==1){
                                 <td>:&emsp;</td>
                                 <td>
                                 <select name="garam" id="garam" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px" required>
-                                    <option selected>Pilih Jawaban</option>
+                                    <option value="">Pilih Jawaban</option>
                                     <option value="Ya">Ya</option>
                                     <option value="Tidak">Tidak</option>
                                 </select>
@@ -321,7 +321,7 @@ if(($nik)==1){
                                 <td>:&emsp;</td>
                                 <td>
                                 <select name="lemak" id="lemak" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px" required>
-                                    <option selected>Pilih Jawaban</option>
+                                    <option value="">Pilih Jawaban</option>
                                     <option value="Ya">Ya</option>
                                     <option value="Tidak">Tidak</option>
                                 </select>
@@ -332,7 +332,7 @@ if(($nik)==1){
                                 <td>:&emsp;</td>
                                 <td>
                                 <select name="sayur" id="sayur" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px" required>
-                                    <option selected>Pilih Jawaban</option>
+                                    <option value="">Pilih Jawaban</option>
                                     <option value="Ya">Ya</option>
                                     <option value="Tidak">Tidak</option>
                                 </select>
@@ -343,25 +343,30 @@ if(($nik)==1){
                                 <td>:&emsp;</td>
                                 <td>
                                 <select name="alkohol" id="alkohol" class="form-control form-control-user" aria-label="Default select example" style="font-size:12px" required>
-                                    <option selected>Pilih Jawaban</option>
+                                    <option value="">Pilih Jawaban</option>
                                     <option value="Ya">Ya</option>
                                     <option value="Tidak">Tidak</option>
                                 </select>
                                 </td>
                             </tr>
                             <tr>
-                                <td>Tinggi Badan </td>
+                                <td>Tinggi Badan* </td>
                                 <td>:&emsp;</td>
                                 <td><input type="text" class="form-control form-control-user" id="tinggi" name="tinggi" style="font-size:12px" required></td>
                                 <td>cm</td>
                             </tr>
                             <tr>
-                                <td>Berat Badan </td>
+                                <td>Berat Badan* </td>
                                 <td>:&emsp;</td>
-                                <td><input type="text" class="form-control form-control-user" style="width:20" id="berat" name="berat"style="font-size:12px" required ></td>
+                                <td><input type="text" class="form-control form-control-user" id="berat" name="berat" style="font-size:12px" required ></td>
                                 <td>kg</td>
                             </tr>
-                            
+                            <tr>
+                                <td><i>* Mohon diisi dengan pengkuran Berat Badan dan Tinggi Badan terakhir </i></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
                             <input type="hidden" id="status_post" name="status_post"   value="Menunggu Validasi">
                         </table>    
                                         <br>

@@ -8,6 +8,21 @@ if (isset($_SESSION['role'])) {
   }
 }
 
+$query = mysqli_query($koneksi, "SELECT * FROM ptm_pasien where id_user='$_SESSION[id_user]'");
+while($read = mysqli_fetch_array($query)){
+
+$status_post = $read['status_post'];
+
+
+if($status_post == 'Menunggu Validasi'){
+  echo '<script type="text/javascript">
+       window.onload = function () { alert("Hasil skrining mandiri Anda belum divalidasi. Silahkan kunjungi UPTD Puskesmas Pasundan, untuk mendapatkan pemeriksaan kesehatan lebih lanjut  (GRATIS), setiap hari senin s.d sabtu jam 08.00-11.00 WIB (hari minggu dan libur nasional tutup), atau hubungi hotline UPTD Puskesmas Pasundan di nomor 081321251201."); } 
+        </script>';
+  }
+}
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -88,7 +103,24 @@ if (isset($_SESSION['role'])) {
       <h2>Menu Pasien</h2>
       <p>Silahkan Pilih Salah Satu Menu:</p>
     </div>
-
+    <div>
+        <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+          <a href="#" style="color:black">
+          <table>
+          <tr>
+            <td>
+              <img src="gambar/tutor.png"  alt="..." width="150px">
+            </td>
+            <td>
+              <h4 class="title">Tutorial pengisian aplikasi sipinter</h4>
+              <p class="description">Pengguna akan ditunjukan bagaimana cara melakukan pengisian profile hingga skrining kesehatan. Klik di sini.</p>
+            </td>
+          </tr>
+          </table>
+          </a>
+        </div>
+      </div>
+      
     <div class="row">
     <div class="col-md-3 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="50">
@@ -196,8 +228,8 @@ if (isset($_SESSION['role'])) {
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                    <p style="text-align: poppins; text-align:justify"><b>Anda diwajibkan mengisi profile terlebih dahulu sebelum lanjut.</b></p>
-                        <p style="text-align: poppins; text-align:justify">Isilah form skrining dengan lengkap dan benar, data yang diinputkan akan diperiksa oleh petugas puskesmas untuk pemeriksaan.  </p>
+                    <p style="text-align: poppins; text-align:left"><b>Anda diwajibkan mengisi profile terlebih dahulu sebelum lanjut.</b></p>
+                        <p style="text-align: poppins; text-align:justify">Isilah form skrining ini dengan benar dan lengkap sesuai kondisi yang Anda alami saat ini. </p>
                     </div>
                     
                     <div class="modal-footer">

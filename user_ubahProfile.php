@@ -94,13 +94,14 @@ include 'header-user.php';
             </div>
             <div class="text-center">
                 <h3>
-                <?=$lihat['nama_lengkap']?><span class="font-weight-light"></span>
-                </h3>
                 <?php
                       $tampillokasi = mysqli_query($koneksi, "SELECT DISTINCT p.id_user, p.nama_lengkap, p.nik, p.ttl, p.jenis_kelamin, p.alamat,  p.kota, p.provinsi, p.tlp, p.pendidikan, p.pekerjaan, p.status, p.goldar from user b, profil_user p where b.id_user=p.id_user and p.id_user='$_SESSION[id_user]' group by id_user");
                       while ($tampil = mysqli_fetch_array($tampillokasi)){
                       
                       ?>
+                <?=$tampil['nama_lengkap']?><span class="font-weight-light"></span>
+                </h3>
+                
                 <div class="h5 font-weight-300">
                   <i class="ni location_pin mr-2"><?=$tampil['kota']?>, <?=$tampil['provinsi']?></i>
                 </div>

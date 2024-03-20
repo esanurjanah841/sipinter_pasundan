@@ -64,7 +64,7 @@
                     <div class="col-md-12">
                       <div class="form-group focused">
                         <label class="form-control-label" for="nama_lengkap">Nama Lengkap</label>
-                        <input id="nama_lengkap" name="nama_lengkap" class="form-control form-control-alternative" type="text" value="<?=$lihat['nama_lengkap']?>" required>
+                        <input id="nama_lengkap" name="nama_lengkap" class="form-control form-control-alternative" type="text" required>
                       </div>
                     </div>
                   </div>
@@ -112,7 +112,7 @@
                     <div class="col-lg-6">
                       <div class="form-group focused">
                         <label class="form-control-label" for="tlp">No. Telepon</label>
-                        <input type="text" id="tlp" name="tlp" class="form-control form-control-alternative" value="<?=$lihat['tlp']?>" required>
+                        <input type="text" id="tlp" name="tlp" class="form-control form-control-alternative"  required>
                       </div>
                     </div>
                     <div class="col-lg-6">

@@ -169,7 +169,7 @@ if (isset($_SESSION['role'])) {
           <tbody>
           <?php 
           $nourut = 0;
-          $queryPTM = mysqli_query($koneksi, "SELECT DISTINCT  b.id_ptm, b.tanggal_pengisian, b.nik, b.nama_lengkap, b.tlp, b.ttl, b.status_post FROM ptm_pasien b, user p where p.nik = b.nik and b.id_user='$_SESSION[id_user]' group by id_ptm");
+          $queryPTM = mysqli_query($koneksi, "SELECT DISTINCT  b.id_ptm, b.tanggal_pengisian, b.nik, b.nama_lengkap, b.tlp, b.ttl, b.status_post FROM ptm_pasien b, user p where p.nik = b.nik and b.id_user='$_SESSION[id_user]' and status_post = 'Menunggu Validasi' group by id_ptm");
           while ($hasil = mysqli_fetch_array($queryPTM)) { 
           $nourut ++;?>
           

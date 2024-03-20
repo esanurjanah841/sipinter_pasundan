@@ -386,7 +386,7 @@ if (isset($_SESSION['role'])) {
                                 </tr>
                                 <?php } ?>
                             <tr>
-                                <td width="150"><h6>Rekomendasi Dokter</h6></td>
+                                <td width="150">Rekomendasi Dokter</td>
                                 <td>:&emsp;</td>
                                 <td colspan="2"><?= $tampil['feedback']; ?></td>
                             </tr>

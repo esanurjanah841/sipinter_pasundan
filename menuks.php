@@ -82,12 +82,12 @@
     <div class="row">
     <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-5 mb-lg-0">
         <a>
-          <img src="gambar/PTM/1.png" class="card-img-top" alt="...">
+          <img src="gambar/KS/1.png" class="card-img-top" alt="...">
           </a>
       </div>
       <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-5 mb-lg-0">
         <a>
-          <img src="gambar/PTM/2.png" class="card-img-top" alt="...">
+          <img src="gambar/KS/2.png" class="card-img-top" alt="...">
           </a>
       </div>
     </div>
@@ -95,12 +95,12 @@
     <div class="row" style="margin-top: 35px">
     <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-5 mb-lg-0">
         <a>
-          <img src="gambar/PTM/3.png" class="card-img-top" alt="...">
+          <img src="gambar/KS/3.png" class="card-img-top" alt="...">
           </a>
       </div>
       <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-5 mb-lg-0">
         <a>
-          <img src="gambar/PTM/4.jpg" class="card-img-top" alt="...">
+          <img src="gambar/KS/4.png" class="card-img-top" alt="...">
           </a>
       </div>
     </div>
@@ -108,22 +108,67 @@
     <div class="row" style="margin-top: 35px">
     <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-5 mb-lg-0">
         <a">
-          <img src="gambar/PTM/5.png" class="card-img-top" alt="...">
+          <img src="gambar/KS/5.png" class="card-img-top" alt="...">
           </a>
       </div>
       <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-5 mb-lg-0">
         <a>
-          <img src="gambar/PTM/6.png" class="card-img-top" alt="...">
+          <img src="gambar/KS/6.png" class="card-img-top" alt="...">
+          </a>
+      </div>
+    </div>
+
+
+    <div class="row" style="margin-top: 35px">
+    <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-5 mb-lg-0">
+        <a">
+          <img src="gambar/KS/7.png" class="card-img-top" alt="...">
+          </a>
+      </div>
+      <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-5 mb-lg-0">
+        <a>
+          <img src="gambar/KS/8.png" class="card-img-top" alt="...">
           </a>
       </div>
     </div>
 
     <div class="row" style="margin-top: 35px">
     <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-5 mb-lg-0">
-        <a>
-          <img src="gambar/PTM/7.png" class="card-img-top" alt="...">
+        <a">
+          <img src="gambar/KS/9.png" class="card-img-top" alt="...">
           </a>
+      </div>
+      <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-5 mb-lg-0">
+        <a>
+          <img src="gambar/KS/10.png" class="card-img-top" alt="...">
+          </a>
+      </div>
     </div>
+    
+    <div class="row" style="margin-top: 35px">
+    <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-5 mb-lg-0">
+        <a">
+          <img src="gambar/KS/11.png" class="card-img-top" alt="...">
+          </a>
+      </div>
+      <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-5 mb-lg-0">
+        <a>
+          <img src="gambar/KS/12.png" class="card-img-top" alt="...">
+          </a>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 35px">
+    <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-5 mb-lg-0">
+        <a">
+          <img src="gambar/KS/13.png" class="card-img-top" alt="...">
+          </a>
+      </div>
+      <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-5 mb-lg-0">
+        <a>
+          <img src="gambar/KS/14.png" class="card-img-top" alt="...">
+          </a>
+      </div>
     </div>
 
     <button type="button" class="btn btn-danger" style="margin-top: 35px" onclick="history.back();">Kembali</button>

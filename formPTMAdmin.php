@@ -60,7 +60,7 @@
                                     <div class="form-group col-lg-6">
                                         <label for="jenis_kelamin">Jenis Kelamin</label>
                                         <select name="jenis_kelamin" id="jenis_kelamin" class="form-control form-control-user" aria-label="Default select example" required>
-                                            <option selected>Pilih Jenis Kelamin</option>
+                                            <option value="">Pilih Jenis Kelamin</option>
                                             <option value="Laki-laki">Laki-laki</option>
                                             <option value="Perempuan">Perempuan</option>
                                         </select>
@@ -88,7 +88,7 @@
                                     <div class="form-group col-lg-6">
                                         <label for="pendidikan">Pendidikan Terakhir</label>
                                         <select name="pendidikan" id="pendidikan" class="form-control form-control-user" aria-label="Default select example" required>
-                                            <option>Pilih Pendidikan Terakhir</option>
+                                            <option value="">Pilih Pendidikan Terakhir</option>
                                             <option value="Tidak sekolah">Tidak Sekolah</option>
                                             <option value="SD/SLTP">SD/SLTP</option>
                                             <option value="SLTA">SLTA</option>
@@ -100,7 +100,7 @@
                                     <div class="form-group col-lg-6">
                                         <label for="pekerjaan">Pekerjaan</label>
                                             <select name="pekerjaan" id="pekerjaan" class="form-control form-control-user" aria-label="Default select example" required>
-                                            <option selected>Pilih Pekerjaan</option>
+                                            <option value="">Pilih Pekerjaan</option>
                                             <option value="Petani">Petani</option>
                                             <option value="Pedagang / Wiraswasta">Pedagang / Wiraswasta</option>
                                             <option value="Nelayan">Nelayan</option>
@@ -124,7 +124,7 @@
                                     <div class="form-group col-lg-6">
                                         <label for="status">Status Perkawinan</label>
                                         <select name="status" id="status" class="form-control form-control-user" aria-label="Default select example" required>
-                                            <option selected>Pilih Status Perkawinan</option>
+                                            <option value="">Pilih Status Perkawinan</option>
                                             <option value="Menikah">Menikah</option>
                                             <option value="Belum Menikah">Belum Menikah</option>
                                             <option value="Janda/Duda">Janda/Duda</option>
@@ -133,7 +133,7 @@
                                     <div class="form-group col-lg-6">
                                         <label for="goldar">Golongan Darah</label>
                                         <select name="goldar" id="goldar" class="form-control form-control-user" aria-label="Default select example" required>
-                                            <option selected>Pilih Golongan Darah</option>
+                                            <option value="">Pilih Golongan Darah</option>
                                             <option value="A">A</option>
                                             <option value="B">B</option>
                                             <option value="AB">AB</option>
@@ -145,7 +145,7 @@
                                     <div class="form-group col-lg-4">
                                         <label for="riwayatkeluarga1">Riwayat Pada Keluarga</label><br>
                                         <select name="riwayatkeluarga1" id="riwayatkeluarga1" class="form-control form-control-user" aria-label="Default select example">
-                                            <option selected></option>
+                                            <option value=""></option>
                                             <option value="Tidak Ada">Tidak Ada</option>
                                             <option value="Penyakit Diabetes">Penyakit Diabetes</option>
                                             <option value="Penyakit Hipertensi">Penyakit Hipertensi</option>
@@ -159,7 +159,7 @@
                                     <div class="form-group col-lg-4">
                                         <label for="riwayatkeluarga2"></label><br>
                                         <select name="riwayatkeluarga2" id="riwayatkeluarga2" class="form-control form-control-user" aria-label="Default select example">
-                                            <option selected></option>
+                                            <option value=""></option>
                                             <option value="Tidak Ada">Tidak Ada</option>
                                             <option value="Penyakit Diabetes">Penyakit Diabetes</option>
                                             <option value="Penyakit Hipertensi">Penyakit Hipertensi</option>
@@ -173,7 +173,7 @@
                                     <div class="form-group col-lg-4">
                                         <label for="riwayatkeluarga3"></label><br>
                                         <select name="riwayatkeluarga3" id="riwayatkeluarga3" class="form-control form-control-user" aria-label="Default select example">
-                                            <option selected></option>
+                                            <option value=""></option>
                                             <option value="Tidak Ada">Tidak Ada</option>
                                             <option value="Penyakit Diabetes">Penyakit Diabetes</option>
                                             <option value="Penyakit Hipertensi">Penyakit Hipertensi</option>
@@ -189,7 +189,7 @@
                                     <div class="form-group col-lg-4">
                                         <label for="riwayatsendiri1">Riwayat Pada Diri Sendiri</label><br>
                                         <select name="riwayatsendiri1" id="riwayatsendiri1" class="form-control form-control-user" aria-label="Default select example">
-                                            <option selected></option>
+                                            <option value=""></option>
                                             <option value="Tidak Ada">Tidak Ada</option>
                                             <option value="Penyakit Diabetes">Penyakit Diabetes</option>
                                             <option value="Penyakit Hipertensi">Penyakit Hipertensi</option>
@@ -203,7 +203,7 @@
                                     <div class="form-group col-lg-4">
                                         <label for="riwayatsendiri2"></label><br>
                                         <select name="riwayatsendiri2" id="riwayatsendiri2" class="form-control form-control-user" aria-label="Default select example">
-                                            <option selected></option>
+                                            <option value=""></option>
                                             <option value="Tidak Ada">Tidak Ada</option>
                                             <option value="Penyakit Diabetes">Penyakit Diabetes</option>
                                             <option value="Penyakit Hipertensi">Penyakit Hipertensi</option>
@@ -217,7 +217,7 @@
                                     <div class="form-group col-lg-4">
                                         <label for="riwayatsendiri3"></label><br>
                                         <select name="riwayatsendiri3" id="riwayatsendiri3" class="form-control form-control-user" aria-label="Default select example">
-                                            <option selected></option>
+                                            <option value=""></option>
                                             <option value="Tidak Ada">Tidak Ada</option>
                                             <option value="Penyakit Diabetes">Penyakit Diabetes</option>
                                             <option value="Penyakit Hipertensi">Penyakit Hipertensi</option>
@@ -232,7 +232,7 @@
                                 <div class="form-group ">
                                     <label for="merokok">Merokok</label>
                                     <select name="merokok" id="merokok" class="form-control form-control-user" aria-label="Default select example" required>
-                                        <option selected>Pilih Jawaban</option>
+                                        <option value="">Pilih Jawaban</option>
                                         <option value="Ya">Ya</option>
                                         <option value="Tidak">Tidak</option>
                                     </select>
@@ -240,7 +240,7 @@
                                 <div class="form-group ">
                                 <label for="fisik">Aktivitas Fisik < 150 Menit/Minggu</label>
                                 <select name="fisik" id="fisik" class="form-control form-control-user" aria-label="Default select example" required>
-                                    <option selected>Pilih Jawaban</option>
+                                    <option value="">Pilih Jawaban</option>
                                     <option value="Ya">Ya</option>
                                     <option value="Tidak">Tidak</option>
                                 </select>
@@ -248,7 +248,7 @@
                                 <div class="form-group ">
                                     <label for="gula">Konsumsi Gula >4 Sendok Makan / Hari</label>
                                     <select name="gula" id="gula" class="form-control form-control-user" aria-label="Default select example" required>
-                                        <option selected>Pilih Jawaban</option>
+                                        <option value="">Pilih Jawaban</option>
                                         <option value="Ya">Ya</option>
                                         <option value="Tidak">Tidak</option>
                                     </select>
@@ -256,7 +256,7 @@
                                 <div class="form-group ">
                                 <label for="garam">Konsumsi Garam >1 Sendok Teh/ Hari</label>
                                 <select name="garam" id="garam" class="form-control form-control-user" aria-label="Default select example" required>
-                                    <option selected>Pilih Jawaban</option>
+                                    <option value="">Pilih Jawaban</option>
                                     <option value="Ya">Ya</option>
                                     <option value="Tidak">Tidak</option>
                                 </select>
@@ -264,7 +264,7 @@
                                 <div class="form-group ">
                                 <label for="lemak">Konsumsi Lemak >5 Sendok Makan / Hari </label>
                                 <select name="lemak" id="lemak" class="form-control form-control-user" aria-label="Default select example" required>
-                                    <option selected>Pilih Jawaban</option>
+                                    <option value="">Pilih Jawaban</option>
                                     <option value="Ya">Ya</option>
                                     <option value="Tidak">Tidak</option>
                                 </select>
@@ -272,7 +272,7 @@
                                 <div class="form-group ">
                                 <label for="sayur">Konsumsi sayur dan buah ≤5 porsi/Hari</label>
                                 <select name="sayur" id="sayur" class="form-control form-control-user" aria-label="Default select example" required>
-                                    <option selected>Pilih Jawaban</option>
+                                    <option value="">Pilih Jawaban</option>
                                     <option value="Ya">Ya</option>
                                     <option value="Tidak">Tidak</option>
                                 </select>
@@ -280,7 +280,7 @@
                                 <div class="form-group ">
                                 <label for="alkohol">Konsumsi Alkohol</label>
                                 <select name="alkohol" id="alkohol" class="form-control form-control-user" aria-label="Default select example" required>
-                                    <option selected>Pilih Jawaban</option>
+                                    <option value="">Pilih Jawaban</option>
                                     <option value="Ya">Ya</option>
                                     <option value="Tidak">Tidak</option>
                                 </select>

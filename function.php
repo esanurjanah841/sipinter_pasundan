@@ -136,13 +136,11 @@ function register()
         
         }else{
         $nama = htmlspecialchars($_POST['nama']);
-        $nama_lengkap = htmlspecialchars($_POST['nama_lengkap']);
         $nik = htmlspecialchars($_POST['nik']);
         $email = htmlspecialchars($_POST['email']);
         $ttl=$_POST['ttl'];
-        $tlp = htmlspecialchars($_POST['tlp']);
         $password = password_hash(htmlspecialchars($_POST['password']), PASSWORD_DEFAULT);
-        $query_user = "INSERT INTO user VALUES ('','pasien','$nama','$nama_lengkap', '$nik','$email',  '$ttl', '$tlp','$password')";
+        $query_user = "INSERT INTO user VALUES ('','pasien','$nama', '$nik','$email',  '$ttl', '$password')";
         $exe = mysqli_query($koneksi, $query_user);
 
             if (!$exe) {
@@ -211,11 +209,9 @@ function tambahUser()
 {
     global $koneksi;
     $nama = htmlspecialchars($_POST['nama']);
-    $nama_lengkap = htmlspecialchars($_POST['nama_lengkap']);
     $nik = htmlspecialchars($_POST['nik']);
     $email = htmlspecialchars($_POST['email']);
     $ttl = htmlspecialchars($_POST['ttl']);
-    $tlp = htmlspecialchars($_POST['tlp']);
     $password = password_hash(htmlspecialchars($_POST['password']), PASSWORD_DEFAULT);
     $role = htmlspecialchars($_POST['role']);
     $queryUser = "INSERT INTO user VALUES ('','$role','$nama','$nama_lengkap', '$nik','$email','$ttl', '$tlp', '$password')";
@@ -470,7 +466,8 @@ function tambahPTM()
             document.location.href = 'formPTMPasien.php'</script>";
     }
             echo "<script>
-            alert('Data berhasil dikirimkan! Terima kasih sudah melakukan skrining kesehatan secara mandiri, silahkan kunjungi Puskesmas atau Fasilitas Pelayanan Kesehatan terdekat untuk mendapatkan pemeriksaan dan konsultasi kesehatan lebih lanjut');
+            alert('Data berhasil dikirimkan!<br>
+            Terima kasih sudah melakukan skrining kesehatan secara mandiri, silahkan kunjungi UPTD Puskesmas Pasundan, untuk mendapatkan pemeriksaan kesehatan lebih lanjut  (GRATIS), setiap hari senin s.d sabtu jam 08.00-11.00 WIB (hari minggu dan libur nasional tutup), atau hubungi hotline UPTD Puskesmas Pasundan di nomor 081321251201.');
             document.location.href = 'riwayat.php'</script>";
 }
 
@@ -806,11 +803,11 @@ function ubahPTM($id_ptm)
     $exe = mysqli_query($koneksi, $queryUser);
     if (!$exe) {
         echo "<script>
-        alert('Data Validasi gagal diubah!');
-        document.location.href = 'indexPeriksaPTM.php?id_ptm=$id_ptm'</script>";
+        alert('Periksa data PTM pasien gagal!');
+        document.location.href = 'indexPTM'</script>";
     }
             echo "<script>
-            alert('Data Validasi berhasil diubah!');
+            alert('Silahkan periksa data PTM pasien!');
             document.location.href = 'indexPeriksaPTM.php?id_ptm=$id_ptm'</script>";
 }
 

@@ -39,12 +39,8 @@
                         <div class="modal-body">
                         <form class="tambah_pasien" action="function.php?act=ubahPasien&id_user=<?= $user['id_user']; ?>" id="ubah" method="POST">
                                 <div class="form-group ">
-                                    <label for="nama">Nama Lengkap</label>
+                                    <label for="nama">Username</label>
                                     <input type="text" class="form-control form-control-user" id="nama" name="nama" value="<?= $user['nama']; ?>" required>
-                                </div>
-                                <div class="form-group ">
-                                    <label for="nama_lengkap">Nama Lengkap</label>
-                                    <input type="text" class="form-control form-control-user" id="nama_lengkap" name="nama_lengkap" value="<?= $user['nama_lengkap']; ?>" required>
                                 </div>
                                 <div class="form-group ">
                                     <label for="nik">NIK</label>
@@ -57,10 +53,6 @@
                                 <div class="form-group">
                                         <label for="ttl">Tanggal Lahir</label>
                                         <input type="date" class="form-control form-control-user" name="ttl" id="ttl" value="<?= $user['ttl']; ?>" required>
-                                </div>
-                                <div class="form-group">
-                                        <label for="tlp">No. Telepon</label>
-                                        <input type="text" class="form-control form-control-user" name="tlp" id="tlp"  value="<?= $user['tlp']; ?>" placeholder="08xxxxxxxxxx" required>
                                 </div>
                                 <div class="form-group">
                                         <label for="password">Password</label>

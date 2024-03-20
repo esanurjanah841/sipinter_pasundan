@@ -117,8 +117,7 @@ if (isset($_SESSION['role'])) {
     </div>
 
     <div class="row" style="margin-top: 35px;">
-      <div class="col-md-2 col-lg-2 d-flex align-items-stretch mb-2 mb-lg-0">
-      </div>
+      
       <div class="col-md-4 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="50">
         <a href="menuIsh.php" style="color:black">
@@ -135,8 +134,15 @@ if (isset($_SESSION['role'])) {
           </a>
         </div>
       </div>
-      <div class="col-md-2 col-lg-2 d-flex align-items-stretch mb-2 mb-lg-0">
+      <div class="col-md-4 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+        <div class="icon-box" data-aos="fade-up" data-aos-delay="50">
+        <a href="menuks.php" style="color:black">
+          <img src="gambar/KS.png" class="card-img-top" alt="...">
+          <h4 class="title">INFO SEPUTAR KELOLA STRESS</h4>
+          </a>
+        </div>
       </div>
+      
     </div>
     
   

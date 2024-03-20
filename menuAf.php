@@ -81,74 +81,31 @@
 
     <div class="row">
     <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-5 mb-lg-0">
-        <a href="menuPtm.php" style="color:black">
+        <a>
           <img src="gambar/AF/1.png" class="card-img-top" alt="...">
           </a>
       </div>
       <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-5 mb-lg-0">
-        <a href="menuPtm.php" style="color:black" data-bs-toggle="modal" data-bs-target="#skrining" >
+        <a>
           <img src="gambar/AF/2.png" class="card-img-top" alt="...">
+          </a>
+      </div>
+    </div>
+    <div class="row">
+    <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-5 mb-lg-0">
+        <a>
+          <img src="gambar/AF/3.png" class="card-img-top" alt="...">
+          </a>
+      </div>
+      <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-5 mb-lg-0">
+        <a>
+          <img src="gambar/AF/4.png" class="card-img-top" alt="...">
           </a>
       </div>
     </div>
 
     <button type="button" class="btn btn-danger" style="margin-top: 35px" onclick="history.back();">Kembali</button>
 
-  <!-- Profile -->
-  <div class="modal fade" id="profile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="dialog">
-            <div class="modal-content" style="font-family:poppins">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Bacalah terlebih dahulu</h5>
-                    <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <p style="text-align: poppins; text-align:justify">Isilah profile terlebih dahulu secara benar dan lengkap sebelum memulai  Skrining Kesehatan. Klik tombol 'Oke' untuk melakukan pengisian profile.<br>
-                          Jika Anda sudah mengisi profile klik 'Batal'.<br>
-                          Kunjungi User Pasien dan pilih 'Profile' untuk melihat dan mengubah data profile Anda. </p>
-                    </div>
-                    
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Batal</button>
-                        <button onclick="document.location='tambahProfilePasien.php'" class="btn btn-success">Oke</button>
-                    </div>
-                </div>
-              </div>
-            </div>
-        </div>
-  </div>
-
-
-<!-- Skrining -->
-<div class="modal fade" id="skrining" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="dialog">
-            <div class="modal-content" style="font-family:poppins">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Bacalah terlebih dahulu</h5>
-                    <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                    <p style="text-align: poppins; text-align:justify"><b>Anda diwajibkan mengisi profile terlebih dahulu sebelum lanjut.</b></p>
-                        <p style="text-align: poppins; text-align:justify">Isilah form skrining dengan lengkap dan benar, data yang diinputkan akan diperiksa oleh petugas puskesmas untuk pemeriksaan.  </p>
-                    </div>
-                    
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Batal</button>
-                        <button onclick="document.location='formPTMPasien.php'" class="btn btn-success">Oke</button>
-                    </div>
-                </div>
-              </div>
-            </div>
-        </div>
-  </div>
-  
-</section><!-- End Services Section -->
 
 
 </section><!-- End Services Section -->

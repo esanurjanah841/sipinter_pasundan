@@ -47,11 +47,9 @@
                                         <tr>
                                             <th>No</th>
                                             <th style="width: 50px; text-align: center;">Username</th>
-                                            <th style="width: 200px; text-align: center;">Nama Lengkap</th>
                                             <th style="width: 200px; text-align: center;">NIK</th>
                                             <th style="width: 100px; text-align: center;">E-mail</th>
                                             <th style="width: 20px; text-align: center;">Tanggal Lahir</th>
-                                            <th style="width: 20px; text-align: center;">No. Telepon</th>
                                             <th style="width: 40px; text-align: center;">Role</th>
                                             <th style="width: 100px; text-align: center;">Kelola</th>
                                         </tr>
@@ -62,11 +60,9 @@
                                         <tr>
                                             <td><?= $no ?></td>
                                             <td><?= $data['nama']; ?></td>
-                                            <td><?= $data['nama_lengkap']; ?></td>
                                             <td><?= $data['nik']; ?></td>
                                             <td><?= $data['email']; ?></td>
                                             <td><?= $data['ttl']; ?></td>
-                                            <td><?= $data['tlp']; ?></td>
                                             <td><?= $data['role']; ?></td>
                                             <td>
                                                 <a href="function.php?act=hapusPasien&id_user=<?= $data["id_user"]; ?>" onclick="return confirm('Yakin ingin menghapus data?');" class="btn btn-danger btn-icon-split" title="Hapus" style="margin:10px">
