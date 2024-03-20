@@ -120,8 +120,8 @@ if($status_post == 'Menunggu Validasi'){
           </a>
         </div>
       </div>
-      
-    <div class="row">
+
+    <div class="row" style="margin-top:50px">
     <div class="col-md-3 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="50">
         <a href="" style="color:black" data-bs-toggle="modal" data-bs-target="#profile">
