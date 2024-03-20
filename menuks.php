@@ -75,7 +75,7 @@
       <img src="gambar/hotline.png" style="vertical-align:middle; max-height: 80px;"></a>
     </div>
     <div class="section-title" data-aos="fade-up">
-      <h2>CEGAH PTM DENGAN CERDIK</h2>
+      <h2>KELOLA STRESS</h2>
     </div>
 
 

@@ -150,7 +150,8 @@ include 'header-user.php';
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-6">
+                  <div class="row">
+                    <div class="col-lg-6">
                       <div class="form-group">
                         <label class="form-control-label" for="pass">Password</label>
                         <input type="password" id="password" name="password" class="form-control form-control-alternative" value="<?=$tampil['password']?>" required>

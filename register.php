@@ -60,7 +60,7 @@ if (isset($_SESSION['role'])) {
                             Bagus!
                         </div>
                         <div class="invalid-feedback">
-                            Nama tidak boleh kosong
+                            Username min 8 karakter dan tidak boleh kosong
                         </div>
                     </div>
                     <div class="col">
@@ -127,7 +127,7 @@ if (isset($_SESSION['role'])) {
                 <div class="modal-content">
                     <div class="modal-header bg-gradient-primary-to-secondary p-4">
                         <h5 class="modal-title font-alt text-white" id="feedbackModalLabel">Login Aplikasi SIPINTER</h5>
-                        <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button class="btn-close btn-close-white" type="button" data-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body border-0 p-4">
                             <!-- Name input-->
